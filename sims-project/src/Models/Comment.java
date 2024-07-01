@@ -2,27 +2,26 @@ package Models;
 
 import java.util.Date;
 
-public class Review {
+public class Comment {
     private String id;
-    private String description;
+    private String text;
     private int grade;
     private boolean isApproved;
     private Date date;
-    // da li moze ovako posto je kardinalitet 1
     private PublishWork publishWork;
-    private Moderator moderator;
+    private Person person;
 
-    public Review() {
+    public Comment() {
     }
 
-    public Review(String id, String description, int grade, boolean isApproved, Date date, PublishWork publishWork, Moderator moderator) {
+    public Comment(String id, String text, int grade, boolean isApproved, Date date, PublishWork publishWork, Person person) {
         this.id = id;
-        this.description = description;
+        this.text = text;
         this.grade = grade;
         this.isApproved = isApproved;
         this.date = date;
         this.publishWork = publishWork;
-        this.moderator = moderator;
+        this.person = person;
     }
 
     public String getId() {
@@ -33,12 +32,12 @@ public class Review {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getText() {
+        return text;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public int getGrade() {
@@ -73,12 +72,12 @@ public class Review {
         this.publishWork = publishWork;
     }
 
-    public Moderator getModerator() {
-        return moderator;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setModerator(Moderator moderator) {
-        this.moderator = moderator;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     public void approve() {
