@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/New folder.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Advertisment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Artist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/PublishWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/RecordLabel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/TopAlbums.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/TopArtists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/TopList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/TopSongs.java" afterDir="false" />
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="add new classes">
+      <change beforePath="$PROJECT_DIR$/.idea/New folder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/New folder.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/TopList.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/TopList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +25,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="e320216ec1bbc1e180e576a6e284eb4c122b6099" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mionalukic"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/vanjakostic03/GeniusApp.git",
+    "accountId": "dacab240-2996-4d55-b407-4647f3673c72"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,13 +57,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Miona/Desktop/New folder",
+    "last_opened_file_path": "C:/Users/Miona/Desktop/fakultet/2. semsstar/Oop/projekat_sv_17_2022/KozmetckiSalon",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,7 +76,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-22-openjdk-22-f644763e9732-8c5c9ae5" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
