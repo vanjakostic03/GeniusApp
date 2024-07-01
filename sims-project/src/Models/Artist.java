@@ -3,18 +3,18 @@ package Models;
 
 public abstract class Artist {
 
-    protected String Id;
+    protected String id;
 
     public Artist(String id) {
-        this.Id = id;
+        this.id = id;
     }
 
     public String getId() {
-        return this.Id;
+        return this.id;
     }
 
     public void setId(String id) {
-        this.Id = id;
+        this.id = id;
     }
 }
 
