@@ -4,25 +4,25 @@ package Models;
 import java.util.ArrayList;
 
 public class Album extends PublishedWork{
-    private ArrayList<String> songs;
+    private ArrayList<Song> songs;
 
     public Album() {
         songs = new ArrayList<>();
     }
 
-    public ArrayList<String> getSongs() {
+    public ArrayList<Song> getSongs() {
         return songs;
     }
 
-    public void setSongs(ArrayList<String> songs) {
+    public void setSongs(ArrayList<Song> songs) {
         this.songs = songs;
     }
 
-    public void addSong(String song) {
+    public void addSong(Song song) {
         songs.add(song);
     }
 
-    public void removeSong(String song) {
+    public void removeSong(Song song) {
         songs.remove(song);
     }
 }

@@ -8,13 +8,13 @@ public abstract class PublishedWork {
     protected String id;
     protected String title;
     protected String cover;
-    protected ArrayList<String> artists;
+    protected ArrayList<Artist> artists;
     protected TypeOfWork typeOfWork;
-    protected ArrayList<String> genres;
+    protected ArrayList<Genre> genres;
 
     public PublishedWork() {}
 
-    public PublishedWork(String id, String title, String cover, ArrayList<String> artists, TypeOfWork typeOfWork, ArrayList<String> genres) {
+    public PublishedWork(String id, String title, String cover, ArrayList<Artist> artists, TypeOfWork typeOfWork, ArrayList<Genre> genres) {
         this.id = id;
         this.title = title;
         this.cover = cover;
@@ -44,11 +44,11 @@ public abstract class PublishedWork {
         this.cover = cover;
     }
 
-    public ArrayList<String> getArtists() {
+    public ArrayList<Artist> getArtists() {
         return artists;
     }
 
-    public void setArtists(ArrayList<String> artists) {
+    public void setArtists(ArrayList<Artist> artists) {
         this.artists = artists;
     }
 
@@ -60,26 +60,26 @@ public abstract class PublishedWork {
         this.typeOfWork = typeOfWork;
     }
 
-    public ArrayList<String> getGenres() {
+    public ArrayList<Genre> getGenres() {
         return genres;
     }
 
-    public void setGenres(ArrayList<String> genres) {
+    public void setGenres(ArrayList<Genre> genres) {
         this.genres = genres;
     }
 
-    public void addGenre(String genre) {
+    public void addGenre(Genre genre) {
         this.genres.add(genre);
     }
 
-    public void removeGenre(String genre) {
+    public void removeGenre(Genre genre) {
         this.genres.remove(genre);
     }
 
-    public void addArtist(String artist) {
+    public void addArtist(Artist artist) {
         this.artists.add(artist);
     }
-    public void removeArtist(String artist) {
+    public void removeArtist(Artist artist) {
         this.artists.remove(artist);
     }
 

@@ -4,36 +4,36 @@ package Models;
 import java.time.LocalDate;
 
 public class Song extends PublishedWork{
-    private String lyricistId;
-    private String composerId;
+    private SingleArtist lyricist;
+    private SingleArtist composer;
     private String lyrics;
     private String description;
     private LocalDate releaseDate;
     private int views;
 
-    public Song(String lyricistId, String composerId, String lyrics, String description){
+    public Song(SingleArtist lyricist, SingleArtist composer, String lyrics, String description){
         releaseDate  = LocalDate.now();
-        this.lyricistId = lyricistId;
-        this.composerId = composerId;
+        this.lyricist = lyricist;
+        this.composer = composer;
         this.lyrics = lyrics;
         this.description = description;
         this.views = 0;
     }
 
-    public String getLyricistId() {
-        return lyricistId;
+    public SingleArtist getLyricist() {
+        return lyricist;
     }
 
-    public void setLyricistId(String lyricistId) {
-        this.lyricistId = lyricistId;
+    public void setLyricist(SingleArtist lyricist) {
+        this.lyricist = lyricist;
     }
 
-    public String getComposerId() {
-        return composerId;
+    public SingleArtist getComposer() {
+        return composer;
     }
 
-    public void setComposerId(String composerId) {
-        this.composerId = composerId;
+    public void setComposer(SingleArtist composer) {
+        this.composer = composer;
     }
 
     public String getLyrics() {
