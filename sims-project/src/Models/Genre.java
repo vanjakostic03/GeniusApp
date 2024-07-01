@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Genre {
     private String id;
     private String name;
+    private String cover;
     private ArrayList<Genre> subgenres;
 
     public Genre(String id, String name) {
@@ -15,6 +16,14 @@ public class Genre {
 
     public String getId() {
         return id;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
     }
 
     public void setId(String id) {
