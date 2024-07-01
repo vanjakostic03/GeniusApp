@@ -44,4 +44,6 @@ public class Account {
     public void setPrivate(boolean aPrivate) {
         isPrivate = aPrivate;
     }
+
+
 }

@@ -1,5 +1,6 @@
 package Models;
 
+
 public abstract class Artist {
 
     protected String Id;
@@ -16,3 +17,4 @@ public abstract class Artist {
         this.Id = id;
     }
 }
+

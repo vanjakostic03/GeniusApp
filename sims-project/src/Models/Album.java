@@ -1,5 +1,6 @@
 package Models;
 
+
 import java.util.ArrayList;
 
 public class Album extends PublishedWork{
@@ -25,3 +26,4 @@ public class Album extends PublishedWork{
         songs.remove(song);
     }
 }
+

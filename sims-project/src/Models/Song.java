@@ -1,5 +1,6 @@
 package Models;
 
+
 import java.time.LocalDate;
 
 public class Song extends PublishedWork{
@@ -70,4 +71,5 @@ public class Song extends PublishedWork{
     public void addView(){
         this.views++;
     }
+
 }
