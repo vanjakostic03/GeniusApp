@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/New folder.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Advertisment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Album.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Artist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/PublishWork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/RecordLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/TopAlbums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/TopArtists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/TopList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Models/TopSongs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Review.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ibVj2bsAF0YR2iq5yIUXK3csaF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Miona/Desktop/New folder",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-f644763e9732-8c5c9ae5" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="" />
+      <created>1719759394410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719759394410</updated>
+      <workItem from="1719759395550" duration="2443000" />
+      <workItem from="1719779092781" duration="879000" />
+      <workItem from="1719822631574" duration="3116000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
