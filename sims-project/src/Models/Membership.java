@@ -15,7 +15,6 @@ public class Membership {
         this.artist = artist;
     }
 
-
     public LocalDate getStartDate() {
         return startDate;
     }
