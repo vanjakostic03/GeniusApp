@@ -1,6 +1,7 @@
 package Models;
 
 import java.util.Date;
+import java.util.List;
 
 public class PlayList {
     public PlayList(String id, String title, String cover, Date creationDate, String description, boolean isPrivate) {
@@ -18,6 +19,7 @@ public class PlayList {
     private Date CreationDate;
     private String description;
     private boolean isPrivate;
+    private List<Song> songs;
 
     public String getId() {
         return id;
@@ -65,5 +67,13 @@ public class PlayList {
 
     public void setPrivate(boolean aPrivate) {
         isPrivate = aPrivate;
+    }
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
     }
 }
