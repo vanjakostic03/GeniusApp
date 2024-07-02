@@ -4,13 +4,13 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class SongPanel extends JPanel {
-    public SongPanel(){
+public class AlbumPanel extends JPanel {
+    public AlbumPanel(){
         setLayout(new GridBagLayout());
-        initSongPanel();
+        initAlbumPanel();
     }
 
-    public void initSongPanel(){
+    public void initAlbumPanel(){
         this.setBackground(new Color(32, 38, 61));
 
         GridBagConstraints c = new GridBagConstraints();

@@ -20,7 +20,7 @@ class RoundBorder extends AbstractBorder {
         g2.dispose();
     }
     public Shape getBorderShape(int x, int y, int w, int h) {
-        int r = h/2; //h / 2;
+        int r = h/5; //h / 2;
         return new RoundRectangle2D.Double(x, y, w, h, r, r);
     }
     @Override public Insets getBorderInsets(Component c) {

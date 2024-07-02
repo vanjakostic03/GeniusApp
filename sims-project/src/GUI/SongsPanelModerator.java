@@ -139,7 +139,6 @@ public class SongsPanelModerator extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 SongPanel newPanel = new SongPanel();
                 parentPanel.setContentPanel(newPanel);
-                //SongFrame songFrame = new SongFrame(songTitle);
 
             }
         });

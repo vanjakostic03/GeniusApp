@@ -107,7 +107,7 @@ public class ToolBarPanelModerator extends JPanel {
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Dialog", Font.PLAIN, 14));
+        button.setFont(new Font("Dialog", Font.PLAIN, 16));
         button.setHorizontalAlignment(SwingConstants.LEFT);
         button.setBackground(new Color(39, 47, 78));
         button.setBorderPainted(false);
