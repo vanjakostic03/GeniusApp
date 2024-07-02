@@ -4,10 +4,16 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 public class AlbumsPanelModerator extends JPanel {
 
+    //private Font customFontRegular;
+    //private Font customFontBold;
+
     public AlbumsPanelModerator() {
+        //loadCustomFonts();
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -34,12 +40,13 @@ public class AlbumsPanelModerator extends JPanel {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 int diameter = Math.min(getWidth(), getHeight());
-                g.setColor(Color.BLUE);
+                g.setColor(Color.white);
                 g.fillOval((getWidth() - diameter) / 2, (getHeight() - diameter) / 2, diameter, diameter);
+
             }
         };
-        circlePanel.setPreferredSize(new Dimension(30, 30));
-        circlePanel.setBackground(Color.WHITE);
+        circlePanel.setPreferredSize(new Dimension(60, 60));
+        circlePanel.setBackground(new Color(32, 38, 61));
         circlePanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         c.gridx = 4;
         c.gridy = 0; // Prvi red
@@ -132,7 +139,7 @@ public class AlbumsPanelModerator extends JPanel {
     }
 
     private JTextField createSearchBar() {
-        JTextField searchBar = new JTextField("Search albums"){
+        JTextField searchBar = new JTextField("      Search albums"){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -149,22 +156,37 @@ public class AlbumsPanelModerator extends JPanel {
                 setBorder(new RoundBorder());
             }
         };
-        searchBar.setFont(new Font("Dialog", Font.BOLD, 14));
+
+        searchBar.setFont(new Font("Dialog", Font.BOLD, 17));
         searchBar.setForeground(Color.LIGHT_GRAY);
         searchBar.setBackground(new Color(39, 47, 78));
         searchBar.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
 //        searchBar.setOpaque(false);
         searchBar.setBorder(new RoundBorder()); // Postavljamo zaobljeni okvir
 
-        // Kreiranje ikonice lupe
-        ImageIcon searchIcon = new ImageIcon("search_icon.png"); // Postavite putanju do vaše ikonice
+        //Image scaledImage = originalIcon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
 
-        // Kreiranje buttona za ikonicu lupe
-        JButton searchIconButton = new JButton(searchIcon);
-        searchIconButton.setBackground(new Color(240, 240, 240));
-        searchIconButton.setBorder(BorderFactory.createEmptyBorder());
-        searchBar.setLayout(new BorderLayout());
-        searchBar.add(searchIconButton, BorderLayout.WEST);
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/search.png")); // Postavite putanju do vaše ikonice
+
+        if (originalIcon.getImageLoadStatus() == MediaTracker.COMPLETE) {
+            // Promena veličine ikonice
+            Image scaledImage = originalIcon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+            ImageIcon searchIcon = new ImageIcon(scaledImage);
+
+            // Kreiranje buttona za ikonicu lupe
+            JButton searchIconButton = new JButton(searchIcon);
+            searchIconButton.setOpaque(false);
+            searchIconButton.setContentAreaFilled(false);
+            searchIconButton.setBorderPainted(false);
+            searchIconButton.setFocusPainted(false);
+            searchIconButton.setBackground(new Color(240, 240, 240));
+            searchIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+            searchBar.setLayout(new BorderLayout());
+            searchBar.add(searchIconButton, BorderLayout.WEST);
+        } else {
+            System.err.println("Ikonica nije učitana.");
+        }
 
         return searchBar;
     }
@@ -186,5 +208,23 @@ public class AlbumsPanelModerator extends JPanel {
         });
         return searchButton;
     }
+
+//    private void loadCustomFonts() {
+//        try {
+//            // Putanje do font fajlova u resursnom direktorijumu
+//            File fontFileRegular = new File(getClass().getClassLoader().getResource("fonts/Poppins-Regular.ttf").getFile());
+//            customFontRegular = Font.createFont(Font.TRUETYPE_FONT, fontFileRegular).deriveFont(24f);
+//
+//            File fontFileBold = new File(getClass().getClassLoader().getResource("fonts/Poppins-Bold.ttf").getFile());
+//            customFontBold = Font.createFont(Font.TRUETYPE_FONT, fontFileBold).deriveFont(24f);
+//
+//            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+//            ge.registerFont(customFontRegular);
+//            ge.registerFont(customFontBold);
+//        } catch (IOException | FontFormatException e) {
+//            e.printStackTrace();
+//            System.err.println("Font nije mogao biti učitan.");
+//        }
+//    }
 
 }
