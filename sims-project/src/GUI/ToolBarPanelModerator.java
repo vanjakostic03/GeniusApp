@@ -85,7 +85,7 @@ public class ToolBarPanelModerator extends JPanel {
         JButton blockedUsers = createStyledButton("Blocked users");
         c.gridx = 0;
         c.gridy = 4;
-        //blockedUsers.addActionListener(e -> setContentPanel(new BlockedUsersPanelModerator(this)));
+        blockedUsers.addActionListener(e -> setContentPanel(new BlockedUsersPanelModerator(this)));
         optionsPanel.add(blockedUsers, c);
 
         JButton reports = createStyledButton("Reports");
