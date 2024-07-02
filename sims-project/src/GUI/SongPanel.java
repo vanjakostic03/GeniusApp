@@ -14,7 +14,7 @@ public class SongPanel extends JPanel {
         this.setBackground(new Color(32, 38, 61));
 
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(25, 5, 15, 25);
+        c.insets = new Insets(25, 15, 15, 25);
 
         JTextField searchBar = createSearchBar();
         c.gridx = 0;

@@ -14,12 +14,12 @@ public class AlbumPanel extends JPanel {
         this.setBackground(new Color(32, 38, 61));
 
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(25, 5, 15, 25);
+        c.insets = new Insets(25, 15, 15, 25);
 
         JTextField searchBar = createSearchBar();
         c.gridx = 0;
-        c.gridy = 0; // Prvi red
-        c.gridwidth = 3; // Zauzima 4 kolone
+        c.gridy = 0;
+        c.gridwidth = 3;
         c.weightx = 1.0;
         c.weighty = 0.5;
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -171,7 +171,7 @@ public class AlbumPanel extends JPanel {
         };
         songs.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        songs.setFont(new Font("Dialog", Font.BOLD, 18));
+        songs.setFont(new Font("Dialog", Font.PLAIN, 18));
         songs.setForeground(Color.WHITE);
         songs.setBackground(new Color(39, 47, 78));
         songs.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));

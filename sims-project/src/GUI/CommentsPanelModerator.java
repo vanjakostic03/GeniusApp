@@ -20,7 +20,7 @@ public class CommentsPanelModerator extends JPanel {
         this.setBackground(new Color(32, 38, 61));
 
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(25, 5, 15, 10);
+        c.insets = new Insets(25, 15, 15, 10);
 
         // Search polje
         JTextField searchBar = createSearchBar();
@@ -218,7 +218,7 @@ public class CommentsPanelModerator extends JPanel {
     }
 
     private JTextField createSearchBar() {
-        JTextField searchBar = new JTextField("      Search albums"){
+        JTextField searchBar = new JTextField("      Search comments"){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
