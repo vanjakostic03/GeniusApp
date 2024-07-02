@@ -73,7 +73,7 @@ public class ToolBarPanelModerator extends JPanel {
         JButton comments = createStyledButton("Comments");
         c.gridx = 0;
         c.gridy = 2;
-        //comments.addActionListener(e -> setContentPanel(new CommentsPanelModerator(this)));
+        comments.addActionListener(e -> setContentPanel(new CommentsPanelModerator(this)));
         optionsPanel.add(comments, c);
 
         JButton activeUsers = createStyledButton("Active users");
