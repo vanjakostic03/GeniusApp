@@ -1,32 +1,51 @@
 package GUI;
 
-import Models.Comment;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class ToolBarPanelModerator extends JPanel {
 
     private JPanel contentPanel;
     private JPanel mainPanel;
+    private ModeratorFrame moderatorFrame;
 
-    public ToolBarPanelModerator(JPanel mainPanel) {
-        this.mainPanel=mainPanel;
+    public ToolBarPanelModerator(ModeratorFrame moderatorFrame) {
+        this.moderatorFrame = moderatorFrame;
         setLayout(new GridBagLayout());
         initToolBar();
     }
 
-    public JPanel getContentPanel() {
-        return contentPanel;
+
+    public void setContentPanel(JPanel newPanel) {
+        if (moderatorFrame.contentPanel != null) {
+            moderatorFrame.mainPanel.remove(moderatorFrame.contentPanel);
+            JOptionPane.showMessageDialog(this, "Enter a valid String",
+                    "WARNING", JOptionPane.WARNING_MESSAGE);
+        }
+        moderatorFrame.contentPanel = newPanel;
+        moderatorFrame.contentPanel.setBackground(new Color(255, 255, 255));
+        GridBagConstraints c = new GridBagConstraints();
+        c.gridx = 1;
+        c.gridy = 0;
+        c.gridwidth = 1; // Širina 1 kolona
+        c.gridheight = 1; // Visina 1 red
+        c.fill = GridBagConstraints.BOTH;
+        c.weightx = 0.85; // 85% dodatnog prostora u širini
+        c.weighty = 1;
+        moderatorFrame.contentPanel.setVisible(true);
+        moderatorFrame.mainPanel.add(moderatorFrame.contentPanel, c);
+        moderatorFrame.mainPanel.revalidate();
+        moderatorFrame.mainPanel.repaint();
     }
 
     private void initToolBar() {
-
         JPanel optionsPanel = new JPanel();
         optionsPanel.setLayout(new GridBagLayout());
-        optionsPanel.setBackground(new Color(39,47,78));
+        optionsPanel.setBackground(new Color(39, 47, 78));
 
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.BOTH;
@@ -35,49 +54,41 @@ public class ToolBarPanelModerator extends JPanel {
         c.gridheight = 1;
         c.insets = new Insets(5, 0, 5, 0);
 
-
         JButton albums = createStyledButton("Albums");
         c.gridx = 0;
         c.gridy = 0;
-
-        albums.addActionListener(e -> contentPanel = new AlbumsPanelModerator());
-        optionsPanel.add(albums,c);
-
+        albums.addActionListener(e -> setContentPanel(new AlbumsPanelModerator()));
+        optionsPanel.add(albums, c);
 
         JButton songs = createStyledButton("Songs");
         c.gridx = 0;
         c.gridy = 1;
-
-        songs.addActionListener(e -> contentPanel = new SongsPanelModerator());
-        optionsPanel.add(songs,c);
+        songs.addActionListener(e -> setContentPanel(new SongsPanelModerator()));
+        optionsPanel.add(songs, c);
 
         JButton comments = createStyledButton("Comments");
         c.gridx = 0;
         c.gridy = 2;
-
-        comments.addActionListener(e -> contentPanel = new CommentsPanelModerator());
-        optionsPanel.add(comments,c);
+        comments.addActionListener(e -> setContentPanel(new CommentsPanelModerator()));
+        optionsPanel.add(comments, c);
 
         JButton activeUsers = createStyledButton("Active users");
         c.gridx = 0;
         c.gridy = 3;
-
-        activeUsers.addActionListener(e -> contentPanel = new ActiveUsersPanelModerator());
-        optionsPanel.add(activeUsers,c);
+        activeUsers.addActionListener(e -> setContentPanel(new ActiveUsersPanelModerator()));
+        optionsPanel.add(activeUsers, c);
 
         JButton blockedUsers = createStyledButton("Blocked users");
         c.gridx = 0;
         c.gridy = 4;
-
-        blockedUsers.addActionListener(e -> contentPanel = new BlockedUsersPanelModerator());
-        optionsPanel.add(blockedUsers,c);
+        blockedUsers.addActionListener(e -> setContentPanel(new BlockedUsersPanelModerator()));
+        optionsPanel.add(blockedUsers, c);
 
         JButton reports = createStyledButton("Reports");
         c.gridx = 0;
         c.gridy = 5;
-
-        reports.addActionListener(e -> contentPanel = new ReportsPanelModerator());
-        optionsPanel.add(reports,c);
+        reports.addActionListener(e -> setContentPanel(new ReportsPanelModerator()));
+        optionsPanel.add(reports, c);
 
         GridBagConstraints panelConstraints = new GridBagConstraints();
         panelConstraints.gridx = 0;
@@ -89,19 +100,29 @@ public class ToolBarPanelModerator extends JPanel {
         add(optionsPanel, panelConstraints);
     }
 
-
-
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
-        button.setForeground(Color.WHITE); // Postavi boju teksta na belu
-        button.setFont(new Font("Dialog", Font.PLAIN, 16)); // Postavi font i veličinu
-        button.setHorizontalAlignment(SwingConstants.LEFT); // Poravnaj tekst na levo
-        button.setBackground(new Color(39, 47, 78)); // Postavi pozadinsku boju
-        button.setBorderPainted(false); // Ukloni granicu
-        button.setFocusPainted(false); // Ukloni fokus obrub
-        button.setContentAreaFilled(false); // Ukloni content area
+        button.setForeground(Color.WHITE);
+        button.setFont(new Font("Dialog", Font.PLAIN, 16));
+        button.setHorizontalAlignment(SwingConstants.LEFT);
+        button.setBackground(new Color(39, 47, 78));
+        button.setBorderPainted(false);
+        button.setFocusPainted(false);
+        button.setContentAreaFilled(false);
+        button.setPreferredSize(new Dimension(150, 20));
+        // Dodavanje MouseListener za hover efekat
+        button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                button.setFont(button.getFont().deriveFont(Font.BOLD));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                button.setFont(button.getFont().deriveFont(Font.PLAIN));
+            }
+        });
+
         return button;
     }
-
-
 }
