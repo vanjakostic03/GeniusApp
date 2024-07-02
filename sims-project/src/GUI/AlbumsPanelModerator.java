@@ -13,11 +13,11 @@ public class AlbumsPanelModerator extends JPanel {
 
     //private Font customFontRegular;
     //private Font customFontBold;
-    ToolBarPanelModerator parenPanel ;
+    ToolBarPanelModerator parentPanel ;
 
     public AlbumsPanelModerator(ToolBarPanelModerator parenPanel) {
         //loadCustomFonts();
-        this.parenPanel = parenPanel;
+        this.parentPanel = parenPanel;
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -142,9 +142,8 @@ public class AlbumsPanelModerator extends JPanel {
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
-                //AlbumFrame albumFrame = new AlbumFrame(albumTitle);
-
+                AlbumPanel newPanel = new AlbumPanel();
+                parentPanel.setContentPanel(newPanel);
             }
         });
 

@@ -68,7 +68,7 @@ public class AlbumPanel extends JPanel {
         c.gridx = 0;
         c.gridy = 1; // Prvi red
         c.gridwidth = 1; // Zauzima 1 kolonu
-        c.gridheight = 4;
+        c.gridheight = 3;
         c.weightx = 1.0;
         c.weighty = 0.5;
         c.fill = GridBagConstraints.BOTH;
@@ -82,7 +82,7 @@ public class AlbumPanel extends JPanel {
         description.setLineWrap(true);
 
         c.gridx = 0;
-        c.gridy = 5; // Prvi red
+        c.gridy = 4; // Prvi red
         c.gridwidth = 1; // Zauzima 1 kolonu
         c.gridheight = 1;
         c.weightx = 1.0;
@@ -152,18 +152,7 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(releaseDate, c);
 
-        JPanel associates = createAssociatesPanel();
-        c.gridx = 1;
-        c.gridy = 3;
-        c.gridwidth = 2;
-        c.gridheight = 1;
-        c.weightx = 1.0;
-        c.weighty = 0.5;
-        c.fill = GridBagConstraints.BOTH;
-        add(associates, c);
-
-
-        JTextArea lyrics = new JTextArea("\n\nLorem ipsum dolor sit amet,\n consectetur adipiscing elit,\n sed do eiusmod tempor incididunt \nut labore et dolore magna aliqua.\n Ut enim ad minim veniam,\n quis nostrud exercitation ullamco laboris \nnisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in \nvoluptate velit esse cillum dolore eu fugiat nulla pariatur.\n Excepteur sint occaecat cupidatat non proident,\n sunt in culpa qui officia deserunt mollit anim id est laborum. \nLorem ipsum dolor sit amet,\n consectetur adipiscing elit,\n sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \nUt enim ad minim veniam,\n quis nostrud exercitation ullamco laboris nisi \nut aliquip ex ea commodo consequat.\n Duis aute irure \n...\n"){
+        JTextArea songs = new JTextArea("\n\npesma\n pesma\n pesma \npesma\n pesma\n qpesma \n...\n"){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -180,36 +169,34 @@ public class AlbumPanel extends JPanel {
                 setBorder(new RoundBorder());
             }
         };
-        lyrics.setBorder(new EmptyBorder(10, 10, 10, 10));
+        songs.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-
-        //lyrics.setMargin(new Insets(60, 60, 60, 60));
-        lyrics.setFont(new Font("Dialog", Font.BOLD, 18));
-        lyrics.setForeground(Color.WHITE);
-        lyrics.setBackground(new Color(39, 47, 78));
-        lyrics.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
-        lyrics.setBorder(new RoundBorder()); // Postavljamo zaobljeni okvir
-        lyrics.setLineWrap(true);
-        lyrics.setWrapStyleWord(true);
-        lyrics.setAlignmentX(CENTER_ALIGNMENT);
-        lyrics.setMargin(new Insets(100, 10, 10, 10));
+        songs.setFont(new Font("Dialog", Font.BOLD, 18));
+        songs.setForeground(Color.WHITE);
+        songs.setBackground(new Color(39, 47, 78));
+        songs.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
+        songs.setBorder(new RoundBorder()); // Postavljamo zaobljeni okvir
+        songs.setLineWrap(true);
+        songs.setWrapStyleWord(true);
+        songs.setAlignmentX(CENTER_ALIGNMENT);
+        songs.setMargin(new Insets(100, 10, 10, 10));
 
 
         c.gridx = 1;
-        c.gridy = 4;
+        c.gridy = 3;
         c.gridwidth = 2;
         c.gridheight = 2;
         c.weightx = 1.0;
         c.weighty = 1.0;
         c.insets = new Insets(10, 10, 10, 10);
         c.fill = GridBagConstraints.BOTH;
-        add(lyrics, c);
+        add(songs, c);
 
 
     }
 
     private JTextField createSearchBar() {
-        JTextField searchBar = new JTextField("      Search songs"){
+        JTextField searchBar = new JTextField("      Search albums"){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -257,44 +244,4 @@ public class AlbumPanel extends JPanel {
 
         return searchBar;
     }
-
-    private JPanel createAssociatesPanel(){
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
-        panel.setBackground(new Color(32,38,61));
-        GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(1, 1, 1, 1);
-
-        JTextArea composer = new JTextArea("Composer name\n..");
-        composer.setBackground(new Color(32, 38, 61));
-        composer.setFont(new Font("Dialog", Font.PLAIN, 20));
-        composer.setForeground(Color.WHITE);
-        composer.setLineWrap(true);
-        c.gridx = 0;
-        c.gridy = 0;
-        c.gridwidth = 1;
-        c.gridheight = 1;
-        c.weightx = 1.0;
-        c.weighty = 1.0;
-        c.fill = GridBagConstraints.BOTH;
-        panel.add(composer, c);
-
-        JTextArea lyricist = new JTextArea("Lyricist name\n..");
-        lyricist.setBackground(new Color(32, 38, 61));
-        lyricist.setFont(new Font("Dialog", Font.PLAIN, 20));
-        lyricist.setForeground(Color.WHITE);
-        lyricist.setLineWrap(true);
-        c.gridx = 1;
-        c.gridy = 0;
-        c.gridwidth = 1;
-        c.gridheight = 1;
-        c.weightx = 1.0;
-        c.weighty = 1.0;
-        c.fill = GridBagConstraints.BOTH;
-        panel.add(lyricist, c);
-
-
-        return panel;
-    }
-
 }
