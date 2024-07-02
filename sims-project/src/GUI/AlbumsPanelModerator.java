@@ -4,6 +4,8 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 
@@ -11,9 +13,11 @@ public class AlbumsPanelModerator extends JPanel {
 
     //private Font customFontRegular;
     //private Font customFontBold;
+    ToolBarPanelModerator parenPanel ;
 
-    public AlbumsPanelModerator() {
+    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel) {
         //loadCustomFonts();
+        this.parenPanel = parenPanel;
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -22,7 +26,7 @@ public class AlbumsPanelModerator extends JPanel {
         this.setBackground(new Color(32, 38, 61));
 
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(25, 5, 15, 15);
+        c.insets = new Insets(25, 5, 15, 10);
 
         // Search polje
         JTextField searchBar = createSearchBar();
@@ -45,7 +49,7 @@ public class AlbumsPanelModerator extends JPanel {
 
             }
         };
-        circlePanel.setPreferredSize(new Dimension(60, 60));
+        circlePanel.setPreferredSize(new Dimension(55, 55));
         circlePanel.setBackground(new Color(32, 38, 61));
         circlePanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         c.gridx = 4;
@@ -91,7 +95,7 @@ public class AlbumsPanelModerator extends JPanel {
         panel.setLayout(new GridBagLayout());
         panel.setBackground(new Color(32,38,61));
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(2, 2, 2, 2);
+        c.insets = new Insets(1, 1, 1, 1);
 
         // Cover albuma
         JLabel coverLabel = new JLabel(coverText){
@@ -135,6 +139,15 @@ public class AlbumsPanelModerator extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         panel.add(titleLabel, c);
 
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                //AlbumFrame albumFrame = new AlbumFrame(albumTitle);
+
+            }
+        });
+
         return panel;
     }
 
@@ -161,10 +174,7 @@ public class AlbumsPanelModerator extends JPanel {
         searchBar.setForeground(Color.LIGHT_GRAY);
         searchBar.setBackground(new Color(39, 47, 78));
         searchBar.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
-//        searchBar.setOpaque(false);
         searchBar.setBorder(new RoundBorder()); // Postavljamo zaobljeni okvir
-
-        //Image scaledImage = originalIcon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
 
         ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/search.png")); // Postavite putanju do vaše ikonice
 
@@ -192,22 +202,6 @@ public class AlbumsPanelModerator extends JPanel {
     }
 
 
-    private JButton createSearchButton() {
-        JButton searchButton = new JButton("<html><b>Search</b></html>");
-        searchButton.setForeground(Color.LIGHT_GRAY);
-        searchButton.setBackground(new Color(240, 240, 240));
-        searchButton.setBorder(BorderFactory.createEmptyBorder());
-        searchButton.setFocusPainted(false);
-        searchButton.setFont(new Font("Dialog", Font.PLAIN, 14));
-        searchButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Handle search action here
-                System.out.println("Search button clicked");
-            }
-        });
-        return searchButton;
-    }
 
 //    private void loadCustomFonts() {
 //        try {

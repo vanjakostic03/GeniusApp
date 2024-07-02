@@ -61,37 +61,37 @@ public class ToolBarPanelModerator extends JPanel {
         JButton albums = createStyledButton("Albums");
         c.gridx = 0;
         c.gridy = 0;
-        albums.addActionListener(e -> setContentPanel(new AlbumsPanelModerator()));
+        albums.addActionListener(e -> setContentPanel(new AlbumsPanelModerator(this)));
         optionsPanel.add(albums, c);
 
         JButton songs = createStyledButton("Songs");
         c.gridx = 0;
         c.gridy = 1;
-        songs.addActionListener(e -> setContentPanel(new SongsPanelModerator()));
+        songs.addActionListener(e -> setContentPanel(new SongsPanelModerator(this)));
         optionsPanel.add(songs, c);
 
         JButton comments = createStyledButton("Comments");
         c.gridx = 0;
         c.gridy = 2;
-        comments.addActionListener(e -> setContentPanel(new CommentsPanelModerator()));
+        //comments.addActionListener(e -> setContentPanel(new CommentsPanelModerator(this)));
         optionsPanel.add(comments, c);
 
         JButton activeUsers = createStyledButton("Active users");
         c.gridx = 0;
         c.gridy = 3;
-        activeUsers.addActionListener(e -> setContentPanel(new ActiveUsersPanelModerator()));
+        //activeUsers.addActionListener(e -> setContentPanel(new ActiveUsersPanelModerator(this)));
         optionsPanel.add(activeUsers, c);
 
         JButton blockedUsers = createStyledButton("Blocked users");
         c.gridx = 0;
         c.gridy = 4;
-        blockedUsers.addActionListener(e -> setContentPanel(new BlockedUsersPanelModerator()));
+        //blockedUsers.addActionListener(e -> setContentPanel(new BlockedUsersPanelModerator(this)));
         optionsPanel.add(blockedUsers, c);
 
         JButton reports = createStyledButton("Reports");
         c.gridx = 0;
         c.gridy = 5;
-        reports.addActionListener(e -> setContentPanel(new ReportsPanelModerator()));
+        //reports.addActionListener(e -> setContentPanel(new ReportsPanelModerator(this)));
         optionsPanel.add(reports, c);
 
         GridBagConstraints panelConstraints = new GridBagConstraints();
@@ -107,7 +107,7 @@ public class ToolBarPanelModerator extends JPanel {
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Dialog", Font.PLAIN, 16));
+        button.setFont(new Font("Dialog", Font.PLAIN, 14));
         button.setHorizontalAlignment(SwingConstants.LEFT);
         button.setBackground(new Color(39, 47, 78));
         button.setBorderPainted(false);
