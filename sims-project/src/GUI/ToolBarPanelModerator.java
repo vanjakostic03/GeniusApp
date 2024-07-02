@@ -19,25 +19,29 @@ public class ToolBarPanelModerator extends JPanel {
         initToolBar();
     }
 
-
     public void setContentPanel(JPanel newPanel) {
-        if (moderatorFrame.contentPanel != null) {
-            moderatorFrame.mainPanel.remove(moderatorFrame.contentPanel);
-            JOptionPane.showMessageDialog(this, "Enter a valid String",
-                    "WARNING", JOptionPane.WARNING_MESSAGE);
-        }
-        moderatorFrame.contentPanel = newPanel;
-        moderatorFrame.contentPanel.setBackground(new Color(255, 255, 255));
+
+        moderatorFrame.mainPanel.remove(moderatorFrame.scrollPane); // Uklanjamo prethodni contentPanel
+        moderatorFrame.contentPanel = newPanel; // Postavljamo novi contentPanel
+        // Postavljamo GridBagConstraints za JScrollPane
         GridBagConstraints c = new GridBagConstraints();
         c.gridx = 1;
         c.gridy = 0;
-        c.gridwidth = 1; // Širina 1 kolona
-        c.gridheight = 1; // Visina 1 red
+        c.gridwidth = 1;
+        c.gridheight = 1;
         c.fill = GridBagConstraints.BOTH;
-        c.weightx = 0.85; // 85% dodatnog prostora u širini
+        c.weightx = 0.85;
         c.weighty = 1;
-        moderatorFrame.contentPanel.setVisible(true);
-        moderatorFrame.mainPanel.add(moderatorFrame.contentPanel, c);
+        c.insets = new Insets(0, 0, 30, 0);
+
+        JScrollPane scrollPane = new JScrollPane(moderatorFrame.contentPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
+        // Dodajemo JScrollPane u mainPanel
+        moderatorFrame.scrollPane = scrollPane;
+        moderatorFrame.mainPanel.add(scrollPane, c);
+
+        // Ponovno validiramo i osvežavamo mainPanel
         moderatorFrame.mainPanel.revalidate();
         moderatorFrame.mainPanel.repaint();
     }

@@ -9,6 +9,7 @@ public class ModeratorFrame extends JFrame {
 
     public JPanel mainPanel;
     public JPanel contentPanel;
+    public JScrollPane scrollPane;
 
 
 
@@ -46,6 +47,7 @@ public class ModeratorFrame extends JFrame {
         mainPanel.add(toolBarPanel, c);
 
         contentPanel = new JPanel();
+
         contentPanel.setBackground(new Color(32, 38, 61));
         c.gridx = 1;
         c.gridy = 0;
@@ -55,7 +57,10 @@ public class ModeratorFrame extends JFrame {
         c.weightx = 0.85;
         c.weighty = 1;
         c.insets = new Insets(0, 0, 0, 0);
-        mainPanel.add(contentPanel, c);
+
+        scrollPane = new JScrollPane(contentPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        mainPanel.add(scrollPane, c);
 
         this.add(mainPanel);
     }
