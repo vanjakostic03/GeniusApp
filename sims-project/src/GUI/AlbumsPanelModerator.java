@@ -1,13 +1,18 @@
 package GUI;
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class AlbumsPanelModerator extends JPanel {
 
-    public AlbumsPanelModerator() {
+    //private Font customFontRegular;
+    //private Font customFontBold;
+    ToolBarPanelModerator parentPanel ;
+
+    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel) {
+        //loadCustomFonts();
+        this.parentPanel = parenPanel;
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -16,7 +21,7 @@ public class AlbumsPanelModerator extends JPanel {
         this.setBackground(new Color(32, 38, 61));
 
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(25, 5, 15, 15);
+        c.insets = new Insets(25, 5, 15, 10);
 
         // Search polje
         JTextField searchBar = createSearchBar();
@@ -34,12 +39,13 @@ public class AlbumsPanelModerator extends JPanel {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 int diameter = Math.min(getWidth(), getHeight());
-                g.setColor(Color.BLUE);
+                g.setColor(Color.white);
                 g.fillOval((getWidth() - diameter) / 2, (getHeight() - diameter) / 2, diameter, diameter);
+
             }
         };
-        circlePanel.setPreferredSize(new Dimension(30, 30));
-        circlePanel.setBackground(Color.WHITE);
+        circlePanel.setPreferredSize(new Dimension(55, 55));
+        circlePanel.setBackground(new Color(32, 38, 61));
         circlePanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         c.gridx = 4;
         c.gridy = 0; // Prvi red
@@ -53,14 +59,44 @@ public class AlbumsPanelModerator extends JPanel {
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setHorizontalAlignment(SwingConstants.LEFT);
         c.gridx = 0;
-        c.gridy = 1; // Drugi red
-        c.gridwidth = 4; // Zauzima 5 kolona
+        c.gridy = 1;
+        c.gridwidth = 4;
         c.weightx = 1.0;
         c.weighty = 0.0;
         c.fill = GridBagConstraints.HORIZONTAL;
         add(titleLabel, c);
 
-        int albumCount = 30; // Primer: prikazuje do 20 albuma
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/plus.png"));
+        Image scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon plusIcon = new ImageIcon(scaledImage);
+
+        JButton plusIconButton = new JButton(plusIcon);
+        plusIconButton.setOpaque(false);
+        plusIconButton.setContentAreaFilled(false);
+        plusIconButton.setBorderPainted(false);
+        plusIconButton.setFocusPainted(false);
+        plusIconButton.setBackground(new Color(240, 240, 240));
+        plusIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 4;
+        c.gridy = 1;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(plusIconButton,c);
+
+        plusIconButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+        });
+
+
+
+        int albumCount = 30; // Primer: prikazuje do 30 albuma
         int albumsPerRow = 4; // Broj albuma po redu
         int startingRow = 2;
         for (int i = 0; i < albumCount; i++) {
@@ -84,7 +120,7 @@ public class AlbumsPanelModerator extends JPanel {
         panel.setLayout(new GridBagLayout());
         panel.setBackground(new Color(32,38,61));
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(2, 2, 2, 2);
+        c.insets = new Insets(1, 1, 1, 1);
 
         // Cover albuma
         JLabel coverLabel = new JLabel(coverText){
@@ -106,7 +142,7 @@ public class AlbumsPanelModerator extends JPanel {
         };
         coverLabel.setBackground(new Color( 39,47,78));
         coverLabel.setPreferredSize(new Dimension(80, 160));
-        //coverLabel.setBorder(b);
+
         c.gridx = 0;
         c.gridy = 0; // Prvi red
         c.gridwidth = 1; // Zauzima 1 kolonu
@@ -128,11 +164,19 @@ public class AlbumsPanelModerator extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         panel.add(titleLabel, c);
 
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                AlbumPanel newPanel = new AlbumPanel();
+                parentPanel.setContentPanel(newPanel);
+            }
+        });
+
         return panel;
     }
 
     private JTextField createSearchBar() {
-        JTextField searchBar = new JTextField("Search albums"){
+        JTextField searchBar = new JTextField("      Search albums"){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -149,42 +193,36 @@ public class AlbumsPanelModerator extends JPanel {
                 setBorder(new RoundBorder());
             }
         };
-        searchBar.setFont(new Font("Dialog", Font.BOLD, 14));
+
+        searchBar.setFont(new Font("Dialog", Font.BOLD, 17));
         searchBar.setForeground(Color.LIGHT_GRAY);
         searchBar.setBackground(new Color(39, 47, 78));
         searchBar.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
-//        searchBar.setOpaque(false);
         searchBar.setBorder(new RoundBorder()); // Postavljamo zaobljeni okvir
 
-        // Kreiranje ikonice lupe
-        ImageIcon searchIcon = new ImageIcon("search_icon.png"); // Postavite putanju do vaše ikonice
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/search.png")); // Postavite putanju do vaše ikonice
 
-        // Kreiranje buttona za ikonicu lupe
-        JButton searchIconButton = new JButton(searchIcon);
-        searchIconButton.setBackground(new Color(240, 240, 240));
-        searchIconButton.setBorder(BorderFactory.createEmptyBorder());
-        searchBar.setLayout(new BorderLayout());
-        searchBar.add(searchIconButton, BorderLayout.WEST);
+        if (originalIcon.getImageLoadStatus() == MediaTracker.COMPLETE) {
+            // Promena veličine ikonice
+            Image scaledImage = originalIcon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+            ImageIcon searchIcon = new ImageIcon(scaledImage);
+
+            // Kreiranje buttona za ikonicu lupe
+            JButton searchIconButton = new JButton(searchIcon);
+            searchIconButton.setOpaque(false);
+            searchIconButton.setContentAreaFilled(false);
+            searchIconButton.setBorderPainted(false);
+            searchIconButton.setFocusPainted(false);
+            searchIconButton.setBackground(new Color(240, 240, 240));
+            searchIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+            searchBar.setLayout(new BorderLayout());
+            searchBar.add(searchIconButton, BorderLayout.WEST);
+        } else {
+            System.err.println("Ikonica nije učitana.");
+        }
 
         return searchBar;
-    }
-
-
-    private JButton createSearchButton() {
-        JButton searchButton = new JButton("<html><b>Search</b></html>");
-        searchButton.setForeground(Color.LIGHT_GRAY);
-        searchButton.setBackground(new Color(240, 240, 240));
-        searchButton.setBorder(BorderFactory.createEmptyBorder());
-        searchButton.setFocusPainted(false);
-        searchButton.setFont(new Font("Dialog", Font.PLAIN, 14));
-        searchButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Handle search action here
-                System.out.println("Search button clicked");
-            }
-        });
-        return searchButton;
     }
 
 }
