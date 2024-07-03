@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="nesto registracija i login">
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="Sredjiivanje po direktorijumima radi registracija i login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/UserControler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/UserModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/UserView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +101,7 @@
       <workItem from="1719822631574" duration="3116000" />
       <workItem from="1719925072024" duration="2646000" />
       <workItem from="1719930699693" duration="11019000" />
-      <workItem from="1720018902319" duration="8675000" />
+      <workItem from="1720018902319" duration="9352000" />
     </task>
     <task id="LOCAL-00001" summary="TopListType">
       <option name="closed" value="true" />
@@ -127,7 +119,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720028393901</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sredjiivanje po direktorijumima radi registracija i login">
+      <option name="closed" value="true" />
+      <created>1720035419846</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720035419846</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Sredjiivanje po direktorijumima radi registracija i login">
+      <option name="closed" value="true" />
+      <created>1720035444480</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720035444480</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +144,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TopListType" />
     <MESSAGE value="nesto registracija i login" />
-    <option name="LAST_COMMIT_MESSAGE" value="nesto registracija i login" />
+    <MESSAGE value="Sredjiivanje po direktorijumima radi registracija i login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sredjiivanje po direktorijumima radi registracija i login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
