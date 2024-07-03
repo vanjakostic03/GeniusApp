@@ -1,5 +1,7 @@
 package Models;
 
+import java.util.ArrayList;
+
 public class Account {
     private Person person;
     private String email;
@@ -43,5 +45,20 @@ public class Account {
 
     public void setPrivate(boolean aPrivate) {
         isPrivate = aPrivate;
+    }
+    public void block(){
+        this.isBlocked = true;
+    }
+    public void unBlock(){
+        this.isBlocked = false;
+    }
+    public void changePrivacy(){
+        this.isPrivate = !isPrivate;
+    }
+    public void sendNotification(Notification notification){
+        ArrayList<Notification> n;
+        n = this.person.getNotifications();
+        n.add(notification);
+        this.person.setNotifications(n);
     }
 }

@@ -1,6 +1,8 @@
 package Models;
 import Enums.Role;
 import Enums.Gender;
+
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Person {
@@ -12,6 +14,7 @@ public class Person {
     private String address;
     private Date dateOfBirth;
     private Gender gender;
+    private ArrayList<Notification> notifications;
 
     public Person(String id, String name, String lastName, Role role, String address, Date dateOfBirth, Gender gender) {
         this.id = id;
@@ -78,5 +81,15 @@ public class Person {
         this.gender = gender;
     }
 
+    public ArrayList<Notification> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(ArrayList<Notification> notifications) {
+        this.notifications = notifications;
+    }
+    public void followArtist(Artist artist){
+
+    }
 
 }

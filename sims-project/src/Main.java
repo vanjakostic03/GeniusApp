@@ -1,3 +1,4 @@
+import GUI.AdminFrame;
 import GUI.ModeratorFrame;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -16,6 +17,7 @@ public class Main {
             System.out.println("i = " + i);
         }
 
-        ModeratorFrame mf = new ModeratorFrame("nesto");
+        AdminFrame af = new AdminFrame("nesto");
+        //ModeratorFrame moderatorFrame = new ModeratorFrame("fd");
     }
 }
