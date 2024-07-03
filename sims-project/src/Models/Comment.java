@@ -8,13 +8,13 @@ public class Comment {
     private int grade;
     private boolean isApproved;
     private Date date;
-    private PublishWork publishWork;
+    private PublishedWork publishWork;
     private Person person;
 
     public Comment() {
     }
 
-    public Comment(String id, String text, int grade, boolean isApproved, Date date, PublishWork publishWork, Person person) {
+    public Comment(String id, String text, int grade, boolean isApproved, Date date, PublishedWork publishWork, Person person) {
         this.id = id;
         this.text = text;
         this.grade = grade;
@@ -64,11 +64,11 @@ public class Comment {
         this.date = date;
     }
 
-    public PublishWork getPublishWork() {
+    public PublishedWork getPublishWork() {
         return publishWork;
     }
 
-    public void setPublishWork(PublishWork publishWork) {
+    public void setPublishWork(PublishedWork publishWork) {
         this.publishWork = publishWork;
     }
 

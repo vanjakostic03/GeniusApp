@@ -1,0 +1,29 @@
+<account>
+    <email>john.doe@example.com</email>
+    <password>password123</password>
+    <isBlocked>false</isBlocked>
+    <isPrivate>true</isPrivate>
+    <notifications>
+        <notification>
+            <id>1</id>
+            <date>2024-07-03</date>
+            <text>Notification text 1</text>
+        </notification>
+        <notification>
+            <id>2</id>
+            <date>2024-07-03</date>
+            <text>Notification text 2</text>
+        </notification>
+    </notifications>
+    <person>
+        <id>1</id>
+        <name>John</name>
+        <lastName>Doe</lastName>
+        <role>RegisteredUser</role>
+        <address>123 Street</address>
+        <dateOfBirth>1990-05-15</dateOfBirth>
+        <gender>MALE</gender>
+        <followedArtists/>
+        <favorites/>
+    </person>
+</account>
