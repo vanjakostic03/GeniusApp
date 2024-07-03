@@ -2,8 +2,6 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -88,11 +86,11 @@ public class ToolBarPanelModerator extends JPanel {
         blockedUsers.addActionListener(e -> setContentPanel(new BlockedUsersPanelModerator(this)));
         optionsPanel.add(blockedUsers, c);
 
-        JButton reports = createStyledButton("Reports");
+        JButton home = createStyledButton("HOME");
         c.gridx = 0;
         c.gridy = 5;
-        //reports.addActionListener(e -> setContentPanel(new ReportsPanelModerator(this)));
-        optionsPanel.add(reports, c);
+        home.addActionListener(e -> setContentPanel(new HomePanel(this)));
+        optionsPanel.add(home, c);
 
         GridBagConstraints panelConstraints = new GridBagConstraints();
         panelConstraints.gridx = 0;
@@ -118,7 +116,7 @@ public class ToolBarPanelModerator extends JPanel {
         button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                button.setFont(button.getFont().deriveFont(Font.BOLD));
+                button.setFont(button.getFont().deriveFont(Font.ITALIC));
             }
 
             @Override

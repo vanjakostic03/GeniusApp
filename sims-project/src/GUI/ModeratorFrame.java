@@ -46,8 +46,8 @@ public class ModeratorFrame extends JFrame {
         c.insets = new Insets(0, 166, 0, 0);
         mainPanel.add(toolBarPanel, c);
 
-        contentPanel = new JPanel();
-
+        //contentPanel = new JPanel();
+        contentPanel = new HomePanel(toolBarPanel);
         contentPanel.setBackground(new Color(32, 38, 61));
         c.gridx = 1;
         c.gridy = 0;
