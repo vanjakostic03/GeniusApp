@@ -90,7 +90,8 @@ public class AlbumsPanelModerator extends JPanel {
         plusIconButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
+                AlbumForm albumForm = new AlbumForm();
+                albumForm.setVisible(true);
             }
         });
 

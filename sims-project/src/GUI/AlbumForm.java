@@ -8,14 +8,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SongForm extends JFrame {
+public class AlbumForm extends JFrame {
 
-    private AlbumForm albumFrame; //ako se poziva iz album forme
+    private JFrame parentFrame;
+    private DefaultListModel<String> songListModel;
+    private JList<String> songList;
 
 
-    public SongForm(AlbumForm albumFrame) {
-        this.albumFrame = albumFrame;
-        setTitle("Song Entry Form");
+    public AlbumForm() {
+        //parentFrame = parentFrame;
+        setTitle("Album Entry Form");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(600, 800);
         setLocationRelativeTo(null);
@@ -29,20 +31,15 @@ public class SongForm extends JFrame {
         formPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         formPanel.setLayout(new GridBagLayout());
 
-         JTextField titleField ;
-         JTextField coverField;
-         JTextArea lyricsField;
-         JTextArea descriptionField;
-         JComboBox<SingleArtist> composerBox;
-         JComboBox<SingleArtist> lyricistBox;
-         //JList<Genre> genreList;
+        JTextField titleField ;
+        JTextField coverField;
         String[] genresStrings = {"zanr1","zanr2"};
-         JList<String> genreList = new JList<String>(genresStrings);
-        //JList<Artist> artistList;
+        JList<String> genreList = new JList<String>(genresStrings);
         String[] artistsStrings = {"artist1","artist2"};
-         JList<String> artistList= new JList<String>(artistsStrings);
-         genreList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-         artistList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        JList<String> artistList= new JList<String>(artistsStrings);
+        genreList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        artistList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+
 
 
         GridBagConstraints c = new GridBagConstraints();
@@ -107,62 +104,35 @@ public class SongForm extends JFrame {
         c.gridx = 1;
         formPanel.add(artistScrollPane, c);
 
-
-        // Composer
+        // Songs
         c.gridx = 0;
         c.gridy = 4;
-        JLabel composerLabel = new JLabel("Composer: ");
-        composerLabel.setForeground(Color.WHITE);
-        composerLabel.setFont(new Font("Dialog", Font.BOLD, 16));
-        formPanel.add(composerLabel, c);
+        JLabel songsLabel = new JLabel("Songs: ");
+        songsLabel.setForeground(Color.WHITE);
+        songsLabel.setFont(new Font("Dialog", Font.BOLD, 16));
+        formPanel.add(songsLabel, c);
 
-        composerBox = new JComboBox<>();
+        songListModel = new DefaultListModel<>();
+        songList = new JList<>(songListModel);
+        JScrollPane songScrollPane = new JScrollPane(songList);
+        songScrollPane.setPreferredSize(new Dimension(200, 100));
         c.gridx = 1;
-        formPanel.add(composerBox, c);
+        formPanel.add(songScrollPane, c);
 
+        // Add Song Button
+        AlbumForm albumForm = this;
+        JButton addSongButton = new JButton("Add Song");
+        addSongButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SongForm songForm = new SongForm(albumForm);
+                songForm.setVisible(true);
+            }
+        });
+        c.gridx = 2;
+        c.gridy = 4;
+        formPanel.add(addSongButton, c);
 
-        // Lyricist
-        c.gridx = 0;
-        c.gridy = 5;
-        JLabel lyricistLabel = new JLabel("Lyricist: ");
-        lyricistLabel.setForeground(Color.WHITE);
-        lyricistLabel.setFont(new Font("Dialog", Font.BOLD, 16));
-        formPanel.add(lyricistLabel, c);
-
-        lyricistBox = new JComboBox<>();
-        c.gridx = 1;
-        formPanel.add(lyricistBox, c);
-
-
-        // Lyrics
-        c.gridx = 0;
-        c.gridy = 6;
-
-        JLabel lyricsLabel = new JLabel("Lyrics: ");
-        lyricsLabel.setForeground(Color.WHITE);
-        lyricsLabel.setFont(new Font("Dialog", Font.BOLD, 16));
-        formPanel.add(lyricsLabel, c);
-
-        lyricsField = new JTextArea(5, 20);
-        JScrollPane lyricsScrollPane = new JScrollPane(lyricsField);
-        c.gridx = 1;
-        c.fill = GridBagConstraints.BOTH;
-        formPanel.add(lyricsScrollPane, c);
-
-        // Description
-        c.gridx = 0;
-        c.gridy = 7;
-
-        JLabel descriptionLabel = new JLabel("Description: ");
-        descriptionLabel.setForeground(Color.WHITE);
-        descriptionLabel.setFont(new Font("Dialog", Font.BOLD, 16));
-        formPanel.add(descriptionLabel, c);
-
-        descriptionField = new JTextArea(5, 20);
-        JScrollPane descriptionScrollPane = new JScrollPane(descriptionField);
-        c.gridx = 1;
-        c.fill = GridBagConstraints.BOTH;
-        formPanel.add(descriptionScrollPane, c);
 
         // Submit Button
         JButton submitButton = new JButton("Submit");
@@ -171,10 +141,7 @@ public class SongForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String title = titleField.getText();
                 String cover = coverField.getText();
-                SingleArtist composer = (SingleArtist) composerBox.getSelectedItem();
-                SingleArtist lyricist = (SingleArtist) lyricistBox.getSelectedItem();
-                String lyrics = lyricsField.getText();
-                String description = descriptionField.getText();
+
 
                 String genres[] = new String[genreList.getSelectedValuesList().size()];
                 int i = 0;
@@ -195,22 +162,6 @@ public class SongForm extends JFrame {
                 System.out.println("Cover: " + cover);
                 System.out.println("Genres: " + genres);
                 System.out.println("Artists: " + artists);
-                System.out.println("Composer: " + composer);
-                System.out.println("Lyricist: " + lyricist);
-                System.out.println("Lyrics: " + lyrics);
-                System.out.println("Description: " + description);
-
-                if (albumFrame != null){
-                    albumFrame.addSong(title);
-                    int result = JOptionPane.showOptionDialog(null,
-                            "Do you want to delete song?",
-                            "song",
-                            JOptionPane.YES_NO_OPTION,
-                            JOptionPane.QUESTION_MESSAGE,
-                            null,
-                            new String[]{"Yes", "No"},
-                            "Yes");
-                }
                 setVisible(false);
                 dispose();
             }
@@ -223,6 +174,18 @@ public class SongForm extends JFrame {
         add(formPanel, BorderLayout.CENTER);
 
 
+    }
+
+    public void addSong(String song) {
+        songListModel.addElement(song);
+        int result = JOptionPane.showOptionDialog(null,
+                "Do you want to delete song?",
+                "song",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                new String[]{"Yes", "No"},
+                "Yes");
     }
 }
 
