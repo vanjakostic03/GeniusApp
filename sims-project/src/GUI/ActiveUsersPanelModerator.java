@@ -79,9 +79,6 @@ public class ActiveUsersPanelModerator extends JPanel {
             add(userPanel, c);
         }
 
-
-
-
     }
 
     private JPanel createActiveUserPanel(String coverText, String username) {
@@ -110,7 +107,6 @@ public class ActiveUsersPanelModerator extends JPanel {
         };
         coverLabel.setBackground(new Color( 39,47,78));
         coverLabel.setPreferredSize(new Dimension(80, 160));
-        //coverLabel.setBorder(b);
         c.gridx = 0;
         c.gridy = 0; // Prvi red
         c.gridwidth = 1; // Zauzima 1 kolonu
@@ -135,14 +131,14 @@ public class ActiveUsersPanelModerator extends JPanel {
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                int result = JOptionPane.showOptionDialog(null, // roditelj komponenta, null za centriranje
-                        "Do you want to block user?", // poruka koja se prikazuje
-                        "Blocking user", // naslov messagebox-a
-                        JOptionPane.YES_NO_OPTION, // tip messagebox-a (yes/no)
-                        JOptionPane.QUESTION_MESSAGE, // tip ikonice (pitanje)
-                        null, // koristi default ikonicu
-                        new String[]{"Yes", "No"}, // opcije koje se prikazuju
-                        "No"); // podrazumevana opcija
+                int result = JOptionPane.showOptionDialog(null,
+                        "Do you want to block user?",
+                        "Blocking user",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        new String[]{"Yes", "No"},
+                        "No");
 
             }
         });
@@ -200,24 +196,5 @@ public class ActiveUsersPanelModerator extends JPanel {
         return searchBar;
     }
 
-
-
-//    private void loadCustomFonts() {
-//        try {
-//            // Putanje do font fajlova u resursnom direktorijumu
-//            File fontFileRegular = new File(getClass().getClassLoader().getResource("fonts/Poppins-Regular.ttf").getFile());
-//            customFontRegular = Font.createFont(Font.TRUETYPE_FONT, fontFileRegular).deriveFont(24f);
-//
-//            File fontFileBold = new File(getClass().getClassLoader().getResource("fonts/Poppins-Bold.ttf").getFile());
-//            customFontBold = Font.createFont(Font.TRUETYPE_FONT, fontFileBold).deriveFont(24f);
-//
-//            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-//            ge.registerFont(customFontRegular);
-//            ge.registerFont(customFontBold);
-//        } catch (IOException | FontFormatException e) {
-//            e.printStackTrace();
-//            System.err.println("Font nije mogao biti učitan.");
-//        }
-//    }
 
 }

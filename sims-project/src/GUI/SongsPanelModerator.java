@@ -53,6 +53,35 @@ public class SongsPanelModerator extends JPanel {
         c.weightx = 0.0;
         add(circlePanel, c);
 
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/plus.png")); // Postavite putanju do vaše ikonice
+
+        Image scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon plusIcon = new ImageIcon(scaledImage);
+
+        JButton plusIconButton = new JButton(plusIcon);
+        plusIconButton.setOpaque(false);
+        plusIconButton.setContentAreaFilled(false);
+        plusIconButton.setBorderPainted(false);
+        plusIconButton.setFocusPainted(false);
+        plusIconButton.setBackground(new Color(240, 240, 240));
+        plusIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 4;
+        c.gridy = 1;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(plusIconButton,c);
+
+        plusIconButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+        });
+
 
         JLabel titleLabel = new JLabel("Songs");
         titleLabel.setFont(new Font("Dialog", Font.BOLD, 24));
@@ -60,7 +89,7 @@ public class SongsPanelModerator extends JPanel {
         titleLabel.setHorizontalAlignment(SwingConstants.LEFT);
         c.gridx = 0;
         c.gridy = 1; // Drugi red
-        c.gridwidth = 4; // Zauzima 5 kolona
+        c.gridwidth = 4; // Zauzima 4 kolona
         c.weightx = 1.0;
         c.weighty = 0.0;
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -112,7 +141,6 @@ public class SongsPanelModerator extends JPanel {
         };
         coverLabel.setBackground(new Color( 39,47,78));
         coverLabel.setPreferredSize(new Dimension(80, 160));
-        //coverLabel.setBorder(b);
         c.gridx = 0;
         c.gridy = 0; // Prvi red
         c.gridwidth = 1; // Zauzima 1 kolonu
@@ -207,7 +235,6 @@ public class SongsPanelModerator extends JPanel {
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Handle search action here
                 System.out.println("Search button clicked");
             }
         });

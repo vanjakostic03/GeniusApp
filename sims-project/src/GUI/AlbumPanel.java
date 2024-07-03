@@ -3,6 +3,8 @@ package GUI;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AlbumPanel extends JPanel {
     public AlbumPanel(){
@@ -45,6 +47,84 @@ public class AlbumPanel extends JPanel {
         c.weightx = 0.0;
         add(circlePanel, c);
 
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/minus.png")); // Postavite putanju do vaše ikonice
+
+        Image scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon minusIcon = new ImageIcon(scaledImage);
+
+        JButton minusIconButton = new JButton(minusIcon);
+        minusIconButton.setOpaque(false);
+        minusIconButton.setContentAreaFilled(false);
+        minusIconButton.setBorderPainted(false);
+        minusIconButton.setFocusPainted(false);
+        minusIconButton.setBackground(new Color(240, 240, 240));
+        minusIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 3;
+        c.gridy = 1;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(minusIconButton,c);
+
+        minusIconButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int result = JOptionPane.showOptionDialog(null,
+                        "Do you want to delete album?",
+                        "Album",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        new String[]{"Yes", "No"},
+                        "Yes");
+            }
+        });
+
+
+
+        originalIcon = new ImageIcon(getClass().getResource("/img/edit.png"));
+
+        scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon editIcon = new ImageIcon(scaledImage);
+
+        JButton editIconButton = new JButton(editIcon);
+        editIconButton.setOpaque(false);
+        editIconButton.setContentAreaFilled(false);
+        editIconButton.setBorderPainted(false);
+        editIconButton.setFocusPainted(false);
+        editIconButton.setBackground(new Color(240, 240, 240));
+        editIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 3;
+        c.gridy = 2;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(editIconButton,c);
+
+        editIconButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int result = JOptionPane.showOptionDialog(null,
+                        "Update?",
+                        "Album",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        new String[]{"Yes", "No"},
+                        "Yes");
+            }
+        });
+
+
+
         JLabel coverLabel = new JLabel("cover pesme"){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
@@ -64,10 +144,9 @@ public class AlbumPanel extends JPanel {
         };
         coverLabel.setBackground(new Color( 39,47,78));
         coverLabel.setPreferredSize(new Dimension(100, 160));
-        //coverLabel.setBorder(b);
         c.gridx = 0;
-        c.gridy = 1; // Prvi red
-        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.gridy = 1;
+        c.gridwidth = 1;
         c.gridheight = 3;
         c.weightx = 1.0;
         c.weighty = 0.5;
@@ -82,8 +161,8 @@ public class AlbumPanel extends JPanel {
         description.setLineWrap(true);
 
         c.gridx = 0;
-        c.gridy = 4; // Prvi red
-        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.gridy = 4;
+        c.gridwidth = 1;
         c.gridheight = 1;
         c.weightx = 1.0;
         c.weighty = 0.5;

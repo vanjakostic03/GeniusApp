@@ -123,8 +123,6 @@ public class HomePanel extends JPanel {
 
 
         JTextField reviewText = createReviewTextField();
-//        reviewText.setPreferredSize(new Dimension(300, 200));
-//        reviewText.setMaximumSize(new Dimension(300, 200));
         reviewText.setHorizontalAlignment(SwingConstants.LEFT);
         c.gridx = 0;
         c.gridy = 1;

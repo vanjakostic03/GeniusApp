@@ -110,7 +110,6 @@ public class BlockedUsersPanelModerator extends JPanel {
         };
         coverLabel.setBackground(new Color( 39,47,78));
         coverLabel.setPreferredSize(new Dimension(80, 160));
-        //coverLabel.setBorder(b);
         c.gridx = 0;
         c.gridy = 0; // Prvi red
         c.gridwidth = 1; // Zauzima 1 kolonu

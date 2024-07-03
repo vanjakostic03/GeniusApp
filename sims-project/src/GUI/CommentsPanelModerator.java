@@ -10,7 +10,7 @@ public class CommentsPanelModerator extends JPanel {
     ToolBarPanelModerator parentPanel ;
 
     public CommentsPanelModerator(ToolBarPanelModerator parenPanel) {
-        //loadCustomFonts();
+
         this.parentPanel = parenPanel;
         setLayout(new GridBagLayout());
         initCommentsPanel();
@@ -52,24 +52,24 @@ public class CommentsPanelModerator extends JPanel {
         c.weightx = 0.0;
         add(circlePanel, c);
 
-        // Naslov "Albums"
+        // Naslov "Comments to approve"
         JLabel titleLabel = new JLabel("Comments to approve");
         titleLabel.setFont(new Font("Dialog", Font.BOLD, 24));
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setHorizontalAlignment(SwingConstants.LEFT);
         c.gridx = 0;
         c.gridy = 1; // Drugi red
-        c.gridwidth = 4; // Zauzima 5 kolona
+        c.gridwidth = 4; // Zauzima 4 kolona
         c.weightx = 1.0;
         c.weighty = 0.0;
         c.fill = GridBagConstraints.HORIZONTAL;
         add(titleLabel, c);
 
-        int commentCount = 30; // Primer: prikazuje do 20 albuma
-        int commentsPerRow = 1; // Broj albuma po redu
+        int commentCount = 30;
+        int commentsPerRow = 1;
         int startingRow = 2;
         for (int i = 0; i < commentCount; i++) {
-            JPanel commentPanelPanel = createCommentPanel("Cover " + (i + 1), "Album " + (i + 1));
+            JPanel commentPanelPanel = createCommentPanel("Cover " + (i + 1), "Comment " + (i + 1));
             c.gridx = i % commentsPerRow; // Redni broj kolone u trenutnom redu
             c.gridy = startingRow + i / commentsPerRow; // Redni broj reda
             c.gridwidth = 4; // Zauzima 1 kolonu
@@ -81,7 +81,7 @@ public class CommentsPanelModerator extends JPanel {
 
     }
 
-    private JPanel createCommentPanel(String coverText, String albumTitle) {
+    private JPanel createCommentPanel(String coverText, String comment) {
         JPanel panel = new JPanel(){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {

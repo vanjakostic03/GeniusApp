@@ -59,14 +59,44 @@ public class AlbumsPanelModerator extends JPanel {
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setHorizontalAlignment(SwingConstants.LEFT);
         c.gridx = 0;
-        c.gridy = 1; // Drugi red
-        c.gridwidth = 4; // Zauzima 5 kolona
+        c.gridy = 1;
+        c.gridwidth = 4;
         c.weightx = 1.0;
         c.weighty = 0.0;
         c.fill = GridBagConstraints.HORIZONTAL;
         add(titleLabel, c);
 
-        int albumCount = 30; // Primer: prikazuje do 20 albuma
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/plus.png"));
+        Image scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon plusIcon = new ImageIcon(scaledImage);
+
+        JButton plusIconButton = new JButton(plusIcon);
+        plusIconButton.setOpaque(false);
+        plusIconButton.setContentAreaFilled(false);
+        plusIconButton.setBorderPainted(false);
+        plusIconButton.setFocusPainted(false);
+        plusIconButton.setBackground(new Color(240, 240, 240));
+        plusIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 4;
+        c.gridy = 1;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(plusIconButton,c);
+
+        plusIconButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+        });
+
+
+
+        int albumCount = 30; // Primer: prikazuje do 30 albuma
         int albumsPerRow = 4; // Broj albuma po redu
         int startingRow = 2;
         for (int i = 0; i < albumCount; i++) {
@@ -112,7 +142,7 @@ public class AlbumsPanelModerator extends JPanel {
         };
         coverLabel.setBackground(new Color( 39,47,78));
         coverLabel.setPreferredSize(new Dimension(80, 160));
-        //coverLabel.setBorder(b);
+
         c.gridx = 0;
         c.gridy = 0; // Prvi red
         c.gridwidth = 1; // Zauzima 1 kolonu
@@ -194,25 +224,5 @@ public class AlbumsPanelModerator extends JPanel {
 
         return searchBar;
     }
-
-
-
-//    private void loadCustomFonts() {
-//        try {
-//            // Putanje do font fajlova u resursnom direktorijumu
-//            File fontFileRegular = new File(getClass().getClassLoader().getResource("fonts/Poppins-Regular.ttf").getFile());
-//            customFontRegular = Font.createFont(Font.TRUETYPE_FONT, fontFileRegular).deriveFont(24f);
-//
-//            File fontFileBold = new File(getClass().getClassLoader().getResource("fonts/Poppins-Bold.ttf").getFile());
-//            customFontBold = Font.createFont(Font.TRUETYPE_FONT, fontFileBold).deriveFont(24f);
-//
-//            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-//            ge.registerFont(customFontRegular);
-//            ge.registerFont(customFontBold);
-//        } catch (IOException | FontFormatException e) {
-//            e.printStackTrace();
-//            System.err.println("Font nije mogao biti učitan.");
-//        }
-//    }
 
 }
