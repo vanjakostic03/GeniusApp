@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="add new classes">
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="nesto registracija i login">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/xstream_1_4_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/Data/accounts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Controler/UserControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Observer/ChangePerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Observer/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/LoginView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/UserView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/New folder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/New folder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/TopList.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/TopList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -27,23 +40,23 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="e320216ec1bbc1e180e576a6e284eb4c122b6099" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mionalukic"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mionalukic&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vanjakostic03/GeniusApp.git",
-    "accountId": "dacab240-2996-4d55-b407-4647f3673c72"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vanjakostic03/GeniusApp.git&quot;,
+    &quot;accountId&quot;: &quot;dacab240-2996-4d55-b407-4647f3673c72&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -58,18 +71,29 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.MusicApp.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "127",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "171",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "miona",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Miona/Desktop/fakultet/2. semsstar/Oop/projekat_sv_17_2022/KozmetckiSalon",
+    "last_opened_file_path": "C:/Users/Miona/Downloads/xpp3_min-1.1.4c.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,10 +116,38 @@
       <workItem from="1719759395550" duration="2443000" />
       <workItem from="1719779092781" duration="879000" />
       <workItem from="1719822631574" duration="3116000" />
+      <workItem from="1719925072024" duration="2646000" />
+      <workItem from="1719930699693" duration="11019000" />
+      <workItem from="1720018902319" duration="3817000" />
     </task>
+    <task id="LOCAL-00001" summary="TopListType">
+      <option name="closed" value="true" />
+      <created>1719851657748</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719851657748</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TopListType" />
+    <MESSAGE value="nesto registracija i login" />
+    <option name="LAST_COMMIT_MESSAGE" value="nesto registracija i login" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sims-project/src/Models/Person.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

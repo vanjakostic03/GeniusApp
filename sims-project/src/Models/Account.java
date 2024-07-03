@@ -3,6 +3,7 @@ package Models;
 public class Account {
     private Person person;
     private String email;
+    private String password;
     private  boolean isBlocked;
     private boolean isPrivate;
 
@@ -11,6 +12,11 @@ public class Account {
         this.email = email;
         this.isBlocked = isBlocked;
         this.isPrivate = isPrivate;
+    }
+
+    public Account(String emali, String password){
+        this.email = emali;
+        this.password = password;
     }
 
     public Person getPerson() {
@@ -45,5 +51,11 @@ public class Account {
         isPrivate = aPrivate;
     }
 
+    public void setPassword (String p) {password=p;}
 
+    public String getPassword() {return password;}
+
+    public boolean changePassword(String p) {
+        return true; //TODO
+    }
 }
