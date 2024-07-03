@@ -1,5 +1,7 @@
 package Models;
 
+import Enums.TopListType;
+
 import java.util.Date;
 
 public class TopList {
@@ -7,7 +9,7 @@ public class TopList {
     private String description;
     private String title;
     private Date year;
-    //topListTyple
+    private TopListType topListType; //dodati get i set metode i u konstruktore
 
     public TopList() {
     }
