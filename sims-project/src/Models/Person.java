@@ -14,11 +14,10 @@ public class Person {
     private String address;
     private Date dateOfBirth;
     private Gender gender;
-    private ArrayList<Notification> notifications;
+
 
     public Person(String id, String name, String lastName, Role role, String address, Date dateOfBirth, Gender gender) {
 
-    public Person(){}
 
         this.id = id;
         this.name = name;
@@ -84,20 +83,20 @@ public class Person {
         this.gender = gender;
     }
 
-    public ArrayList<Notification> getNotifications() {
-        return notifications;
-    }
-
-    public void setNotifications(ArrayList<Notification> notifications) {
-        this.notifications = notifications;
-    }
+//    public ArrayList<Notification> getNotifications() {
+//        return notifications;
+//    }
+//
+//    public void setNotifications(ArrayList<Notification> notifications) {
+//        this.notifications = notifications;
+//    }
     public void followArtist(Artist artist){
 
     }
 
-    public void setPlayLists(List<PlayList> playLists) {
-        this.playLists = playLists;
-    }
+    //public void setPlayLists(List<PlayList> playLists) {
+//        this.playLists = playLists;
+//    }
 
 
     public void updatePerson( String name, String lastName, Role role, String address, Date dateOfBirth, Gender gender) {

@@ -1,12 +1,13 @@
 package Controler;
 
+import Models.Data.AccountService;
 import Models.Person;
 import Enums.Role;
 import Enums.Gender;
-import View.LoginView;
-import View.RegisterView;
+import View.User.LoginView;
+import View.User.RegisterView;
 import Models.Account;
-import View.UserView;
+import View.User.UserView;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -15,11 +16,11 @@ import java.util.Date;
 
 public class RegisterController {
     private RegisterView view;
-    private Account model;
+    private AccountService accountService;
 
-    public RegisterController(RegisterView view, Account model) {
+    public RegisterController(RegisterView view, AccountService accountService) {
         this.view = view;
-        this.model = model;
+        this.accountService = accountService;
 
         this.view.addRegisterListener(new RegisterListener());
         this.view.addLoginListener(new LoginListener());
@@ -34,20 +35,19 @@ public class RegisterController {
             String address = view.getAddress();
             Gender gender = Gender.valueOf(view.getGender().toUpperCase());
 
-            if (!model.usernameExists(username)) {
+            if (!accountService.usernameExists(username)) {
                 Account account = new Account(username, password);
                 Person person = new Person(
-                        model.getFreeID(),
+                        accountService.getFreeID(),
                         firstName,
                         lastName,
                         Role.REGISTERED_USER,
                         address,
                         new Date(),
-                        gender,
-                        account
+                        gender
                 );
                 account.setPerson(person);
-                model.addAccount(account);
+                accountService.addAccount(account);
 
                 JOptionPane.showMessageDialog(view, "Registration Successful!");
                 view.dispose();
@@ -64,7 +64,7 @@ public class RegisterController {
         public void actionPerformed(ActionEvent e) {
             view.dispose();
             LoginView loginView = new LoginView();
-            LoginController loginController = new LoginController(model,loginView);
+            LoginController loginController = new LoginController(accountService,loginView);
             loginView.setVisible(true);
         }
     }

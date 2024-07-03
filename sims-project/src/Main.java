@@ -1,13 +1,8 @@
 
-import GUI.AdminFrame;
-import GUI.ModeratorFrame;
 import Controler.RegisterController;
-import Models.Account;
-import View.RegisterView;
-import Serialization.Serialization;
-import util.Setup;
-
-import java.io.IOException;
+import Models.Data.AccountService;
+import View.Moderator.ModeratorFrame;
+import View.User.RegisterView;
 
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -15,9 +10,9 @@ import java.io.IOException;
 // Main.java
 public class Main {
     public static void main(String[] args) {
-        //Account model = new Account();
-        //RegisterView registerView = new RegisterView();
-        // registerController = new RegisterController(registerView, model);
+        AccountService service = new AccountService();
+        RegisterView registerView = new RegisterView();
+        RegisterController registerController = new RegisterController(registerView, service);
 
         //registerView.setVisible(true);
 

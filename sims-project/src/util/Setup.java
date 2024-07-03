@@ -1,48 +1,7 @@
 package util;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
 
-import Enums.Gender;
-import Enums.Role;
-import Enums.TopListType;
-import Enums.TypeOfWork;
-import Models.Account;
-import Models.Admin;
-import Models.Advertisment;
-import Models.Album;
-import Models.Artist;
-import Models.ArtistVoting;
-import Models.Bend;
-import Models.Comment;
-import Models.Event;
-import Models.GeniusApp;
-import Models.Genre;
-import Models.Membership;
-import Models.Moderator;
-import Models.Notification;
-import Models.Person;
-import Models.PlayList;
-import Models.PublishedWork;
-import Models.PublishedWorkVoting;
-import Models.RecordLabel;
-import Models.Review;
-import Models.SingleArtist;
-import Models.Song;
-import Models.TopAlbums;
-import Models.TopArtists;
-import Models.TopList;
-import Models.TopSongs;
-import Models.Data.AccountsList;
-import Models.Data.ArtistList;
-import Models.Data.PublishedWorkList;
-import Serialization.Serialization;
 
 public class Setup {
 
