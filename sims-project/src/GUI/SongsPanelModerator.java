@@ -78,7 +78,8 @@ public class SongsPanelModerator extends JPanel {
         plusIconButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
+                SongForm songForm = new SongForm(null);
+                songForm.setVisible(true);
             }
         });
 

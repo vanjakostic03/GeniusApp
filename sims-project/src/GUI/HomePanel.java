@@ -60,24 +60,25 @@ public class HomePanel extends JPanel {
         add(circlePanel, c);
 
 
-        JPanel reviewPanel = createReviewPanel();
+
+        JPanel reportPanel = createReportPanel();
         c.gridx = 0;
         c.gridy = 1;
         c.gridwidth = 2;
         c.weightx = 1.0;
         c.weighty = 1.0;
         c.fill = GridBagConstraints.BOTH;
-        add(reviewPanel, c);
+        add(reportPanel, c);
 
-        JPanel reportPanel = createReportPanel();
+        JPanel emptyPanel = new JPanel();
+        emptyPanel.setBackground(new Color(32, 38, 61));
         c.gridx = 0;
         c.gridy = 2;
         c.gridwidth = 2;
-        c.weightx = 1.0;
-        c.weighty = 1.0;
-        c.fill = GridBagConstraints.BOTH;
-        add(reportPanel, c);
-
+        c.weightx = 0.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.VERTICAL;
+        add(emptyPanel, c);
 
     }
 

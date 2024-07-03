@@ -125,6 +125,38 @@ public class SongPanel extends JPanel {
             }
         });
 
+        originalIcon = new ImageIcon(getClass().getResource("/img/review.png"));
+
+        scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon reviewIcon = new ImageIcon(scaledImage);
+
+        JButton reviewIconButton = new JButton(reviewIcon);
+        reviewIconButton.setOpaque(false);
+        reviewIconButton.setContentAreaFilled(false);
+        reviewIconButton.setBorderPainted(false);
+        reviewIconButton.setFocusPainted(false);
+        reviewIconButton.setBackground(new Color(240, 240, 240));
+        reviewIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 3;
+        c.gridy = 3;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(reviewIconButton,c);
+
+        reviewIconButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ReviewForm reviewForm = new ReviewForm();
+                reviewForm.setVisible(true);
+            }
+        });
+
+
         JLabel coverLabel = new JLabel("cover pesme"){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
