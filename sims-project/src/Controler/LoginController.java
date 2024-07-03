@@ -5,17 +5,18 @@ package Controler;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import View.LoginView;
+import Models.Data.AccountService;
+import View.User.LoginView;
 import Models.Account;
 
 import javax.swing.*;
 
 public class LoginController {
-    private Account model;
+    private AccountService accountService;
     private LoginView view;
 
-    public LoginController(Account model, LoginView view) {
-        this.model = model;
+    public LoginController(AccountService accountService, LoginView view) {
+        this.accountService = accountService;
         this.view = view;
 
         view.addLoginListener(new LoginListener());
@@ -27,7 +28,7 @@ public class LoginController {
             String username = view.getUsername();
             String password = view.getPassword();
 
-            Account account = model.findAccount(username, password);
+            Account account = accountService.findAccount(username, password);
             if (account != null) {
                 JOptionPane.showMessageDialog(view, "Login successful!");
             } else {
