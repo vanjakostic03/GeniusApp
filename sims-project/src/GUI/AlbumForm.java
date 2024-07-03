@@ -178,14 +178,7 @@ public class AlbumForm extends JFrame {
 
     public void addSong(String song) {
         songListModel.addElement(song);
-        int result = JOptionPane.showOptionDialog(null,
-                "Do you want to delete song?",
-                "song",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                new String[]{"Yes", "No"},
-                "Yes");
+
     }
 }
 

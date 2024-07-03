@@ -202,14 +202,7 @@ public class SongForm extends JFrame {
 
                 if (albumFrame != null){
                     albumFrame.addSong(title);
-                    int result = JOptionPane.showOptionDialog(null,
-                            "Do you want to delete song?",
-                            "song",
-                            JOptionPane.YES_NO_OPTION,
-                            JOptionPane.QUESTION_MESSAGE,
-                            null,
-                            new String[]{"Yes", "No"},
-                            "Yes");
+
                 }
                 setVisible(false);
                 dispose();
