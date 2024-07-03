@@ -6,7 +6,6 @@ public class Notification {
     private String id;
     private Date date;
     private String message;
-    private Account account;
 
     public Notification(String id, Date date, String message) {
         this.id = id;

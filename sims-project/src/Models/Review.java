@@ -9,13 +9,13 @@ public class Review {
     private boolean isApproved;
     private Date date;
     // da li moze ovako posto je kardinalitet 1
-    private PublishWork publishWork;
+    private PublishedWork publishWork;
     private Moderator moderator;
 
     public Review() {
     }
 
-    public Review(String id, String description, int grade, boolean isApproved, Date date, PublishWork publishWork, Moderator moderator) {
+    public Review(String id, String description, int grade, boolean isApproved, Date date, PublishedWork publishWork, Moderator moderator) {
         this.id = id;
         this.description = description;
         this.grade = grade;
@@ -65,11 +65,11 @@ public class Review {
         this.date = date;
     }
 
-    public PublishWork getPublishWork() {
+    public PublishedWork getPublishWork() {
         return publishWork;
     }
 
-    public void setPublishWork(PublishWork publishWork) {
+    public void setPublishWork(PublishedWork publishWork) {
         this.publishWork = publishWork;
     }
 
