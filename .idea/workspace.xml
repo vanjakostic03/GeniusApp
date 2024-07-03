@@ -5,23 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="nesto registracija i login">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/xstream_1_4_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/Data/accounts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Controler/UserControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Observer/ChangePerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/Observer/Publisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/LoginView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/UserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/nesto/UserView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/New folder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/New folder.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/UserControler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/UserModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/UserView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +70,6 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "127",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "171",
@@ -118,7 +109,7 @@
       <workItem from="1719822631574" duration="3116000" />
       <workItem from="1719925072024" duration="2646000" />
       <workItem from="1719930699693" duration="11019000" />
-      <workItem from="1720018902319" duration="3817000" />
+      <workItem from="1720018902319" duration="8675000" />
     </task>
     <task id="LOCAL-00001" summary="TopListType">
       <option name="closed" value="true" />
@@ -128,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719851657748</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="nesto registracija i login">
+      <option name="closed" value="true" />
+      <created>1720028393901</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720028393901</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
