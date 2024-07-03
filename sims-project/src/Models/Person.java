@@ -16,6 +16,8 @@ public class Person {
     private Account account;
     private List<PlayList> playLists;
 
+
+    public Person(){}
     public Person(String id, String name, String lastName, Role role, String address, Date dateOfBirth, Gender gender, Account account) {
         this.id = id;
         this.name = name;
@@ -97,4 +99,18 @@ public class Person {
     public void setPlayLists(List<PlayList> playLists) {
         this.playLists = playLists;
     }
+
+
+    public void updatePerson( String name, String lastName, Role role, String address, Date dateOfBirth, Gender gender, Account account) {
+        this.name = name;
+        this.lastName = lastName;
+        this.role = role;
+        this.address = address;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.account = account;
+    }
+
+
+
 }
