@@ -1,18 +1,20 @@
-package nesto;
+package Controler;
 
 
 // LoginController.java
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import View.LoginView;
 import Models.Account;
 
 import javax.swing.*;
 
 public class LoginController {
-    private UserModel model;
+    private Account model;
     private LoginView view;
 
-    public LoginController(UserModel model, LoginView view) {
+    public LoginController(Account model, LoginView view) {
         this.model = model;
         this.view = view;
 

@@ -1,9 +1,12 @@
-package nesto;
+package Controler;
 
-import Models.Account;
 import Models.Person;
 import Enums.Role;
 import Enums.Gender;
+import View.LoginView;
+import View.RegisterView;
+import Models.Account;
+import View.UserView;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,9 +15,9 @@ import java.util.Date;
 
 public class RegisterController {
     private RegisterView view;
-    private UserModel model;
+    private Account model;
 
-    public RegisterController(RegisterView view, UserModel model) {
+    public RegisterController(RegisterView view, Account model) {
         this.view = view;
         this.model = model;
 
@@ -34,7 +37,7 @@ public class RegisterController {
             if (!model.usernameExists(username)) {
                 Account account = new Account(username, password);
                 Person person = new Person(
-                        java.util.UUID.randomUUID().toString(),
+                        model.getFreeID(),
                         firstName,
                         lastName,
                         Role.REGISTERED_USER,
@@ -65,4 +68,6 @@ public class RegisterController {
             loginView.setVisible(true);
         }
     }
+
+
 }

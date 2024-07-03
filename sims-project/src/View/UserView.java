@@ -1,4 +1,4 @@
-package nesto;
+package View;
 
 import javax.swing.*;
 

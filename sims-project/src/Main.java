@@ -1,12 +1,13 @@
-import nesto.*;
+import Controler.RegisterController;
+import Models.Account;
+import View.RegisterView;
 
-import javax.swing.*;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 // Main.java
 public class Main {
     public static void main(String[] args) {
-        UserModel model = new UserModel();
+        Account model = new Account();
         RegisterView registerView = new RegisterView();
         RegisterController registerController = new RegisterController(registerView, model);
 
