@@ -1,5 +1,8 @@
 package View.Moderator;
 
+import Enums.TypeOfArtist;
+import Models.*;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -7,7 +10,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AlbumPanel extends JPanel {
-    public AlbumPanel(){
+    private Album album;
+
+    public AlbumPanel(Album album){
+        this.album = album;
         setLayout(new GridBagLayout());
         initAlbumPanel();
     }
@@ -156,7 +162,13 @@ public class AlbumPanel extends JPanel {
             }
         });
 
-        JLabel coverLabel = new JLabel("cover pesme"){
+        ImageIcon icon = new ImageIcon(getClass().getResource(album.getCover()));
+        Image image = icon.getImage();
+
+        Image scaledcoverImage = image.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(scaledcoverImage);
+
+        JLabel coverLabel = new JLabel(scaledIcon){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -202,7 +214,7 @@ public class AlbumPanel extends JPanel {
 
 
 
-        JTextArea title= new JTextArea("Title");
+        JTextArea title= new JTextArea(album.getTitle());
         title.setBackground(new Color(32, 38, 61));
         title.setFont(new Font("Dialog", Font.BOLD, 55));
         title.setForeground(Color.WHITE);
@@ -217,6 +229,20 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(title, c);
 
+//        String artists ="";
+//        if(album.getArtists()!=null){
+//            for(Artist a: album.getArtists()) {
+//                if(a.getTypeOfArtist() == TypeOfArtist.BAND){
+//                    Bend b = (Bend)a;
+//                    artists+= b.getName() + "\n";
+//                }else{
+//                    SingleArtist sa = (SingleArtist) a;
+//                    artists+= sa.getName() + "\n";
+//                }
+//            }
+//        }
+//
+//        JTextArea artist= new JTextArea(artists);
         JTextArea artist= new JTextArea("Artist name");
         artist.setBackground(new Color(32, 38, 61));
         artist.setFont(new Font("Dialog", Font.PLAIN, 30));
@@ -232,7 +258,11 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(artist, c);
 
-        JTextArea views= new JTextArea("73984834");
+        int numOfViews = 0;
+        for(Song song: album.getSongs()){
+            numOfViews+=song.getViews();
+        }
+        JTextArea views= new JTextArea(String.valueOf(numOfViews));
         views.setBackground(new Color(32, 38, 61));
         views.setFont(new Font("Dialog", Font.PLAIN, 30));
         views.setForeground(Color.WHITE);
@@ -247,22 +277,28 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(views, c);
 
-        JTextArea releaseDate= new JTextArea("12.12.2012.");
-        releaseDate.setBackground(new Color(32, 38, 61));
-        releaseDate.setFont(new Font("Dialog", Font.PLAIN, 30));
-        releaseDate.setForeground(Color.WHITE);
-        releaseDate.setLineWrap(true);
+//        JTextArea releaseDate= new JTextArea(String.valueOf(album.get()));
+//        releaseDate.setBackground(new Color(32, 38, 61));
+//        releaseDate.setFont(new Font("Dialog", Font.PLAIN, 30));
+//        releaseDate.setForeground(Color.WHITE);
+//        releaseDate.setLineWrap(true);
 
-        c.gridx = 2;
-        c.gridy = 2;
-        c.gridwidth = 1; // Zauzima 1 kolonu
-        c.gridheight = 1;
-        c.weightx = 1.0;
-        c.weighty = 0.5;
-        c.fill = GridBagConstraints.BOTH;
-        add(releaseDate, c);
+//        c.gridx = 2;
+//        c.gridy = 2;
+//        c.gridwidth = 1; // Zauzima 1 kolonu
+//        c.gridheight = 1;
+//        c.weightx = 1.0;
+//        c.weighty = 0.5;
+//        c.fill = GridBagConstraints.BOTH;
+//        add(releaseDate, c);
 
-        JTextArea songs = new JTextArea("\n\npesma\n pesma\n pesma \npesma\n pesma\n qpesma \n...\n"){
+        String songsString = "\n";
+        int i = 1;
+        for(Song song: album.getSongs()){
+            songsString+=i+". "+ song.getTitle()+"\n";
+            i++;
+        }
+        JTextArea songs = new JTextArea(songsString){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
