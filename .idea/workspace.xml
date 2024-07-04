@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="gui user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/ArtistsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/ArtistsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/RegisterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/RegisterView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +134,7 @@
       <workItem from="1720044044151" duration="119000" />
       <workItem from="1720069733400" duration="81000" />
       <workItem from="1720069850273" duration="290000" />
-      <workItem from="1720070183943" duration="24736000" />
+      <workItem from="1720070183943" duration="26525000" />
     </task>
     <task id="LOCAL-00001" summary="TopListType">
       <option name="closed" value="true" />
@@ -192,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720084190857</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="gui user">
+      <option name="closed" value="true" />
+      <created>1720110796432</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720110796432</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,49 +1,46 @@
 package View.User;
 
-import Models.Album;
-import Models.Artist;
 import Models.PublishedWork;
 import Models.SingleArtist;
 import View.Moderator.RoundBorder;
-import View.User.ToolBarPanelUser;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class UserView extends JPanel {
 
-    ToolBarPanelUser parentPanel;
+    private ToolBarPanelUser parentPanel;
 
-    ArrayList<PublishedWork> albums=new ArrayList<PublishedWork>();
-    ArrayList<SingleArtist> artists=new ArrayList<SingleArtist>();
-
+    private ArrayList<PublishedWork> albums;
+    private ArrayList<SingleArtist> artists;
 
     public UserView(ToolBarPanelUser parentPanel, ArrayList<SingleArtist> singleArtists, ArrayList<PublishedWork> albums) {
         this.parentPanel = parentPanel;
-        setLayout(new GridBagLayout());
-        this.albums=albums;
-        this.artists=singleArtists;
+        this.albums = albums;
+        this.artists = singleArtists;
         initHomePanel();
     }
 
     public void initHomePanel() {
-        this.setBackground(new Color(32, 38, 61));
+        setBackground(new Color(32, 38, 61));
+        setLayout(new GridBagLayout());
 
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(25, 5, 15, 10);
-        // Search polje
-        JTextField searchBar = createSearchBar();
         c.gridx = 0;
-        c.gridy = 0; // Prvi red
-        c.gridwidth = 4; // Zauzima 4 kolone
+        c.gridy = 0;
+        c.gridwidth = 4;
         c.weightx = 1.0;
         c.weighty = 0.5;
         c.fill = GridBagConstraints.HORIZONTAL;
+
+        // Search polje
+        JTextField searchBar = createSearchBar();
         add(searchBar, c);
 
         // Naslov "EXPLORE"
@@ -51,48 +48,29 @@ public class UserView extends JPanel {
         explore.setFont(new Font("Dialog", Font.BOLD, 32));
         explore.setForeground(Color.WHITE);
         explore.setHorizontalAlignment(SwingConstants.LEFT);
-        c.gridx = 0;
-        c.gridy = 0;
+        c.gridy++;
         c.gridwidth = 3;
         c.weightx = 1.0;
         c.weighty = 0.0;
         c.fill = GridBagConstraints.HORIZONTAL;
         add(explore, c);
 
-        // Panel za Zanrove
-        JPanel genresPanel = createCategoryPanel("Genres", "genre_image.jpg", new String[]{"Pop", "Rock", "Hip-Hop","trala la"});
-        c.gridx = 0;
-        c.gridy = 1;
+        // Panel za Žanrove
+        JPanel genresPanel = createCategoryPanel("Genres", new String[]{"Pop", "Rock", "Hip-Hop", "Electronic"});
+        c.gridy++;
         c.gridwidth = 4;
         c.weightx = 0.5;
         c.weighty = 1.0;
         c.fill = GridBagConstraints.BOTH;
         add(genresPanel, c);
 
-        PublishedWork album1=null;
-        PublishedWork album2=null;
-        PublishedWork album3=null;
-        System.out.println("velicina albuma");
-        System.out.println(albums.size());
-        if(albums.size()>=1){
-             album1=albums.get(0);
-             album2=null;
-             album3=null;
-
-        }else if(albums.size()>=2){
-             album1=albums.get(0);
-             album2=albums.get(1);
-             album3=null;
-        }else if(albums.size()>=3){
-             album1=albums.get(0);
-             album2=albums.get(1);
-             album3=albums.get(2);
-        }
-
         // Panel za Pesme
-        JPanel songsPanel = createCategoryPanelSongs("Popular songs",  new PublishedWork[]{album1, album2, album3});
+        PublishedWork album1 = (albums.size() >= 1) ? albums.get(0) : null;
+        PublishedWork album2 = (albums.size() >= 2) ? albums.get(1) : null;
+        PublishedWork album3 = (albums.size() >= 3) ? albums.get(2) : null;
+        JPanel songsPanel = createCategoryPanelSongs("Popular songs", new PublishedWork[]{album1, album2, album3});
         c.gridx = 1;
-        c.gridy = 2;
+        c.gridy++;
         c.gridwidth = 1;
         c.weightx = 0.5;
         c.weighty = 1.0;
@@ -100,7 +78,7 @@ public class UserView extends JPanel {
         add(songsPanel, c);
 
         // Panel za Popularne Izvođače
-        JPanel popularArtistsPanel = createCategoryPanel("Popular Artists", "artist_image.jpg", new String[]{"Artist 1"});
+        JPanel popularArtistsPanel = createCategoryPanelArtist("Popular Artists", artists.getFirst());
         c.gridx = 2;
         c.gridy = 2;
         c.gridwidth = 1;
@@ -110,40 +88,55 @@ public class UserView extends JPanel {
         add(popularArtistsPanel, c);
     }
 
-    private JPanel createCategoryPanel(String categoryTitle, String imagePath, String[] items) {
+    private JPanel createCategoryPanelArtist(String categoryTitle, SingleArtist artist) {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(new Color(32, 38, 61));
         panel.setPreferredSize(new Dimension(250, 150));
         panel.setMaximumSize(new Dimension(250, 150));
         panel.setMinimumSize(new Dimension(250, 150));
 
-        // Učitavanje slike za kategoriju
-        //BufferedImage image = loadImage(imagePath);
-       // if (image != null) {
-        //    JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(image, 100, 100)));
-         //   imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        //    panel.add(imageLabel, BorderLayout.CENTER);
-        //}
+        // Učitavanje slike izvođača
+        ImageIcon artistImage = loadImage(artist.getPicture());
+        if (artistImage != null) {
+            JLabel imageLabel = new JLabel(artistImage);
+            imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+            panel.add(imageLabel, BorderLayout.CENTER);
+        }
+
+        // Naziv izvođača
+        JLabel nameLabel = new JLabel(artist.getName());
+        nameLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
+        nameLabel.setForeground(Color.white);
+        nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
+        nameLabel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
+        panel.add(nameLabel, BorderLayout.SOUTH);
+
+        return panel;
+    }
+
+    private JPanel createCategoryPanel(String categoryTitle, String[] genres) {
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBackground(new Color(32, 38, 61));
+        panel.setPreferredSize(new Dimension(250, 150));
+        panel.setMaximumSize(new Dimension(250, 150));
+        panel.setMinimumSize(new Dimension(250, 150));
 
         // Naslov kategorije
-
         JLabel titleLabel = new JLabel(categoryTitle);
         titleLabel.setFont(new Font("Dialog", Font.BOLD, 20));
         titleLabel.setForeground(Color.white);
         titleLabel.setHorizontalAlignment(SwingConstants.LEFT);
-        //titleLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        titleLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         panel.add(titleLabel, BorderLayout.NORTH);
 
         // Panel za prikaz stavki
-        JPanel itemsPanel = new JPanel(new GridLayout(1, 4, 10, 10));
+        JPanel itemsPanel = new JPanel(new GridLayout(1, genres.length, 10, 10));
         itemsPanel.setBackground(new Color(32, 38, 61));
         itemsPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        for (String item : items) {
-            if(item!=null) {
-                JPanel itemPanel = createItemPanel(item);
-                itemsPanel.add(itemPanel);
-            }
+        for (String genre : genres) {
+            JPanel itemPanel = createItemPanel(genre);
+            itemsPanel.add(itemPanel);
         }
 
         panel.add(itemsPanel, BorderLayout.SOUTH);
@@ -151,26 +144,58 @@ public class UserView extends JPanel {
         return panel;
     }
 
-
-    private JPanel createItemPanel(String itemName) {
+    private JPanel createItemPanel(String genreName) {
         JPanel itemPanel = new JPanel(new BorderLayout());
         itemPanel.setBackground(new Color(39, 47, 78));
         itemPanel.setBorder(new RoundBorder());
-        itemPanel.setPreferredSize(new Dimension(50, 80)); // Podešavanje veličine kvadrata
+        itemPanel.setPreferredSize(new Dimension(200, 100)); // Podešavanje veličine kvadrata
 
-        // Učitavanje slike za stavku (ovde se može implementirati funkcija za učitavanje slike)
-        JLabel imageLabel = new JLabel(new ImageIcon("putanja_do_slike"));
-        imageLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
-        itemPanel.add(imageLabel, BorderLayout.CENTER);
+        // Učitavanje slike za žanr
+        ImageIcon genreImage = loadImageForGenre(genreName);
+        if (genreImage != null) {
+            JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(genreImage.getImage(), 150, 100)));
+            imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+            itemPanel.add(imageLabel, BorderLayout.CENTER);
+        }
 
-        // Naziv stavke
-        JLabel nameLabel = new JLabel(itemName);
-        nameLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
+        // Naziv žanra
+        JLabel nameLabel = new JLabel(genreName);
+        nameLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
         nameLabel.setForeground(Color.white);
         nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
         itemPanel.add(nameLabel, BorderLayout.SOUTH);
 
         return itemPanel;
+    }
+
+    private ImageIcon loadImageForGenre(String genreName) {
+        // Učitavanje slike na osnovu imena žanra
+        String imagePath = "";
+        switch (genreName.toLowerCase()) {
+            case "pop":
+                imagePath = "img/1111.png";
+                break;
+            case "rock":
+                imagePath = "img/1111.png";
+                break;
+            case "hip-hop":
+                imagePath = "img/1111.png";
+                break;
+            case "electronic":
+                imagePath = "img/1111.png";
+                break;
+            default:
+                System.err.println("Unknown genre: " + genreName);
+                return null;
+        }
+        URL imageURL = getClass().getResource(imagePath);
+        if (imageURL != null) {
+            return new ImageIcon(imageURL);
+        } else {
+            System.err.println("Image resource not found: " + imagePath);
+        }
+        return null;
+
     }
 
     private JPanel createCategoryPanelSongs(String categoryTitle, PublishedWork[] items) {
@@ -179,14 +204,6 @@ public class UserView extends JPanel {
         panel.setPreferredSize(new Dimension(250, 300));
         panel.setMaximumSize(new Dimension(250, 300));
         panel.setMinimumSize(new Dimension(250, 300));
-
-        // Učitavanje slike za kategoriju
-        //BufferedImage image = loadImage(items[0].getCover());
-        //if (image != null) {
-        //    JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(image, 100, 100)));
-        //    imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        //    panel.add(imageLabel, BorderLayout.CENTER);
-        //}
 
         // Naslov kategorije
         JLabel titleLabel = new JLabel(categoryTitle);
@@ -206,44 +223,38 @@ public class UserView extends JPanel {
             itemsPanel.add(itemPanel);
         }
 
-        panel.add(itemsPanel, BorderLayout.SOUTH);
+        panel.add(itemsPanel, BorderLayout.CENTER);
 
         return panel;
     }
 
     private JPanel createItemPanelSongs(PublishedWork item) {
-
         JPanel itemPanel = new JPanel(new BorderLayout());
         itemPanel.setBackground(new Color(39, 47, 78));
-        if(item!=null) {
+        itemPanel.setBorder(new RoundBorder());
+        itemPanel.setPreferredSize(new Dimension(200, 80)); // Podešavanje veličine kvadrata
 
-            itemPanel.setBorder(new RoundBorder());
-            itemPanel.setPreferredSize(new Dimension(50, 80)); // Podešavanje veličine kvadrata
-
-            // Učitavanje slike za stavku (ovde se može implementirati funkcija za učitavanje slike)
-            JLabel imageLabel = new JLabel(new ImageIcon(item.getCover()));
-            System.out.println(item.getCover());
+        // Učitavanje slike za album
+        ImageIcon albumImage = loadImage(item.getCover());
+        if (albumImage != null) {
+            JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(albumImage.getImage(), 150, 80)));
             imageLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
-            itemPanel.add(imageLabel, BorderLayout.CENTER);
-
-
-
-            // Naziv stavke
-            JLabel nameLabel = new JLabel(item.getTitle());
-            nameLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
-            nameLabel.setForeground(Color.white);
-            nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel.add(nameLabel, BorderLayout.SOUTH);
-
-            return itemPanel;
+            itemPanel.add(imageLabel, BorderLayout.WEST);
         }
+
+        // Naziv pesme
+        JLabel nameLabel = new JLabel(item.getTitle());
+        nameLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
+        nameLabel.setForeground(Color.white);
+        nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        itemPanel.add(nameLabel, BorderLayout.CENTER);
+
         return itemPanel;
     }
 
-
-    private BufferedImage loadImage(String imagePath) {
+    private ImageIcon loadImage(String imagePath) {
         try {
-            return ImageIO.read(new File(imagePath));
+            return new ImageIcon(ImageIO.read(getClass().getResource(imagePath)));
         } catch (IOException e) {
             e.printStackTrace();
             return null;
@@ -260,8 +271,9 @@ public class UserView extends JPanel {
     }
 
     private JTextField createSearchBar() {
-        JTextField searchBar = new JTextField("      Search artist, genre, album, band..."){
-            @Override protected void paintComponent(Graphics g) {
+        JTextField searchBar = new JTextField("Search artist, genre, album, band...") {
+            @Override
+            protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
                     g2.setPaint(getBackground());
@@ -271,7 +283,9 @@ public class UserView extends JPanel {
                 }
                 super.paintComponent(g);
             }
-            @Override public void updateUI() {
+
+            @Override
+            public void updateUI() {
                 super.updateUI();
                 setOpaque(false);
                 setBorder(new RoundBorder());
@@ -284,8 +298,8 @@ public class UserView extends JPanel {
         searchBar.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
         searchBar.setBorder(new RoundBorder()); // Postavljamo zaobljeni okvir
 
-        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/search.png")); // Postavite putanju do vaše ikonice
-
+        // Učitavanje ikonice za pretragu
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/search.png"));
         if (originalIcon.getImageLoadStatus() == MediaTracker.COMPLETE) {
             // Promena veličine ikonice
             Image scaledImage = originalIcon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
@@ -305,7 +319,6 @@ public class UserView extends JPanel {
         } else {
             System.err.println("Ikonica nije učitana.");
         }
-
 
         return searchBar;
     }
