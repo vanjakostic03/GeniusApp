@@ -1,5 +1,6 @@
 package View.Admin;
 
+import Enums.TypeOfArtist;
 import Models.Artist;
 
 import javax.swing.*;
@@ -60,7 +61,7 @@ public class ArtistFormPanel extends JPanel {
     private void addArtist() {
         String id = idField.getText();
         if (!id.isEmpty()) {
-            Artist artist = new Artist(id) {
+            Artist artist = new Artist(id, null, TypeOfArtist.SINGLE_ARTIST) {
             };
             listModel.addElement(artist.getId());
             idField.setText("");

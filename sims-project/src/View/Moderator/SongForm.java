@@ -10,6 +10,22 @@ import java.awt.event.ActionListener;
 
 public class SongForm extends JFrame {
 
+    private JTextField titleField ;
+    private JTextField coverField;
+    private JTextArea lyricsField;
+    private JTextArea descriptionField;
+    private JComboBox<SingleArtist> composerBox;
+    private JComboBox<SingleArtist> lyricistBox;
+    //JList<Genre> genreList;
+    private String[] genresStrings = {"zanr1","zanr2"};
+    JList<String> genreList = new JList<String>(genresStrings);
+    //JList<Artist> artistList;
+    private String[] artistsStrings = {"artist1","artist2"};
+    private JList<String> artistList= new JList<String>(artistsStrings);
+
+    private JButton submitButton = new JButton("Submit");
+
+
     private AlbumForm albumFrame; //ako se poziva iz album forme
 
 
@@ -29,20 +45,9 @@ public class SongForm extends JFrame {
         formPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         formPanel.setLayout(new GridBagLayout());
 
-         JTextField titleField ;
-         JTextField coverField;
-         JTextArea lyricsField;
-         JTextArea descriptionField;
-         JComboBox<SingleArtist> composerBox;
-         JComboBox<SingleArtist> lyricistBox;
-         //JList<Genre> genreList;
-        String[] genresStrings = {"zanr1","zanr2"};
-         JList<String> genreList = new JList<String>(genresStrings);
-        //JList<Artist> artistList;
-        String[] artistsStrings = {"artist1","artist2"};
-         JList<String> artistList= new JList<String>(artistsStrings);
-         genreList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-         artistList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        genreList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        artistList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+
 
 
         GridBagConstraints c = new GridBagConstraints();
@@ -165,57 +170,86 @@ public class SongForm extends JFrame {
         formPanel.add(descriptionScrollPane, c);
 
         // Submit Button
-        JButton submitButton = new JButton("Submit");
-        submitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String title = titleField.getText();
-                String cover = coverField.getText();
-                SingleArtist composer = (SingleArtist) composerBox.getSelectedItem();
-                SingleArtist lyricist = (SingleArtist) lyricistBox.getSelectedItem();
-                String lyrics = lyricsField.getText();
-                String description = descriptionField.getText();
-
-                String genres[] = new String[genreList.getSelectedValuesList().size()];
-                int i = 0;
-                for(Object o: genreList.getSelectedValuesList()){
-                    genres[i] = (String) o;
-                    i++;
-                }
-
-                String artists[] = new String[artistList.getSelectedValuesList().size()];
-                i = 0;
-                for(Object o: artistList.getSelectedValuesList()){
-                    artists[i] = (String) o;
-                    i++;
-                }
-
-                // Process the input data as needed
-                System.out.println("Title: " + title);
-                System.out.println("Cover: " + cover);
-                System.out.println("Genres: " + genres);
-                System.out.println("Artists: " + artists);
-                System.out.println("Composer: " + composer);
-                System.out.println("Lyricist: " + lyricist);
-                System.out.println("Lyrics: " + lyrics);
-                System.out.println("Description: " + description);
-
-                if (albumFrame != null){
-                    albumFrame.addSong(title);
-
-                }
-                setVisible(false);
-                dispose();
-            }
-        });
         c.gridx = 1;
         c.gridy = 8;
         c.fill = GridBagConstraints.NONE;
         formPanel.add(submitButton, c);
 
         add(formPanel, BorderLayout.CENTER);
-
-
     }
+
+    public String getTitle(){return titleField.getText(); }
+    public String getCoverURL(){return coverField.getText(); }
+    public String getComposer(){return composerBox.getSelectedItem().toString(); }
+    public String getLyricist(){return lyricistBox.getSelectedItem().toString(); }
+    public String[] getGenres(){
+        String genres[] = new String[genreList.getSelectedValuesList().size()];
+        int i = 0;
+        for(Object o: genreList.getSelectedValuesList()) {
+            genres[i] = (String) o;
+            i++;
+        }
+        return genres;
+    }
+    public String[] getArtists(){
+        String artists[] = new String[artistList.getSelectedValuesList().size()];
+        int i = 0;
+        for(Object o: artistList.getSelectedValuesList()){
+            artists[i] = (String) o;
+            i++;
+        }
+        return artists;
+    }
+    public String getLyrics(){return  lyricsField.getText(); }
+    public String getDescription(){return descriptionField.getText(); }
+
+    public void addSubmitListener(ActionListener listener) {
+        submitButton.addActionListener(listener);
+    }
+
+//    submitButton.addActionListener(new ActionListener() {
+//        @Override
+//        public void actionPerformed(ActionEvent e) {
+//            String title = titleField.getText();
+//            String cover = coverField.getText();
+//            SingleArtist composer = (SingleArtist) composerBox.getSelectedItem();
+//            SingleArtist lyricist = (SingleArtist) lyricistBox.getSelectedItem();
+//            String lyrics = lyricsField.getText();
+//            String description = descriptionField.getText();
+//
+//            String genres[] = new String[genreList.getSelectedValuesList().size()];
+//            int i = 0;
+//            for(Object o: genreList.getSelectedValuesList()){
+//                genres[i] = (String) o;
+//                i++;
+//            }
+//
+//            String artists[] = new String[artistList.getSelectedValuesList().size()];
+//            i = 0;
+//            for(Object o: artistList.getSelectedValuesList()){
+//                artists[i] = (String) o;
+//                i++;
+//            }
+//
+//            // Process the input data as needed
+//            System.out.println("Title: " + title);
+//            System.out.println("Cover: " + cover);
+//            System.out.println("Genres: " + genres);
+//            System.out.println("Artists: " + artists);
+//            System.out.println("Composer: " + composer);
+//            System.out.println("Lyricist: " + lyricist);
+//            System.out.println("Lyrics: " + lyrics);
+//            System.out.println("Description: " + description);
+//
+//            if (albumFrame != null){
+//                albumFrame.addSong(title);
+//
+//            }
+//            setVisible(false);
+//            dispose();
+//        }
+//    });
+
+
 }
 

@@ -1,0 +1,152 @@
+<list>
+    <song>
+        <id>PW001</id>
+        <title>Moonlight</title>
+        <cover>/img/1111.png</cover>
+        <typeOfWork>SONG</typeOfWork>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+        <views>1234567</views>
+    </song>
+    <album>
+        <id>PW002</id>
+        <title>Indigo</title>
+        <cover>/img/indigo.png</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+        <songs>
+            <song>
+                <id>PW007</id>
+                <title>Dear god</title>
+                <cover>/img/indigo.png</cover>
+                <typeOfWork>SONG</typeOfWork>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <id>PW003</id>
+        <title>F.A.M.E.</title>
+        <cover>/img/fame.png</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+        <songs>
+            <song>
+                <id>PW008</id>
+                <title>All back</title>
+                <cover>/img/fame.png</cover>
+                <typeOfWork>SONG</typeOfWork>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <id>PW004</id>
+        <title>Breezy</title>
+        <cover>/img/breezy.png</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+        <songs>
+            <song>
+                <id>PW009</id>
+                <title>Dream</title>
+                <cover>/img/breezy.png</cover>
+                <typeOfWork>SONG</typeOfWork>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <id>PW005</id>
+        <title>X</title>
+        <cover>/img/x.png</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+        <songs>
+            <song>
+                <id>PW010</id>
+                <title>Stereotype</title>
+                <cover>/img/x.png</cover>
+                <typeOfWork>SONG</typeOfWork>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <id>PW006</id>
+        <title>11:11</title>
+        <cover>/img/1111.png</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+        <songs>
+            <song>
+                <id>PW001</id>
+                <title>Moonlight</title>
+                <cover>/img/1111.png</cover>
+                <typeOfWork>SONG</typeOfWork>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <song>
+        <id>PW007</id>
+        <title>Dear god</title>
+        <cover>/img/indigo.png</cover>
+        <typeOfWork>SONG</typeOfWork>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW008</id>
+        <title>All back</title>
+        <cover>/img/fame.png</cover>
+        <typeOfWork>SONG</typeOfWork>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW009</id>
+        <title>Dream</title>
+        <cover>/img/breezy.png</cover>
+        <typeOfWork>SONG</typeOfWork>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW010</id>
+        <title>Stereotype</title>
+        <cover>/img/x.png</cover>
+        <typeOfWork>SONG</typeOfWork>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
+
+        <views>1234567</views>
+    </song>
+</list>

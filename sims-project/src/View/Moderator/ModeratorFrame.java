@@ -1,19 +1,39 @@
 package View.Moderator;
 
+import Models.Data.ArtistService;
+import Models.Data.CommentService;
+import Models.Data.PublishedWorkService;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class ModeratorFrame extends JFrame {
 
     private String moderator;
-
+    private PublishedWorkService publishedWorkService;
+    private ArtistService artistService;
+    private CommentService commentService;
     public JPanel mainPanel;
     public JPanel contentPanel;
     public JScrollPane scrollPane;
 
+    public PublishedWorkService getPublishedWorkService() {
+        return publishedWorkService;
+    }
 
+    public ArtistService getArtistService() {
+        return artistService;
+    }
 
-    public ModeratorFrame(String userName) {
+    public CommentService getCommentService() {
+        return commentService;
+    }
+
+    public ModeratorFrame(String userName, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService) {
+        this.publishedWorkService = publishedWorkService;
+        this.artistService = artistService;
+        this.commentService = commentService;
+
         moderator = userName;
         moderatorUI();
     }

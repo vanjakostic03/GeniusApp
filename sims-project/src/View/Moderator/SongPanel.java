@@ -1,5 +1,11 @@
 package View.Moderator;
 
+import Enums.TypeOfArtist;
+import Models.Artist;
+import Models.Bend;
+import Models.SingleArtist;
+import Models.Song;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -7,7 +13,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SongPanel extends JPanel {
-    public SongPanel(){
+    private Song song;
+    //private String songTitle;
+    public SongPanel(Song song){
+        this.song = song;
         setLayout(new GridBagLayout());
         initSongPanel();
     }
@@ -156,8 +165,13 @@ public class SongPanel extends JPanel {
             }
         });
 
+        ImageIcon icon = new ImageIcon(getClass().getResource(song.getCover()));
+        Image image = icon.getImage();
 
-        JLabel coverLabel = new JLabel("cover pesme"){
+        Image scaledcoverImage = image.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(scaledcoverImage);
+
+        JLabel coverLabel = new JLabel(scaledIcon){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -174,8 +188,8 @@ public class SongPanel extends JPanel {
                 setBorder(new RoundBorder());
             }
         };
-        coverLabel.setBackground(new Color( 39,47,78));
-        coverLabel.setPreferredSize(new Dimension(100, 160));
+        coverLabel.setBackground(new Color(32, 38, 61));
+        coverLabel.setPreferredSize(new Dimension(160, 120));
         c.gridx = 0;
         c.gridy = 1;
         c.gridwidth = 1; // Zauzima 1 kolonu
@@ -186,7 +200,7 @@ public class SongPanel extends JPanel {
         add(coverLabel, c);
 
 
-        JTextArea description= new JTextArea("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+        JTextArea description= new JTextArea(song.getDescription());
         description.setBackground(new Color(32, 38, 61));
         description.setFont(new Font("Dialog", Font.PLAIN, 18));
         description.setForeground(Color.WHITE);
@@ -203,9 +217,9 @@ public class SongPanel extends JPanel {
 
 
 
-        JTextArea title= new JTextArea("Title");
+        JTextArea title= new JTextArea(song.getTitle());
         title.setBackground(new Color(32, 38, 61));
-        title.setFont(new Font("Dialog", Font.BOLD, 55));
+        title.setFont(new Font("Dialog", Font.BOLD, 25));
         title.setForeground(Color.WHITE);
         title.setLineWrap(true);
 
@@ -218,9 +232,22 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(title, c);
 
-        JTextArea artist= new JTextArea("Artist name");
+        String artists ="";
+        if(song.getArtists()!=null){
+            for(Artist a: song.getArtists()) {
+                if(a.getTypeOfArtist() == TypeOfArtist.BAND){
+                    Bend b = (Bend)a;
+                    artists+= b.getName() + "\n";
+                }else{
+                    SingleArtist sa = (SingleArtist) a;
+                    artists+= sa.getName() + "\n";
+                }
+            }
+        }
+
+        JTextArea artist= new JTextArea(artists);
         artist.setBackground(new Color(32, 38, 61));
-        artist.setFont(new Font("Dialog", Font.PLAIN, 30));
+        artist.setFont(new Font("Dialog", Font.PLAIN, 25));
         artist.setForeground(Color.WHITE);
         artist.setLineWrap(true);
 
@@ -233,9 +260,9 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(artist, c);
 
-        JTextArea views= new JTextArea("73984834");
+        JTextArea views= new JTextArea(String.valueOf(song.getViews()));
         views.setBackground(new Color(32, 38, 61));
-        views.setFont(new Font("Dialog", Font.PLAIN, 30));
+        views.setFont(new Font("Dialog", Font.PLAIN, 16));
         views.setForeground(Color.WHITE);
         views.setLineWrap(true);
 
@@ -248,9 +275,9 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(views, c);
 
-        JTextArea releaseDate= new JTextArea("12.12.2012.");
+        JTextArea releaseDate= new JTextArea(String.valueOf(song.getReleaseDate()));
         releaseDate.setBackground(new Color(32, 38, 61));
-        releaseDate.setFont(new Font("Dialog", Font.PLAIN, 30));
+        releaseDate.setFont(new Font("Dialog", Font.PLAIN, 16));
         releaseDate.setForeground(Color.WHITE);
         releaseDate.setLineWrap(true);
 
@@ -274,7 +301,7 @@ public class SongPanel extends JPanel {
         add(associates, c);
 
 
-        JTextArea lyrics = new JTextArea("\n\nLorem ipsum dolor sit amet,\n consectetur adipiscing elit,\n sed do eiusmod tempor incididunt \nut labore et dolore magna aliqua.\n Ut enim ad minim veniam,\n quis nostrud exercitation ullamco laboris \nnisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in \nvoluptate velit esse cillum dolore eu fugiat nulla pariatur.\n Excepteur sint occaecat cupidatat non proident,\n sunt in culpa qui officia deserunt mollit anim id est laborum. \nLorem ipsum dolor sit amet,\n consectetur adipiscing elit,\n sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \nUt enim ad minim veniam,\n quis nostrud exercitation ullamco laboris nisi \nut aliquip ex ea commodo consequat.\n Duis aute irure \n...\n"){
+        JTextArea lyrics = new JTextArea(song.getLyrics()){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -374,9 +401,10 @@ public class SongPanel extends JPanel {
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(1, 1, 1, 1);
 
-        JTextArea composer = new JTextArea("Composer name\n..");
+        //JTextArea composer = new JTextArea(song.getComposer().getName());
+        JTextArea composer = new JTextArea("song.getComposer().getName()");
         composer.setBackground(new Color(32, 38, 61));
-        composer.setFont(new Font("Dialog", Font.PLAIN, 20));
+        composer.setFont(new Font("Dialog", Font.PLAIN, 16));
         composer.setForeground(Color.WHITE);
         composer.setLineWrap(true);
         c.gridx = 0;
@@ -388,9 +416,10 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         panel.add(composer, c);
 
-        JTextArea lyricist = new JTextArea("Lyricist name\n..");
+        JTextArea lyricist = new JTextArea("efjlesfjfe");
+       // JTextArea lyricist = new JTextArea(song.getLyricist().getName());
         lyricist.setBackground(new Color(32, 38, 61));
-        lyricist.setFont(new Font("Dialog", Font.PLAIN, 20));
+        lyricist.setFont(new Font("Dialog", Font.PLAIN, 16));
         lyricist.setForeground(Color.WHITE);
         lyricist.setLineWrap(true);
         c.gridx = 1;

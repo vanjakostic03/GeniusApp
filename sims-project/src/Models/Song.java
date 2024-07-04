@@ -1,18 +1,19 @@
 package Models;
 
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Song extends PublishedWork{
     private SingleArtist lyricist;
     private SingleArtist composer;
     private String lyrics;
     private String description;
-    private LocalDate releaseDate;
+    private Date releaseDate;
     private int views;
 
+    public Song() {}
     public Song(SingleArtist lyricist, SingleArtist composer, String lyrics, String description){
-        releaseDate  = LocalDate.now();
+        releaseDate  = new Date();
         this.lyricist = lyricist;
         this.composer = composer;
         this.lyrics = lyrics;
@@ -52,11 +53,11 @@ public class Song extends PublishedWork{
         this.description = description;
     }
 
-    public LocalDate getReleaseDate() {
+    public Date getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(LocalDate releaseDate) {
+    public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
 
