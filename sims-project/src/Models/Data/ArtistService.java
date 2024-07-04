@@ -95,6 +95,9 @@ public class ArtistService {
         xstream.alias("bend", Bend.class);
         xstream.addPermission(AnyTypePermission.ANY); // Добавление разрешений
 
+        xstream.aliasType("singleArtist", SingleArtist.class);
+        xstream.aliasType("bend", Bend.class);
+
         try (FileWriter writer = new FileWriter("./Data/artists.xml")) {
             xstream.toXML(artists, writer);
         } catch (IOException e) {
@@ -109,6 +112,8 @@ public class ArtistService {
         xstream.alias("bend", Bend.class);
         xstream.addPermission(AnyTypePermission.ANY);
 
+        xstream.aliasType("singleArtist", SingleArtist.class);
+        xstream.aliasType("bend", Bend.class);
         try (FileReader reader = new FileReader("./Data/artists.xml")) {
             artists = (ArrayList<Artist>) xstream.fromXML(reader);
         } catch (IOException e) {
