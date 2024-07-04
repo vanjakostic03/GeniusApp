@@ -111,6 +111,7 @@ public class AlbumsPanelModerator extends JPanel {
         int i = 0;
         int j = 0;
         for (PublishedWork album :this.albums) {
+            System.out.println(album.getCover());
             JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle());
             c.gridx = i % 4; // Redni broj kolone u trenutnom redu
             c.gridy = 2 + j ; // Redni broj reda
@@ -139,18 +140,6 @@ public class AlbumsPanelModerator extends JPanel {
                 j++;
             }
         }
-        //        if(i%4!=0){
-//            JPanel albumPanel = createAlbumPanel("", "");
-//            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
-//            c.gridy = 2 + i / 2; // Redni broj reda
-//            c.gridwidth = 1; // Zauzima 1 kolonu
-//            c.weightx = 1.0;
-//            c.weighty = 1.0;
-//            c.fill = GridBagConstraints.BOTH;
-//            add(albumPanel, c);
-//            i++;
-//        }
-
     }
 
 
@@ -183,7 +172,17 @@ public class AlbumsPanelModerator extends JPanel {
         c.insets = new Insets(1, 1, 1, 1);
 
         // Cover albuma
-        JLabel coverLabel = new JLabel(coverText){
+        ImageIcon icon = new ImageIcon(getClass().getResource(coverText));
+
+// Dobijte Image objekat iz ImageIcon-a
+        Image image = icon.getImage();
+
+// Skalirajte sliku na željene dimenzije
+        Image scaledImage = image.getScaledInstance(160, 160, Image.SCALE_SMOOTH);
+
+// Kreirajte novu ImageIcon sa skaliranom slikom
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+        JLabel coverLabel = new JLabel(scaledIcon){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -200,7 +199,7 @@ public class AlbumsPanelModerator extends JPanel {
                 setBorder(new RoundBorder());
             }
         };
-        coverLabel.setBackground(new Color( 39,47,78));
+        //coverLabel.setBackground(new Color( 39,47,78));
         coverLabel.setPreferredSize(new Dimension(80, 160));
 
         c.gridx = 0;

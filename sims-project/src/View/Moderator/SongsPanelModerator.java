@@ -142,7 +142,17 @@ public class SongsPanelModerator extends JPanel {
         c.insets = new Insets(2, 2, 2, 2);
 
         // Cover songa
-        JLabel coverLabel = new JLabel(coverText){
+        ImageIcon icon = new ImageIcon(getClass().getResource(coverText));
+
+// Dobijte Image objekat iz ImageIcon-a
+        Image image = icon.getImage();
+
+// Skalirajte sliku na željene dimenzije
+        Image scaledImage = image.getScaledInstance(160, 160, Image.SCALE_SMOOTH);
+
+// Kreirajte novu ImageIcon sa skaliranom slikom
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+        JLabel coverLabel = new JLabel(scaledIcon){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();

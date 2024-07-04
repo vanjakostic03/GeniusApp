@@ -1,41 +1,41 @@
 <list>
     <song>
         <id>PW001</id>
-        <title>PESMA1</title>
-        <cover>https:fjsefjesfefef</cover>
+        <title>Moonlight</title>
+        <cover>/img/1111.png</cover>
         <typeOfWork>SONG</typeOfWork>
         <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
         <description>ihefoihef ufoe foie</description>
-        <releaseDate>2024-07-03 16:11:58.747 UTC</releaseDate>
+        <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
         <views>1234567</views>
     </song>
     <album>
         <id>PW002</id>
-        <title>ALBUM1</title>
-        <cover>https:fjsefjesfefef</cover>
+        <title>Indigo</title>
+        <cover>/img/indigo.png</cover>
         <typeOfWork>ALBUM</typeOfWork>
     </album>
     <album>
         <id>PW003</id>
-        <title>ALBUM2</title>
-        <cover>https:fjsefjesfefef</cover>
+        <title>F.A.M.E.</title>
+        <cover>/img/fame.png</cover>
         <typeOfWork>ALBUM</typeOfWork>
     </album><album>
         <id>PW004</id>
-        <title>ALBUM3</title>
-        <cover>https:fjsefjesfefef</cover>
+        <title>Breezy</title>
+        <cover>/img/breezy.png</cover>
         <typeOfWork>ALBUM</typeOfWork>
     </album>
     <album>
         <id>PW005</id>
-        <title>ALBUM4</title>
-        <cover>https:fjsefjesfefef</cover>
+        <title>X</title>
+        <cover>/img/x.png</cover>
         <typeOfWork>ALBUM</typeOfWork>
     </album>
     <album>
         <id>PW006</id>
-        <title>ALBUM5</title>
-        <cover>https:fjsefjesfefef</cover>
+        <title>11:11</title>
+        <cover>/img/1111.png</cover>
         <typeOfWork>ALBUM</typeOfWork>
     </album>
 </list>
