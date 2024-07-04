@@ -53,19 +53,10 @@ public class SongController {
             ArrayList<Genre> genres = new ArrayList<>();
             ArrayList<Artist> artists = new ArrayList<>();
 
-//            for(int i = 0; i < artistString.length; i++) {
-//                String[] artistTokens = artistString[i].split(",");
-//                genres.add(artistService.findArtistById(tokens[0]));
-//            }
             for (int i = 0; i < artistString.length; i++) {
                 String[] artistTokens = artistString[i].split(",");
                 artists.add(artistService.findArtistById(artistTokens[0]));
             }
-
-            for (Artist a : artists) {
-                System.out.println(a.getId());
-            }
-
 
             String id = publishedWorkService.getFreeID();
             Song song = new Song(id, title, cover, lyrics, description, composer, lyricist, genres, artists);
@@ -84,7 +75,6 @@ public class SongController {
     }
 
     public void deleteSong() {
-        System.out.println("upao ovde :)");
         Song song = songPanel.getSong();
         publishedWorkService.deletePublishedWork(song);
         publishedWorkService.savePublishedWorksToXML();

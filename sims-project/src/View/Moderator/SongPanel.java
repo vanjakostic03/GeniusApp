@@ -242,11 +242,9 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(title, c);
 
-        System.out.println(song.getArtists().get(0).getId());
         String artists ="";
         if(song.getArtists()!=null){
             for(Artist a: song.getArtists()) {
-                System.out.println(a.getId());
                 if(a.getTypeOfArtist() == TypeOfArtist.BAND){
                     Bend b = (Bend)a;
                     artists+= b.getName() + "\n";
@@ -453,7 +451,7 @@ public class SongPanel extends JPanel {
     }
 
     public void addDeleteListener(ActionListener listener) {
-        System.out.println("UPAOOOO");
+
         minusIconButton.addActionListener(listener);
 
         SongController songController = new SongController(null,songPanel,songsPanelModerator.getParentPanel().getModeratorFrame().getPublishedWorkService(),null);
