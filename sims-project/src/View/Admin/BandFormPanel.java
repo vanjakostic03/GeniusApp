@@ -1,6 +1,7 @@
 package View.Admin;
 
 import Models.Bend;
+import Models.Data.ArtistService;
 import Models.RecordLabel;
 
 import javax.swing.*;
@@ -14,12 +15,15 @@ public class BandFormPanel extends JPanel {
     private JTextField idField;
     private JTextField nameField;
     private JTextField descriptionField;
-    private JTextField dateField;
+    private JTextField dateOfEstablishmentField;
     private DefaultListModel<String> listModel;
+    private ArtistService artistService;
 
     public BandFormPanel() {
+        this.artistService = new ArtistService();
         setLayout(new GridBagLayout());
         initFormPanel();
+        loadBandsFromXML();
     }
 
     private void initFormPanel() {
@@ -56,15 +60,15 @@ public class BandFormPanel extends JPanel {
         c.gridy = 2;
         add(descriptionField, c);
 
-        JLabel dateLabel = new JLabel("Date of Establishment:");
+        JLabel dateOfEstablishmentLabel = new JLabel("Date of Establishment (YYYY-MM-DD):");
         c.gridx = 0;
         c.gridy = 3;
-        add(dateLabel, c);
+        add(dateOfEstablishmentLabel, c);
 
-        dateField = new JTextField(20);
+        dateOfEstablishmentField = new JTextField(20);
         c.gridx = 1;
         c.gridy = 3;
-        add(dateField, c);
+        add(dateOfEstablishmentField, c);
 
         JButton addButton = new JButton("Add Band");
         addButton.addActionListener(new ActionListener() {
@@ -79,10 +83,10 @@ public class BandFormPanel extends JPanel {
         add(addButton, c);
 
         listModel = new DefaultListModel<>();
-        JList<String> bandList = new JList<>(listModel);
-        bandList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        JList<String> artistList = new JList<>(listModel);
+        artistList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
-        JScrollPane listScrollPane = new JScrollPane(bandList);
+        JScrollPane listScrollPane = new JScrollPane(artistList);
         c.gridx = 0;
         c.gridy = 5;
         c.gridwidth = 2;
@@ -96,15 +100,23 @@ public class BandFormPanel extends JPanel {
         String id = idField.getText();
         String name = nameField.getText();
         String description = descriptionField.getText();
-        LocalDate dateOfEstablishment = LocalDate.parse(dateField.getText());
+        String dateOfEstablishment = dateOfEstablishmentField.getText();
 
-        if (!id.isEmpty() && !name.isEmpty() && !description.isEmpty() && dateOfEstablishment != null) {
-            Bend band = new Bend(id, null, name, description, dateOfEstablishment);
+        if (!id.isEmpty() && !name.isEmpty() && !description.isEmpty() && !dateOfEstablishment.isEmpty()) {
+            LocalDate date = LocalDate.parse(dateOfEstablishment);
+            Bend band = new Bend(id, new RecordLabel(), name, description, date);
+            artistService.addArtist(band);
             listModel.addElement(band.getId() + ", " + band.getName());
             idField.setText("");
             nameField.setText("");
             descriptionField.setText("");
-            dateField.setText("");
+            dateOfEstablishmentField.setText("");
+        }
+    }
+
+    private void loadBandsFromXML() {
+        for (Bend band : artistService.getBands()) {
+            listModel.addElement(band.getId() + ", " + band.getName());
         }
     }
 
