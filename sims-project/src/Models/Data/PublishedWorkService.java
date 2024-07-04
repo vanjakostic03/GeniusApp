@@ -41,6 +41,11 @@ public class PublishedWorkService {
         publishedWorks.remove(publishedWork);
     }
 
+    public void deletePublishedWorkById(String publishedWorkId) {
+        PublishedWork pw = getPublishedWorkById(publishedWorkId);
+        deletePublishedWork(pw);
+    }
+
     public  boolean idExists(String id) {
         for (PublishedWork publishedWork : publishedWorks) {
             if (publishedWork.getId().equals(id)) {

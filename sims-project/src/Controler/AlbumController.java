@@ -1,12 +1,10 @@
 package Controler;
 
-import Models.Album;
-import Models.Artist;
+import Models.*;
 import Models.Data.ArtistService;
 import Models.Data.PublishedWorkService;
-import Models.Genre;
-import Models.Song;
 import View.Moderator.AlbumForm;
+import View.Moderator.AlbumPanel;
 import View.Moderator.SongForm;
 
 import java.awt.event.ActionEvent;
@@ -15,19 +13,20 @@ import java.util.ArrayList;
 
 public class AlbumController {
     private AlbumForm albumForm;
+    private AlbumPanel albumPanel;
     private PublishedWorkService publishedWorkService;
     private ArtistService artistService;
 
-    public AlbumController(AlbumForm albumForm,PublishedWorkService publishedWorkService, ArtistService artistService) {
+    public AlbumController(AlbumForm albumForm,AlbumPanel albumPanel,PublishedWorkService publishedWorkService, ArtistService artistService) {
         this.albumForm = albumForm;
+        this.albumPanel = albumPanel;
         this.publishedWorkService = publishedWorkService;
         this.artistService = artistService;
 
-
-        this.albumForm.addSongListener(new SongListener());
-        this.albumForm.addSubmitListener(new SubmitListener());
-
-
+        if(albumForm!=null){
+            this.albumForm.addSongListener(new SongListener());
+            this.albumForm.addSubmitListener(new SubmitListener());
+        }
     }
 
     class SubmitListener implements ActionListener {
@@ -71,7 +70,19 @@ public class AlbumController {
 
             SongForm songForm = new SongForm(albumForm,artistService.getArtists());
             songForm.setVisible(true);
-            SongController songController = new SongController(songForm,publishedWorkService,artistService);
+            SongController songController = new SongController(songForm,null,publishedWorkService,artistService);
         }
+    }
+
+    public void deleteAlbum(){
+        ArrayList<PublishedWork> publishedWorks = publishedWorkService.getPublishedWorks();
+        Album album = albumPanel.getAlbum();
+        ArrayList<Song> songs = album.getSongs();
+        for(Song song : songs){
+            publishedWorkService.deletePublishedWorkById(song.getId());
+        }
+
+        publishedWorkService.deletePublishedWork(album);
+        publishedWorkService.savePublishedWorksToXML();
     }
 }

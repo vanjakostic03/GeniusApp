@@ -16,9 +16,13 @@ public class AlbumsPanelModerator extends JPanel {
     ToolBarPanelModerator parentPanel ;
     ArrayList<PublishedWork> albums = new ArrayList<>() ;
     ArrayList<Artist> artists = new ArrayList<>() ;
-
+    AlbumsPanelModerator albumsPanelModerator = this;
     public void setAlbums(ArrayList<PublishedWork> albums) {
         this.albums = albums;
+    }
+    public  ToolBarPanelModerator getParentPanel() {
+
+        return parentPanel;
     }
 
     public AlbumsPanelModerator(ToolBarPanelModerator parenPanel,ArrayList<PublishedWork> albums,ArrayList<Artist> artists) {
@@ -105,18 +109,14 @@ public class AlbumsPanelModerator extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 AlbumForm albumForm = new AlbumForm(artists);
                 albumForm.setVisible(true);
-                AlbumController albumController = new AlbumController(albumForm,parentPanel.getModeratorFrame().getPublishedWorkService(), parentPanel.getModeratorFrame().getArtistService());
+                AlbumController albumController = new AlbumController(albumForm,null,parentPanel.getModeratorFrame().getPublishedWorkService(), parentPanel.getModeratorFrame().getArtistService());
             }
         });
 
 
-//        int albumCount = 30; // Primer: prikazuje do 30 albuma
-//        int albumsPerRow = 4; // Broj albuma po redu
-//        int startingRow = 2;
         int i = 0;
         int j = 0;
         for (PublishedWork album :this.albums) {
-            System.out.println(album.getCover());
             JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(), album.getId());
             albumPanel.setBackground(new Color(32, 38, 61));
             c.gridx = i % 4; // Redni broj kolone u trenutnom redu
@@ -248,7 +248,7 @@ public class AlbumsPanelModerator extends JPanel {
                 for(PublishedWork album: albums){
                     if(album.getId().equals(albumId)){
 
-                        AlbumPanel newPanel = new AlbumPanel((Album) album);
+                        AlbumPanel newPanel = new AlbumPanel((Album) album,albumsPanelModerator);
                         parentPanel.setContentPanel(newPanel);
                     }
                 }

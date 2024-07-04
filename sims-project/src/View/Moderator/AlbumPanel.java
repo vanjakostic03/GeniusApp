@@ -1,5 +1,7 @@
 package View.Moderator;
 
+import Controler.AlbumController;
+import Controler.SongController;
 import Enums.TypeOfArtist;
 import Models.*;
 
@@ -11,13 +13,20 @@ import java.awt.event.ActionListener;
 
 public class AlbumPanel extends JPanel {
     private Album album;
+    private JButton minusIconButton = new JButton();
+    private AlbumPanel albumPanel= this;
+    private AlbumsPanelModerator albumsPanelModerator;
 
-    public AlbumPanel(Album album){
+    public AlbumPanel(Album album,AlbumsPanelModerator albumsPanelModerator){
         this.album = album;
+        this.albumsPanelModerator = albumsPanelModerator;
         setLayout(new GridBagLayout());
         initAlbumPanel();
     }
 
+    public  Album getAlbum(){
+        return album;
+    }
     public void initAlbumPanel(){
         this.setBackground(new Color(32, 38, 61));
 
@@ -58,7 +67,7 @@ public class AlbumPanel extends JPanel {
         Image scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         ImageIcon minusIcon = new ImageIcon(scaledImage);
 
-        JButton minusIconButton = new JButton(minusIcon);
+        minusIconButton = new JButton(minusIcon);
         minusIconButton.setOpaque(false);
         minusIconButton.setContentAreaFilled(false);
         minusIconButton.setBorderPainted(false);
@@ -87,6 +96,9 @@ public class AlbumPanel extends JPanel {
                         null,
                         new String[]{"Yes", "No"},
                         "Yes");
+                if (result == JOptionPane.YES_OPTION) {
+                    addDeleteListener( this);
+                }
             }
         });
 
@@ -392,5 +404,14 @@ public class AlbumPanel extends JPanel {
         }
 
         return searchBar;
+    }
+
+    public void addDeleteListener(ActionListener listener) {
+
+        minusIconButton.addActionListener(listener);
+
+        AlbumController albumController = new AlbumController(null,albumPanel,albumsPanelModerator.getParentPanel().getModeratorFrame().getPublishedWorkService(),null);
+        albumController.deleteAlbum();
+
     }
 }
