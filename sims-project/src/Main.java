@@ -20,6 +20,7 @@ public class Main {
         for(PublishedWork pw:pwService.getPublishedWorks()){
             System.out.println(pw.getId()+"\n");
         }
+
         //registerView.setVisible(true);
 
         // For login

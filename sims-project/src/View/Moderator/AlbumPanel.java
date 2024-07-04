@@ -197,7 +197,7 @@ public class AlbumPanel extends JPanel {
         add(coverLabel, c);
 
 
-        JTextArea description= new JTextArea("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+        JTextArea description= new JTextArea(album.getDescription());
         description.setBackground(new Color(32, 38, 61));
         description.setFont(new Font("Dialog", Font.PLAIN, 18));
         description.setForeground(Color.WHITE);
@@ -277,20 +277,22 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(views, c);
 
-//        JTextArea releaseDate= new JTextArea(String.valueOf(album.get()));
-//        releaseDate.setBackground(new Color(32, 38, 61));
-//        releaseDate.setFont(new Font("Dialog", Font.PLAIN, 30));
-//        releaseDate.setForeground(Color.WHITE);
-//        releaseDate.setLineWrap(true);
+        String releaseDateString = String.valueOf(album.getReleaseDate()).substring(4,9) + " " +String.valueOf(album.getReleaseDate()).substring(24);
 
-//        c.gridx = 2;
-//        c.gridy = 2;
-//        c.gridwidth = 1; // Zauzima 1 kolonu
-//        c.gridheight = 1;
-//        c.weightx = 1.0;
-//        c.weighty = 0.5;
-//        c.fill = GridBagConstraints.BOTH;
-//        add(releaseDate, c);
+        JTextArea releaseDate= new JTextArea(releaseDateString);
+        releaseDate.setBackground(new Color(32, 38, 61));
+        releaseDate.setFont(new Font("Dialog", Font.PLAIN, 30));
+        releaseDate.setForeground(Color.WHITE);
+        releaseDate.setLineWrap(true);
+
+        c.gridx = 2;
+        c.gridy = 2;
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.gridheight = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.5;
+        c.fill = GridBagConstraints.BOTH;
+        add(releaseDate, c);
 
         String songsString = "\n";
         int i = 1;
