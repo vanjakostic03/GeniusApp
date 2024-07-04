@@ -26,7 +26,6 @@ public class SongListAdminPanel extends JPanel {
         JScrollPane scrollPane = new JScrollPane(songTable);
         add(scrollPane, BorderLayout.CENTER);
 
-        // Add test songs
         addTestSongs();
     }
 

@@ -54,33 +54,39 @@ public class ToolBarPanelAdmin extends JPanel {
         c.gridheight = 1;
         c.insets = new Insets(5, 0, 5, 0);
 
-        JButton albums = createStyledButton("Artists");
+        JButton artists = createStyledButton("Single Artists");
         c.gridx = 0;
         c.gridy = 0;
-        albums.addActionListener(e -> setContentPanel(new ArtistFormPanel()));
-        optionsPanel.add(albums, c);
+        artists.addActionListener(e -> setContentPanel(new SingleArtistFormPanel()));
+        optionsPanel.add(artists, c);
 
-        JButton songs = createStyledButton("Create adv");
+        JButton bands = createStyledButton("Bands");
         c.gridx = 0;
         c.gridy = 1;
-        songs.addActionListener(e -> setContentPanel(new AdvertismentFormPanel()));
-        optionsPanel.add(songs, c);
+        bands.addActionListener(e -> setContentPanel(new BandFormPanel()));
+        optionsPanel.add(bands, c);
 
-        JButton comments = createStyledButton("Adv profits");
+        JButton advs = createStyledButton("Create adv");
         c.gridx = 0;
         c.gridy = 2;
-        comments.addActionListener(e -> setContentPanel(new AdvertismentListPanel()));
-        optionsPanel.add(comments, c);
+        advs.addActionListener(e -> setContentPanel(new AdvertismentFormPanel()));
+        optionsPanel.add(advs, c);
 
-        JButton activeUsers = createStyledButton("Songs views");
+        JButton advProfits = createStyledButton("Adv profits");
         c.gridx = 0;
         c.gridy = 3;
-        activeUsers.addActionListener(e -> setContentPanel(new SongListAdminPanel()));
-        optionsPanel.add(activeUsers, c);
+        advProfits.addActionListener(e -> setContentPanel(new AdvertismentListPanel()));
+        optionsPanel.add(advProfits, c);
+
+        JButton songViews = createStyledButton("Songs views");
+        c.gridx = 0;
+        c.gridy = 4;
+        songViews.addActionListener(e -> setContentPanel(new SongListAdminPanel()));
+        optionsPanel.add(songViews, c);
 
         JButton home = createStyledButton("HOME");
         c.gridx = 0;
-        c.gridy = 4;
+        c.gridy = 5;
         home.addActionListener(e -> setContentPanel(new HomePanelAdmin(this)));
         optionsPanel.add(home, c);
 
