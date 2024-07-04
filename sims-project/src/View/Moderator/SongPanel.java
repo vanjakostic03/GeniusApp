@@ -233,9 +233,11 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(title, c);
 
+        System.out.println(song.getArtists().get(0).getId());
         String artists ="";
         if(song.getArtists()!=null){
             for(Artist a: song.getArtists()) {
+                System.out.println(a.getId());
                 if(a.getTypeOfArtist() == TypeOfArtist.BAND){
                     Bend b = (Bend)a;
                     artists+= b.getName() + "\n";
@@ -278,7 +280,7 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(views, c);
 
-        String releaseDateString = String.valueOf(song.getReleaseDate()).substring(4,9) + " " +String.valueOf(song.getReleaseDate()).substring(24);
+        String releaseDateString = String.valueOf(song.getReleaseDate()).substring(4,10) + " " +String.valueOf(song.getReleaseDate()).substring(24);
         JTextArea releaseDate= new JTextArea("Release date:\n" + releaseDateString);
         releaseDate.setBackground(new Color(32, 38, 61));
         releaseDate.setFont(new Font("Dialog", Font.PLAIN, 16));

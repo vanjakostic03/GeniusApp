@@ -26,23 +26,23 @@ public class SongListAdminPanel extends JPanel {
         JScrollPane scrollPane = new JScrollPane(songTable);
         add(scrollPane, BorderLayout.CENTER);
 
-        addTestSongs();
+        //addTestSongs();
     }
 
-    private void addTestSongs() {
-        SingleArtist lyricist1 = new SingleArtist("1", null, "Bio", "pick", "Lyricist 1");
-        SingleArtist composer1 = new SingleArtist("1", null, "Bio", "pick", "Lyricist 1");
-        Song song1 = new Song(lyricist1, composer1, "Lyrics 1", "Description 1");
-        song1.setViews(100);
-
-        SingleArtist lyricist2 = new SingleArtist("1", null, "Bio", "pick", "Lyricist 1");
-        SingleArtist composer2 = new SingleArtist("1", null, "Bio", "pick", "Lyricist 1");
-        Song song2 = new Song(lyricist2, composer2, "Lyrics 2", "Description 2");
-        song2.setViews(200);
-
-        addSongToTable(song1);
-        addSongToTable(song2);
-    }
+//    private void addTestSongs() {
+//        SingleArtist lyricist1 = new SingleArtist("1", null, "Bio", "pick", "Lyricist 1");
+//        SingleArtist composer1 = new SingleArtist("1", null, "Bio", "pick", "Lyricist 1");
+//        Song song1 = new Song(lyricist1, composer1, "Lyrics 1", "Description 1");
+//        song1.setViews(100);
+//
+//        SingleArtist lyricist2 = new SingleArtist("1", null, "Bio", "pick", "Lyricist 1");
+//        SingleArtist composer2 = new SingleArtist("1", null, "Bio", "pick", "Lyricist 1");
+//        Song song2 = new Song(lyricist2, composer2, "Lyrics 2", "Description 2");
+//        song2.setViews(200);
+//
+//        addSongToTable(song1);
+//        addSongToTable(song2);
+//    }
 
     private void addSongToTable(Song song) {
         Object[] rowData = {

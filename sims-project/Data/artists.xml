@@ -1,20 +1,18 @@
 <list>
-  <singleArtist>
-    <id>2131</id>
-    <recordLabel/>
-    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
-    <biography>123</biography>
-    <picture>123</picture>
-    <name>123</name>
-    <memberships/>
-  </singleArtist>
-  <bend>
-    <id>111</id>
-    <recordLabel/>
-    <typeOfArtist>BAND</typeOfArtist>
-    <name>111</name>
-    <description>111</description>
-    <dateOfEstablishment>2021-11-11</dateOfEstablishment>
-    <memberships/>
-  </bend>
+    <singleArtist>
+        <id>A002</id> <!-- Vrednost id-a -->
+        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+        <picture>.eff</picture> <!-- Vrednost slike -->
+        <name>Taylor Swift</name> <!-- Vrednost imena -->
+        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+    </singleArtist>
+    <singleArtist>
+        <id>A001</id> <!-- Vrednost id-a -->
+        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+        <picture>.eff</picture> <!-- Vrednost slike -->
+        <name>Chris Brown</name> <!-- Vrednost imena -->
+        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+    </singleArtist>
+
+
 </list>

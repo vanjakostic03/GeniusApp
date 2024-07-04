@@ -17,6 +17,10 @@ public class ToolBarPanelModerator extends JPanel {
         initToolBar();
     }
 
+    public ModeratorFrame getModeratorFrame() {
+        return moderatorFrame;
+    }
+
     public void setContentPanel(JPanel newPanel) {
 
         moderatorFrame.mainPanel.remove(moderatorFrame.scrollPane); // Uklanjamo prethodni contentPanel

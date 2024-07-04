@@ -113,6 +113,7 @@ public class AlbumsPanelModerator extends JPanel {
         for (PublishedWork album :this.albums) {
             System.out.println(album.getCover());
             JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(), album.getId());
+            albumPanel.setBackground(new Color(32, 38, 61));
             c.gridx = i % 4; // Redni broj kolone u trenutnom redu
             c.gridy = 2 + j ; // Redni broj reda
             c.gridwidth = 1; // Zauzima 1 kolonu

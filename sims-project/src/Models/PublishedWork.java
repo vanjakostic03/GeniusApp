@@ -1,14 +1,18 @@
 package Models;
 
 import Enums.TypeOfWork;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 import java.util.ArrayList;
 import java.util.Date;
 
+@XStreamAlias("publishedWork")
 public abstract class PublishedWork {
     protected String id;
     protected String title;
     protected String cover;
+
     protected ArrayList<Artist> artists;
     protected TypeOfWork typeOfWork;
     protected ArrayList<Genre> genres;
@@ -27,6 +31,7 @@ public abstract class PublishedWork {
         this.description = description;
         this.releaseDate = new Date();
     }
+
     public String getId() {
         return id;
     }

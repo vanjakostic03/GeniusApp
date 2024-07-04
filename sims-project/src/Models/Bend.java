@@ -1,10 +1,12 @@
 package Models;
 
 import Enums.TypeOfArtist;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+@XStreamAlias("bend")
 public class Bend extends Artist{
     private String name;
     private String description;
