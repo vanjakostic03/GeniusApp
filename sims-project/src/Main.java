@@ -36,10 +36,9 @@ public class Main {
 //        serialization.load();
         //treba pozvati prozor za nereg.korisnika
 //        AccountService accountService = new AccountService();
-//        ArtistService artistService = new ArtistService();
-//        //PublishedWorkService pwService2 = new PublishedWorkService();
-//        CommentService commentService = new CommentService();
-//        ModeratorFrame mf = new ModeratorFrame("nesto",pwService,artistService,commentService);
-        AdminFrame af = new AdminFrame("f");
+        ArtistService artistService = new ArtistService();
+        CommentService commentService = new CommentService();
+        ModeratorFrame mf = new ModeratorFrame("nesto",pwService,artistService,commentService);
+       // AdminFrame af = new AdminFrame("f");
     }
 }
