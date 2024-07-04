@@ -278,7 +278,7 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(views, c);
 
-        String releaseDateString = String.valueOf(album.getReleaseDate()).substring(4,9) + " " +String.valueOf(album.getReleaseDate()).substring(24);
+        String releaseDateString = String.valueOf(album.getReleaseDate()).substring(4,10) + " " +String.valueOf(album.getReleaseDate()).substring(24);
 
         JTextArea releaseDate= new JTextArea("Release date:\n"+releaseDateString);
         releaseDate.setBackground(new Color(32, 38, 61));

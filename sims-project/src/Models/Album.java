@@ -94,6 +94,12 @@ public class Album extends PublishedWork{
         songs = new ArrayList<>();
     }
 
+    public Album(String id,String title,String cover, String description,ArrayList<Genre> genres,ArrayList<Artist> artists,ArrayList<Song> songs) {
+        super(id,title,cover,artists,TypeOfWork.ALBUM,genres,description);
+        this.songs = songs;
+
+    }
+
     public ArrayList<Song> getSongs() {
         return songs;
     }

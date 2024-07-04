@@ -578,4 +578,138 @@
     <lyrics>nwiorjio3wrj3</lyrics>
     <views>0</views>
   </song>
+  <song>
+    <id>PW014</id>
+    <title>kldklasdm</title>
+    <cover>/img/x.png</cover>
+    <artists>
+      <Models.Bend>
+        <id>2</id>
+        <recordLabel/>
+        <typeOfArtist>BAND</typeOfArtist>
+        <name>Depeche Mode</name>
+        <description>Pioneering English band Depeche Mode took the underground electronic club sounds of the early &apos;80s and expanded them to stadium-sized levels within a decade, becoming one of the best-selling international groups in the process. One of the first acts to establish a musical identity based completely around the use of synthesizers, they debuted with a bouncy electro-pop spirit which gradually developed into a darker, more dramatic synth-rock style that ultimately positioned them as one of the most quintessential alternative bands of their era. Earning a modest European following with early releases like 1981&apos;s Speak &amp; Spell and 1983&apos;s Construction Time Again, they made their U.S. breakthrough in 1984 with their platinum-certified fourth LP, Some Great Reward. From there, Depeche Mode remained a fixture on the international Top Ten with hit &apos;90s albums such as the classic Violator and their first U.S./U.K. number one, the grunge-influenced Songs of Faith and Devotion. While internal drama and struggles with substance abuse threatened to derail them by the late &apos;90s, their ever-evolving sound adapted with the times, whether diving into moody trip-hop on 1997&apos;s Ultra or digitizing with experimental electronic on 2001&apos;s Exciter. By the late 2000s, the trio experienced a popular resurgence and renewed drive with the chart-topping electro-rock Playing the Angel, which kicked off a new era that poised Depeche Mode as elder statesmen of the genre, dominating sales with each subsequent release and even embarking on their longest tour to date, in support of their 14th album, 2017&apos;s politically charged Spirit. Major changes carried them into the 2020s: after they were inducted into the Rock &amp; Roll Hall of Fame during the COVID-19 pandemic, they were reduced to a duo following the death of founding member Andy &quot;Fletch&quot; Fletcher in 2022. The next year, they processed the years of losses on the contemplative Memento Mori...</description>
+        <dateOfEstablishment>1980-10-10</dateOfEstablishment>
+        <memberships/>
+      </Models.Bend>
+    </artists>
+    <typeOfWork>SONG</typeOfWork>
+    <genres/>
+    <releaseDate>2024-07-04 20:14:14.102 UTC</releaseDate>
+    <description>iefoiwejofewofhweoifhoewf</description>
+    <lyricist>
+      <id>1</id>
+      <recordLabel/>
+      <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+      <biography>Elizaveta Gyrdymova was born on 1 June 1998 in Yekaterinburg. From childhood, Gyrdymova enjoyed writing poetry and published her work on the site Stihi.ru as a teenager.[1]  In 2014, she entered tenth grade at the Specialized Educational and Scientific Center of the Ural Federal University.[2] In 2016, she enrolled in correspondence courses in film production at the Gerasimov Institute of Cinematography in Moscow. She chose the school because of her love of classic cinema.[3]  Since September 2016, Gyrdymova has continued her studies, and her first internship was at the ETV channel in her native Yekaterinburg, where she released joint projects with the poet Alexandra Aksyonova.[4] She then worked for some time as a producer at ETV.[1]  In May 2022, it became known that the singer left Russia for Lithuania.[5]  In January 2023, the Russian Ministry of Justice included Gyrdymova in the list of foreign agents.[6][7]</biography>
+      <picture>https://en.wikipedia.org/wiki/Monetochka#/media/File:Монеточка_(концерт_Монеточки_в_А2)_2019_(cropped).jpg</picture>
+      <name>Monetochka</name>
+      <memberships/>
+    </lyricist>
+    <composer reference="../lyricist"/>
+    <lyrics>ihfdeiwhfewohfewuf</lyrics>
+    <views>0</views>
+  </song>
+  <song>
+    <id>PW015</id>
+    <title>Nice</title>
+    <cover>/img/exclusive.png</cover>
+    <artists>
+      <Models.SingleArtist>
+        <id>5</id>
+        <recordLabel/>
+        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        <biography>Christopher Maurice Brown (born May 5, 1989) is an American singer, songwriter, rapper, dancer and actor. He is one of the most prominent artists in RB music,[note 1] being credited as an evolver of the genre,[8] and often being referred to by contemporaries as the &quot;King of RB&quot;. Brown has had comparisons to Michael Jackson for his singing and dancing abilities</biography>
+        <picture>https://upload.wikimedia.org/wikipedia/commons/a/a0/Chris_Brown_PartyTour.jpg</picture>
+        <name>Chris Brown</name>
+        <memberships/>
+      </Models.SingleArtist>
+    </artists>
+    <typeOfWork>SONG</typeOfWork>
+    <genres/>
+    <releaseDate>2024-07-04 21:27:23.777 UTC</releaseDate>
+    <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities</description>
+    <lyricist reference="../artists/Models.SingleArtist"/>
+    <composer reference="../artists/Models.SingleArtist"/>
+    <lyrics>ijwd jfoiwjf ij ijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ij</lyrics>
+    <views>0</views>
+  </song>
+  <song>
+    <id>PW016</id>
+    <title>You</title>
+    <cover>/img/exclusive.png</cover>
+    <artists>
+      <Models.SingleArtist reference="../../../song[10]/artists/Models.SingleArtist"/>
+    </artists>
+    <typeOfWork>SONG</typeOfWork>
+    <genres/>
+    <releaseDate>2024-07-04 21:27:32.699 UTC</releaseDate>
+    <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities</description>
+    <lyricist reference="../../song[10]/artists/Models.SingleArtist"/>
+    <composer reference="../../song[10]/artists/Models.SingleArtist"/>
+    <lyrics>ijwd jfoiwjf ij ijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ij</lyrics>
+    <views>0</views>
+  </song>
+  <album>
+    <id>PW017</id>
+    <title>Exclusive</title>
+    <cover>/img/exclusive.png</cover>
+    <artists>
+      <Models.SingleArtist reference="../../../song[10]/artists/Models.SingleArtist"/>
+    </artists>
+    <typeOfWork>ALBUM</typeOfWork>
+    <genres/>
+    <releaseDate>2024-07-04 21:27:35.751 UTC</releaseDate>
+    <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities </description>
+    <songs>
+      <song>
+        <id>PW015</id>
+        <title>Nice</title>
+        <cover>/img/exclusive.png</cover>
+        <artists>
+          <Models.SingleArtist>
+            <id>5</id>
+            <recordLabel/>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>Christopher Maurice Brown (born May 5, 1989) is an American singer, songwriter, rapper, dancer and actor. He is one of the most prominent artists in RB music,[note 1] being credited as an evolver of the genre,[8] and often being referred to by contemporaries as the &quot;King of RB&quot;. Brown has had comparisons to Michael Jackson for his singing and dancing abilities</biography>
+            <picture>https://upload.wikimedia.org/wikipedia/commons/a/a0/Chris_Brown_PartyTour.jpg</picture>
+            <name>Chris Brown</name>
+            <memberships/>
+          </Models.SingleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <genres/>
+        <releaseDate>2024-07-04 21:27:23.777 UTC</releaseDate>
+        <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities</description>
+        <lyricist reference="../artists/Models.SingleArtist"/>
+        <composer reference="../artists/Models.SingleArtist"/>
+        <lyrics>ijwd jfoiwjf ij ijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ij</lyrics>
+        <views>0</views>
+      </song>
+      <song>
+        <id>PW016</id>
+        <title>You</title>
+        <cover>/img/exclusive.png</cover>
+        <artists>
+          <Models.SingleArtist>
+            <id>5</id>
+            <recordLabel/>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>Christopher Maurice Brown (born May 5, 1989) is an American singer, songwriter, rapper, dancer and actor. He is one of the most prominent artists in RB music,[note 1] being credited as an evolver of the genre,[8] and often being referred to by contemporaries as the &quot;King of RB&quot;. Brown has had comparisons to Michael Jackson for his singing and dancing abilities</biography>
+            <picture>https://upload.wikimedia.org/wikipedia/commons/a/a0/Chris_Brown_PartyTour.jpg</picture>
+            <name>Chris Brown</name>
+            <memberships/>
+          </Models.SingleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <genres/>
+        <releaseDate>2024-07-04 21:27:23.777 UTC</releaseDate>
+        <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities</description>
+        <lyricist reference="../artists/Models.SingleArtist"/>
+        <composer reference="../artists/Models.SingleArtist"/>
+        <lyrics>ijwd jfoiwjf ij ijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ij</lyrics>
+        <views>0</views>
+      </song>
+    </songs>
+  </album>
 </list>

@@ -35,5 +35,14 @@
     <name>Billie Eilish</name>
     <memberships/>
   </singleArtist>
+  <singleArtist>
+    <id>5</id>
+    <recordLabel/>
+    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+    <biography>Christopher Maurice Brown (born May 5, 1989) is an American singer, songwriter, rapper, dancer and actor. He is one of the most prominent artists in RB music,[note 1] being credited as an evolver of the genre,[8] and often being referred to by contemporaries as the "King of RB". Brown has had comparisons to Michael Jackson for his singing and dancing abilities</biography>
+    <picture>https://upload.wikimedia.org/wikipedia/commons/a/a0/Chris_Brown_PartyTour.jpg</picture>
+    <name>Chris Brown</name>
+    <memberships/>
+  </singleArtist>
 
 </list>

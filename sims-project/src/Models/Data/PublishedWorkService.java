@@ -129,6 +129,8 @@ public class PublishedWorkService {
 
         xstream.addPermission(AnyTypePermission.ANY); // Dodavanje permisije
 
+        xstream.aliasType("singleArtist", SingleArtist.class);
+        xstream.aliasType("bend", Bend.class);
         xstream.aliasType("album",Album.class);
         xstream.aliasType("song", Song.class);
 

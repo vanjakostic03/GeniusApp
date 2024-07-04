@@ -1,5 +1,7 @@
 package View.Moderator;
+import Controler.AlbumController;
 import Models.Album;
+import Models.Artist;
 import Models.PublishedWork;
 
 import javax.swing.*;
@@ -13,15 +15,17 @@ public class AlbumsPanelModerator extends JPanel {
 
     ToolBarPanelModerator parentPanel ;
     ArrayList<PublishedWork> albums = new ArrayList<>() ;
+    ArrayList<Artist> artists = new ArrayList<>() ;
 
     public void setAlbums(ArrayList<PublishedWork> albums) {
         this.albums = albums;
     }
 
-    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel,ArrayList<PublishedWork> albums) {
+    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel,ArrayList<PublishedWork> albums,ArrayList<Artist> artists) {
 
         this.parentPanel = parenPanel;
         this.albums = albums;
+        this.artists = artists;
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -99,8 +103,9 @@ public class AlbumsPanelModerator extends JPanel {
         plusIconButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                AlbumForm albumForm = new AlbumForm();
+                AlbumForm albumForm = new AlbumForm(artists);
                 albumForm.setVisible(true);
+                AlbumController albumController = new AlbumController(albumForm,parentPanel.getModeratorFrame().getPublishedWorkService(), parentPanel.getModeratorFrame().getArtistService());
             }
         });
 
