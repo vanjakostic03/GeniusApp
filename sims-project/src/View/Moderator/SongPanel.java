@@ -262,7 +262,7 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(artist, c);
 
-        JTextArea views= new JTextArea(String.valueOf(song.getViews()));
+        JTextArea views= new JTextArea("Views:\n"+String.valueOf(song.getViews()));
         views.setBackground(new Color(32, 38, 61));
         views.setFont(new Font("Dialog", Font.PLAIN, 16));
         views.setForeground(Color.WHITE);
@@ -279,8 +279,7 @@ public class SongPanel extends JPanel {
         add(views, c);
 
         String releaseDateString = String.valueOf(song.getReleaseDate()).substring(4,9) + " " +String.valueOf(song.getReleaseDate()).substring(24);
-        JTextArea releaseDate= new JTextArea(releaseDateString);
-        //JTextArea releaseDate= new JTextArea(String.valueOf(song.getReleaseDate()).substring(0,11));
+        JTextArea releaseDate= new JTextArea("Release date:\n" + releaseDateString);
         releaseDate.setBackground(new Color(32, 38, 61));
         releaseDate.setFont(new Font("Dialog", Font.PLAIN, 16));
         releaseDate.setForeground(Color.WHITE);
@@ -407,8 +406,8 @@ public class SongPanel extends JPanel {
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(1, 1, 1, 1);
 
-        //JTextArea composer = new JTextArea(song.getComposer().getName());
-        JTextArea composer = new JTextArea("song.getComposer().getName()");
+        JTextArea composer = new JTextArea("Composer:\n" + song.getComposer().getName());
+        //JTextArea composer = new JTextArea("song.getComposer().getName()");
         composer.setBackground(new Color(32, 38, 61));
         composer.setFont(new Font("Dialog", Font.PLAIN, 16));
         composer.setForeground(Color.WHITE);
@@ -423,8 +422,7 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         panel.add(composer, c);
 
-        JTextArea lyricist = new JTextArea("efjlesfjfe");
-       // JTextArea lyricist = new JTextArea(song.getLyricist().getName());
+        JTextArea lyricist = new JTextArea("Lyricist:\n"+song.getLyricist().getName());
         lyricist.setBackground(new Color(32, 38, 61));
         lyricist.setFont(new Font("Dialog", Font.PLAIN, 16));
         lyricist.setForeground(Color.WHITE);

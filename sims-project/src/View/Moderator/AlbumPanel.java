@@ -229,21 +229,22 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(title, c);
 
-//        String artists ="";
-//        if(album.getArtists()!=null){
-//            for(Artist a: album.getArtists()) {
-//                if(a.getTypeOfArtist() == TypeOfArtist.BAND){
-//                    Bend b = (Bend)a;
-//                    artists+= b.getName() + "\n";
-//                }else{
-//                    SingleArtist sa = (SingleArtist) a;
-//                    artists+= sa.getName() + "\n";
-//                }
-//            }
-//        }
-//
-//        JTextArea artist= new JTextArea(artists);
-        JTextArea artist= new JTextArea("Artist name");
+        String artists ="";
+        if(album.getArtists()!=null){
+            System.out.println("upao");
+            for(Artist a: album.getArtists()) {
+                if(a.getTypeOfArtist() == TypeOfArtist.BAND){
+                    Bend b = (Bend)a;
+                    artists+= b.getName() + "\n";
+                }else{
+                    SingleArtist sa = (SingleArtist) a;
+                    artists+= sa.getName() + "\n";
+                }
+            }
+        }
+
+        JTextArea artist= new JTextArea(artists);
+        //JTextArea artist= new JTextArea("Artist name");
         artist.setBackground(new Color(32, 38, 61));
         artist.setFont(new Font("Dialog", Font.PLAIN, 30));
         artist.setForeground(Color.WHITE);
@@ -262,7 +263,7 @@ public class AlbumPanel extends JPanel {
         for(Song song: album.getSongs()){
             numOfViews+=song.getViews();
         }
-        JTextArea views= new JTextArea(String.valueOf(numOfViews));
+        JTextArea views= new JTextArea("Views:\n"+String.valueOf(numOfViews));
         views.setBackground(new Color(32, 38, 61));
         views.setFont(new Font("Dialog", Font.PLAIN, 30));
         views.setForeground(Color.WHITE);
@@ -279,7 +280,7 @@ public class AlbumPanel extends JPanel {
 
         String releaseDateString = String.valueOf(album.getReleaseDate()).substring(4,9) + " " +String.valueOf(album.getReleaseDate()).substring(24);
 
-        JTextArea releaseDate= new JTextArea(releaseDateString);
+        JTextArea releaseDate= new JTextArea("Release date:\n"+releaseDateString);
         releaseDate.setBackground(new Color(32, 38, 61));
         releaseDate.setFont(new Font("Dialog", Font.PLAIN, 30));
         releaseDate.setForeground(Color.WHITE);
