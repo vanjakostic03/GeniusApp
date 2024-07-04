@@ -104,8 +104,12 @@ public class PublishedWorkService {
         xstream.alias("publishedWork", PublishedWork.class);
         xstream.alias("album",Album.class);
         xstream.alias("song", Song.class);
+
         xstream.addPermission(AnyTypePermission.ANY);
 
+
+        xstream.aliasType("singleArtist", SingleArtist.class);
+        xstream.aliasType("bend", Bend.class);
         xstream.aliasType("album",Album.class);
         xstream.aliasType("song", Song.class);
         
