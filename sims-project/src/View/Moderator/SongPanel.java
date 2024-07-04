@@ -222,6 +222,7 @@ public class SongPanel extends JPanel {
         title.setFont(new Font("Dialog", Font.BOLD, 25));
         title.setForeground(Color.WHITE);
         title.setLineWrap(true);
+        title.setEditable(false);
 
         c.gridx = 1;
         c.gridy = 1;
@@ -250,6 +251,7 @@ public class SongPanel extends JPanel {
         artist.setFont(new Font("Dialog", Font.PLAIN, 25));
         artist.setForeground(Color.WHITE);
         artist.setLineWrap(true);
+        artist.setEditable(false);
 
         c.gridx = 1;
         c.gridy = 2;
@@ -265,6 +267,7 @@ public class SongPanel extends JPanel {
         views.setFont(new Font("Dialog", Font.PLAIN, 16));
         views.setForeground(Color.WHITE);
         views.setLineWrap(true);
+        views.setEditable(false);
 
         c.gridx = 2;
         c.gridy = 1;
@@ -275,11 +278,14 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(views, c);
 
-        JTextArea releaseDate= new JTextArea(String.valueOf(song.getReleaseDate()));
+        String releaseDateString = String.valueOf(song.getReleaseDate()).substring(4,9) + " " +String.valueOf(song.getReleaseDate()).substring(24);
+        JTextArea releaseDate= new JTextArea(releaseDateString);
+        //JTextArea releaseDate= new JTextArea(String.valueOf(song.getReleaseDate()).substring(0,11));
         releaseDate.setBackground(new Color(32, 38, 61));
         releaseDate.setFont(new Font("Dialog", Font.PLAIN, 16));
         releaseDate.setForeground(Color.WHITE);
         releaseDate.setLineWrap(true);
+        releaseDate.setEditable(false);
 
         c.gridx = 2;
         c.gridy = 2;
@@ -329,7 +335,7 @@ public class SongPanel extends JPanel {
         lyrics.setWrapStyleWord(true);
         lyrics.setAlignmentX(CENTER_ALIGNMENT);
         lyrics.setMargin(new Insets(100, 10, 10, 10));
-
+        lyrics.setEditable(false);
 
         c.gridx = 1;
         c.gridy = 4;
@@ -407,6 +413,7 @@ public class SongPanel extends JPanel {
         composer.setFont(new Font("Dialog", Font.PLAIN, 16));
         composer.setForeground(Color.WHITE);
         composer.setLineWrap(true);
+        composer.setEditable(false);
         c.gridx = 0;
         c.gridy = 0;
         c.gridwidth = 1;
@@ -422,6 +429,7 @@ public class SongPanel extends JPanel {
         lyricist.setFont(new Font("Dialog", Font.PLAIN, 16));
         lyricist.setForeground(Color.WHITE);
         lyricist.setLineWrap(true);
+        lyricist.setEditable(false);
         c.gridx = 1;
         c.gridy = 0;
         c.gridwidth = 1;
