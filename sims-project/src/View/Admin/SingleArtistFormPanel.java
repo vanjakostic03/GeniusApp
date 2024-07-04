@@ -1,7 +1,8 @@
 package View.Admin;
 
-import Models.SingleArtist;
+import Models.Data.ArtistService;
 import Models.RecordLabel;
+import Models.SingleArtist;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,10 +16,13 @@ public class SingleArtistFormPanel extends JPanel {
     private JTextField biographyField;
     private JTextField pictureField;
     private DefaultListModel<String> listModel;
+    private ArtistService artistService;
 
     public SingleArtistFormPanel() {
+        this.artistService = new ArtistService();
         setLayout(new GridBagLayout());
         initFormPanel();
+        loadSingleArtistsFromXML();
     }
 
     private void initFormPanel() {
@@ -98,12 +102,19 @@ public class SingleArtistFormPanel extends JPanel {
         String picture = pictureField.getText();
 
         if (!id.isEmpty() && !name.isEmpty() && !biography.isEmpty() && !picture.isEmpty()) {
-            SingleArtist artist = new SingleArtist(id, null, biography, picture, name);
-            listModel.addElement(artist.getId() + ", " + artist.getName());
+            SingleArtist singleArtist = new SingleArtist(id, new RecordLabel(), biography, picture, name);
+            artistService.addArtist(singleArtist);
+            listModel.addElement(singleArtist.getId() + ", " + singleArtist.getName());
             idField.setText("");
             nameField.setText("");
             biographyField.setText("");
             pictureField.setText("");
+        }
+    }
+
+    private void loadSingleArtistsFromXML() {
+        for (SingleArtist singleArtist : artistService.getSingleArtists()) {
+            listModel.addElement(singleArtist.getId() + ", " + singleArtist.getName());
         }
     }
 
