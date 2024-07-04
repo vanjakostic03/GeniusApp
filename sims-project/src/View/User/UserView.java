@@ -70,7 +70,7 @@ public class UserView extends JPanel {
         PublishedWork album1 = (albums.size() >= 1) ? albums.get(0) : null;
         PublishedWork album2 = (albums.size() >= 2) ? albums.get(1) : null;
         PublishedWork album3 = (albums.size() >= 3) ? albums.get(2) : null;
-        JPanel songsPanel = createCategoryPanelSongs("Popular songs", new PublishedWork[]{album1, album2, album3});
+        JPanel songsPanel = createCategoryPanelSongs("Popular albums", new PublishedWork[]{album1, album2, album3});
         c.gridx = 0;
         c.gridy = 2;
         c.gridwidth = 2;
@@ -103,7 +103,7 @@ public class UserView extends JPanel {
         titleLabel.setFont(new Font("Dialog", Font.BOLD, 20));
         titleLabel.setForeground(Color.white);
         titleLabel.setHorizontalAlignment(SwingConstants.LEFT);
-        titleLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        //titleLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         panel.add(titleLabel, BorderLayout.NORTH);
 
         // Učitavanje slike izvođača sa zakrivljenim ivicama
@@ -111,14 +111,14 @@ public class UserView extends JPanel {
         if (artistImage != null) {
             JLabel imageLabel = new JLabel(new ImageIcon(getRoundedImage(artistImage.getImage(), 250, 250)));
             imageLabel.setLayout(new BorderLayout());
-            imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+            //imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
             // Naziv izvođača unutar slike
             JLabel nameLabel = new JLabel(artist.getName());
             nameLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
             nameLabel.setForeground(Color.white);
             nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
-            nameLabel.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 0)); // Podesi razmak kako bi se prikazalo ime u donjem levom uglu
+            //nameLabel.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 0)); // Podesi razmak kako bi se prikazalo ime u donjem levom uglu
             imageLabel.add(nameLabel, BorderLayout.SOUTH);
 
             panel.add(imageLabel, BorderLayout.CENTER);
@@ -138,13 +138,12 @@ public class UserView extends JPanel {
     }
 
 
-
     private JPanel createCategoryPanel(String categoryTitle, String[] genres) {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(new Color(32, 38, 61));
-        panel.setPreferredSize(new Dimension(250, 150));
-        panel.setMaximumSize(new Dimension(250, 150));
-        panel.setMinimumSize(new Dimension(250, 150));
+        panel.setPreferredSize(new Dimension(250, 130)); // Smanjena visina panela za žanrove
+        panel.setMaximumSize(new Dimension(250, 130));
+        panel.setMinimumSize(new Dimension(250, 130));
 
         // Naslov kategorije
         JLabel titleLabel = new JLabel(categoryTitle);
@@ -168,18 +167,17 @@ public class UserView extends JPanel {
 
         return panel;
     }
-
     private JPanel createItemPanel(String genreName) {
         JPanel itemPanel = new JPanel(new BorderLayout());
         itemPanel.setBackground(new Color(32, 38, 61));
+        itemPanel.setPreferredSize(new Dimension(250, 150)); // Podešavanje veličine kvadrata
         itemPanel.setBorder(new RoundBorder());
-        itemPanel.setPreferredSize(new Dimension(200, 100)); // Podešavanje veličine kvadrata
 
         // Učitavanje slike za žanr
         ImageIcon genreImage = loadImageForGenre(genreName);
         if (genreImage != null) {
-            JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(genreImage.getImage(), 150, 100)));
-            imageLabel.setBorder(BorderFactory.createEmptyBorder(3, 3, 3, 3));
+            JLabel imageLabel = new JLabel(new ImageIcon(getScaledAndRoundedImage(genreImage.getImage(), 130))); // Kvadratna slika sa zaobljenim ivicama
+            imageLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
             itemPanel.add(imageLabel, BorderLayout.CENTER);
         }
 
@@ -191,6 +189,16 @@ public class UserView extends JPanel {
         itemPanel.add(nameLabel, BorderLayout.SOUTH);
 
         return itemPanel;
+    }
+
+    private Image getScaledAndRoundedImage(Image srcImg, int size) {
+        BufferedImage output = new BufferedImage(size, size, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = output.createGraphics();
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setClip(new java.awt.geom.RoundRectangle2D.Float(0, 0, size, size, 40, 40)); // Zaobljeni oblik
+        g2.drawImage(srcImg, 0, 0, size, size, null);
+        g2.dispose();
+        return output;
     }
 
     private ImageIcon loadImageForGenre(String genreName) {
@@ -230,6 +238,7 @@ public class UserView extends JPanel {
         panel.setPreferredSize(new Dimension(250, 300));
         panel.setMaximumSize(new Dimension(250, 300));
         panel.setMinimumSize(new Dimension(250, 300));
+        panel.setBorder(new RoundBorder());
 
         // Naslov kategorije
         JLabel titleLabel = new JLabel(categoryTitle);
@@ -263,7 +272,7 @@ public class UserView extends JPanel {
         // Učitavanje slike za album
         ImageIcon albumImage = loadImage(item.getCover());
         if (albumImage != null) {
-            JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(albumImage.getImage(), 150, 80)));
+            JLabel imageLabel = new JLabel(new ImageIcon(getScaledAndRoundedImage1(albumImage.getImage(), 80))); // Kvadratna slika sa zaobljenim ivicama
             imageLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
             itemPanel.add(imageLabel, BorderLayout.WEST);
         }
@@ -272,12 +281,11 @@ public class UserView extends JPanel {
         JLabel nameLabel = new JLabel(item.getTitle());
         nameLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
         nameLabel.setForeground(Color.white);
-        nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
         itemPanel.add(nameLabel, BorderLayout.CENTER);
 
         return itemPanel;
     }
-
     private ImageIcon loadImage(String imagePath) {
         try {
             return new ImageIcon(ImageIO.read(getClass().getResource(imagePath)));
@@ -287,15 +295,15 @@ public class UserView extends JPanel {
         }
     }
 
-    private Image getScaledImage(Image srcImg, int width, int height) {
-        BufferedImage resizedImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2 = resizedImg.createGraphics();
-        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-        g2.drawImage(srcImg, 0, 0, width, height, null);
+    private Image getScaledAndRoundedImage1(Image srcImg, int size) {
+        BufferedImage output = new BufferedImage(size, size, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = output.createGraphics();
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setClip(new java.awt.geom.RoundRectangle2D.Float(0, 0, size, size, 20, 20)); // Zaobljeni oblik
+        g2.drawImage(srcImg, 0, 0, size, size, null);
         g2.dispose();
-        return resizedImg;
+        return output;
     }
-
     private JTextField createSearchBar() {
         JTextField searchBar = new JTextField("Search artist, genre, album, band...") {
             @Override
