@@ -9,6 +9,7 @@ public class Bend extends Artist{
     private String name;
     private String description;
     private LocalDate dateOfEstablishment;
+    private String picture;
     ArrayList<Membership> memberships;
 
     public Bend(String id,RecordLabel recordLabel, String name, String description, LocalDate dateOfEstablishment) {
@@ -26,6 +27,15 @@ public class Bend extends Artist{
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
 
     public String getDescription() {
         return description;

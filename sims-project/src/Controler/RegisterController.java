@@ -52,8 +52,8 @@ public class RegisterController {
                 JOptionPane.showMessageDialog(view, "Registration Successful!");
                 view.dispose();
                 // Otvoriti novi prozor za korisnika
-                UserView userView = new UserView(person.getName());
-                userView.setVisible(true);
+                //UserView userView = new UserView(person.getName());
+                //userView.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(view, "Username already exists!");
             }

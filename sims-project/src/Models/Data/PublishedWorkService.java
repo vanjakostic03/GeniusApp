@@ -109,7 +109,7 @@ public class PublishedWorkService {
         xstream.aliasType("album",Album.class);
         xstream.aliasType("song", Song.class);
         
-        try(FileReader reader = new FileReader("./Data/publishedWorks.xml")){
+        try(FileReader reader = new FileReader("publishedWorks.xml")){
             publishedWorks = (ArrayList<PublishedWork>) xstream.fromXML(reader);
             
         }catch(IOException e){
@@ -129,7 +129,7 @@ public class PublishedWorkService {
         xstream.aliasType("song", Song.class);
 
 
-        try (FileWriter writer = new FileWriter("./Data/publishedWorks.xml")) {
+        try (FileWriter writer = new FileWriter("publishedWorks.xml")) {
             xstream.toXML(publishedWorks, writer);
         } catch (IOException e) {
             e.printStackTrace();
