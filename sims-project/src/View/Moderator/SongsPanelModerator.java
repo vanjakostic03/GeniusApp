@@ -1,5 +1,6 @@
 package View.Moderator;
 
+import Controler.SongController;
 import Models.Artist;
 import Models.PublishedWork;
 import Models.Song;
@@ -87,8 +88,10 @@ public class SongsPanelModerator extends JPanel {
         plusIconButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                SongForm songForm = new SongForm(null);
+                SongForm songForm = new SongForm(null,artists);
                 songForm.setVisible(true);
+                SongController songController = new SongController(songForm,parentPanel.getModeratorFrame().getPublishedWorkService(), parentPanel.getModeratorFrame().getArtistService());
+
             }
         });
 

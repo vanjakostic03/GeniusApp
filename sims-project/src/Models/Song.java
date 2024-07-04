@@ -1,8 +1,13 @@
 package Models;
 
 
+import Enums.TypeOfWork;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import java.util.ArrayList;
 import java.util.Date;
 
+@XStreamAlias("song")
 public class Song extends PublishedWork{
     private SingleArtist lyricist;
     private SingleArtist composer;
@@ -10,14 +15,16 @@ public class Song extends PublishedWork{
     private int views;
 
     public Song() {}
-    public Song(SingleArtist lyricist, SingleArtist composer, String lyrics, String description){
-        releaseDate  = new Date();
+    public Song(String id, String title, String cover, String lyrics, String description, SingleArtist composer, SingleArtist lyricist, ArrayList<Genre>genres,ArrayList<Artist> artists) {
+        super(id,title,cover,artists, TypeOfWork.SONG,genres,description);
+
         this.lyricist = lyricist;
         this.composer = composer;
         this.lyrics = lyrics;
-        this.description = description;
         this.views = 0;
+
     }
+
 
     public SingleArtist getLyricist() {
         return lyricist;

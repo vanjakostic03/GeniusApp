@@ -123,8 +123,8 @@ public class AlbumForm extends JFrame {
         addSongButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SongForm songForm = new SongForm(albumForm);
-                songForm.setVisible(true);
+                //SongForm songForm = new SongForm(albumForm,a);
+                //songForm.setVisible(true);
             }
         });
         c.gridx = 2;

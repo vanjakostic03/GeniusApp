@@ -4,6 +4,8 @@ import Models.Artist;
 import Models.Data.ArtistService;
 import Models.Data.PublishedWorkService;
 import Models.Genre;
+import Models.SingleArtist;
+import Models.Song;
 import View.Moderator.SongForm;
 
 import java.awt.event.ActionEvent;
@@ -36,19 +38,37 @@ public class SongController {
             String[] artistString = songForm.getArtists();
 
             String[] tokens = composerString.split(",");
-            //SingleArtist composer = artistService.getById(tokens[0]);
-            tokens = composerString.split(",");
-            //SingleArtist lyricist = artistService.getById(tokens[0]);
+            SingleArtist composer =(SingleArtist) artistService.findArtistById(tokens[0]);
+            tokens = lyricistString.split(",");
+            SingleArtist lyricist = (SingleArtist) artistService.findArtistById(tokens[0]);
 
             ArrayList<Genre> genres = new ArrayList<>();
             ArrayList<Artist> artists = new ArrayList<>();
 
 //            for(int i = 0; i < artistString.length; i++) {
 //                String[] artistTokens = artistString[i].split(",");
-//                genres.add(artistService.getById(tokens[0]));
+//                genres.add(artistService.findArtistById(tokens[0]));
 //            }
+            for(int i = 0; i < artistString.length; i++) {
+                String[] artistTokens = artistString[i].split(",");
+                artists.add(artistService.findArtistById(artistTokens[0]));
+            }
 
+            System.out.println(lyricistString);
+            System.out.println(lyricist.getName());
 
+            for(Artist a: artists){
+                System.out.println(a.getId());
+            }
+
+            String id = publishedWorkService.getFreeID();
+            Song song = new Song(id,title,cover,lyrics,description,composer,lyricist,genres,artists);
+            song.setComposer(composer);
+            song.setLyricist(lyricist);
+            song.setGenres(genres);
+            song.setArtists(artists);
+            publishedWorkService.addPublishedWork(song);
+            publishedWorkService.savePublishedWorksToXML();
         }
 
     }
