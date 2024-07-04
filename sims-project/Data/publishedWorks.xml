@@ -7,14 +7,45 @@
         <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
-
         <views>1234567</views>
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
+        <composer>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </composer>
+        <lyricist>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </lyricist>
     </song>
     <album>
         <id>PW002</id>
         <title>Indigo</title>
         <cover>/img/indigo.png</cover>
         <typeOfWork>ALBUM</typeOfWork>
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
         <songs>
             <song>
                 <id>PW007</id>
@@ -24,8 +55,30 @@
                 <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
                 <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
                 <releaseDate>2019-06-28 00:00:00.000 UTC</releaseDate>
-
                 <views>1234567</views>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id> <!-- Vrednost id-a -->
+                        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                        <picture>.eff</picture> <!-- Vrednost slike -->
+                        <name>Chris Brown</name> <!-- Vrednost imena -->
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    </singleArtist>
+                </artists>
+                <composer>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </composer>
+                <lyricist>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </lyricist>
             </song>
             <song>
                 <id>PW011</id>
@@ -36,6 +89,29 @@
                 <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
                 <releaseDate>2019-06-28 00:00:00.000 UTC</releaseDate>
                 <views>1234567</views>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id> <!-- Vrednost id-a -->
+                        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                        <picture>.eff</picture> <!-- Vrednost slike -->
+                        <name>Chris Brown</name> <!-- Vrednost imena -->
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    </singleArtist>
+                </artists>
+                <composer>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </composer>
+                <lyricist>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </lyricist>
             </song>
             <song>
                 <id>PW012</id>
@@ -46,6 +122,29 @@
                 <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
                 <releaseDate>2019-06-28 00:00:00.000 UTC</releaseDate>
                 <views>1234567</views>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id> <!-- Vrednost id-a -->
+                        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                        <picture>.eff</picture> <!-- Vrednost slike -->
+                        <name>Chris Brown</name> <!-- Vrednost imena -->
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    </singleArtist>
+                </artists>
+                <composer>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </composer>
+                <lyricist>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </lyricist>
             </song>
         </songs>
         <releaseDate>2019-06-28 00:00:00.000 UTC</releaseDate>
@@ -66,12 +165,43 @@
                 <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
                 <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
                 <releaseDate>2011-03-18 00:00:00.000 UTC</releaseDate>
-
                 <views>1234567</views>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id> <!-- Vrednost id-a -->
+                        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                        <picture>.eff</picture> <!-- Vrednost slike -->
+                        <name>Chris Brown</name> <!-- Vrednost imena -->
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    </singleArtist>
+                </artists>
+                <composer>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </composer>
+                <lyricist>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </lyricist>
             </song>
         </songs>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2011-03-18 00:00:00.000 UTC</releaseDate>
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
 
     </album>
     <album>
@@ -88,13 +218,43 @@
                 <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
                 <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
                 <releaseDate>2022-06-24 00:00:00.000 UTC</releaseDate>
-
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id> <!-- Vrednost id-a -->
+                        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                        <picture>.eff</picture> <!-- Vrednost slike -->
+                        <name>Chris Brown</name> <!-- Vrednost imena -->
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    </singleArtist>
+                </artists>
                 <views>1234567</views>
+                <composer>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </composer>
+                <lyricist>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </lyricist>
             </song>
         </songs>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2022-06-24 00:00:00.000 UTC</releaseDate>
-
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
     </album>
     <album>
         <id>PW005</id>
@@ -110,13 +270,43 @@
                 <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
                 <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
                 <releaseDate>2014-09-16 00:00:00.000 UTC</releaseDate>
-
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id> <!-- Vrednost id-a -->
+                        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                        <picture>.eff</picture> <!-- Vrednost slike -->
+                        <name>Chris Brown</name> <!-- Vrednost imena -->
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    </singleArtist>
+                </artists>
                 <views>1234567</views>
+                <composer>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </composer>
+                <lyricist>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </lyricist>
             </song>
         </songs>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2014-09-16 00:00:00.000 UTC</releaseDate>
-
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
     </album>
     <album>
         <id>PW006</id>
@@ -132,13 +322,43 @@
                 <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
                 <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
                 <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
-
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id> <!-- Vrednost id-a -->
+                        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                        <picture>.eff</picture> <!-- Vrednost slike -->
+                        <name>Chris Brown</name> <!-- Vrednost imena -->
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    </singleArtist>
+                </artists>
                 <views>1234567</views>
+                <composer>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </composer>
+                <lyricist>
+                    <id>SI001</id> <!-- Vrednost id-a -->
+                    <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                    <picture>.eff</picture> <!-- Vrednost slike -->
+                    <name>Chris Brown</name> <!-- Vrednost imena -->
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                </lyricist>
             </song>
         </songs>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2023-11-13 00:00:00.000 UTC</releaseDate>
-
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
     </album>
     <song>
         <id>PW007</id>
@@ -148,8 +368,30 @@
         <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2019-06-28 00:00:00.000 UTC</releaseDate>
-
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
         <views>1234567</views>
+        <composer>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </composer>
+        <lyricist>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </lyricist>
     </song>
     <song>
         <id>PW008</id>
@@ -159,8 +401,30 @@
         <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2011-03-18 00:00:00.000 UTC</releaseDate>
-
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
         <views>1234567</views>
+        <composer>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </composer>
+        <lyricist>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </lyricist>
     </song>
     <song>
         <id>PW009</id>
@@ -170,8 +434,30 @@
         <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2022-06-24 00:00:00.000 UTC</releaseDate>
-
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
         <views>1234567</views>
+        <composer>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </composer>
+        <lyricist>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </lyricist>
     </song>
     <song>
         <id>PW010</id>
@@ -181,7 +467,29 @@
         <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2014-09-16 00:00:00.000 UTC</releaseDate>
-
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
+        <composer>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </composer>
+        <lyricist>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </lyricist>
         <views>1234567</views>
     </song>
     <song>
@@ -193,6 +501,29 @@
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2019-06-28 00:00:00.000 UTC</releaseDate>
         <views>1234567</views>
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
+        <composer>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </composer>
+        <lyricist>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </lyricist>
     </song>
     <song>
         <id>PW012</id>
@@ -203,5 +534,28 @@
         <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
         <releaseDate>2019-06-28 00:00:00.000 UTC</releaseDate>
         <views>1234567</views>
+        <artists>
+            <singleArtist>
+                <id>SI001</id> <!-- Vrednost id-a -->
+                <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+                <picture>.eff</picture> <!-- Vrednost slike -->
+                <name>Chris Brown</name> <!-- Vrednost imena -->
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            </singleArtist>
+        </artists>
+        <composer>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </composer>
+        <lyricist>
+            <id>SI001</id> <!-- Vrednost id-a -->
+            <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+            <picture>.eff</picture> <!-- Vrednost slike -->
+            <name>Chris Brown</name> <!-- Vrednost imena -->
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+        </lyricist>
     </song>
 </list>
