@@ -1,18 +1,27 @@
 package View.Moderator;
+import Models.Album;
+import Models.PublishedWork;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class AlbumsPanelModerator extends JPanel {
 
-    //private Font customFontRegular;
-    //private Font customFontBold;
-    ToolBarPanelModerator parentPanel ;
 
-    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel) {
-        //loadCustomFonts();
+    ToolBarPanelModerator parentPanel ;
+    ArrayList<PublishedWork> albums = new ArrayList<>() ;
+
+    public void setAlbums(ArrayList<PublishedWork> albums) {
+        this.albums = albums;
+    }
+
+    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel,ArrayList<PublishedWork> albums) {
+
         this.parentPanel = parenPanel;
+        this.albums = albums;
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -96,24 +105,74 @@ public class AlbumsPanelModerator extends JPanel {
         });
 
 
-
-        int albumCount = 30; // Primer: prikazuje do 30 albuma
-        int albumsPerRow = 4; // Broj albuma po redu
-        int startingRow = 2;
-        for (int i = 0; i < albumCount; i++) {
-            JPanel albumPanel = createAlbumPanel("Cover " + (i + 1), "Album " + (i + 1));
-            c.gridx = i % albumsPerRow; // Redni broj kolone u trenutnom redu
-            c.gridy = startingRow + i / albumsPerRow; // Redni broj reda
+//        int albumCount = 30; // Primer: prikazuje do 30 albuma
+//        int albumsPerRow = 4; // Broj albuma po redu
+//        int startingRow = 2;
+        int i = 0;
+        int j = 0;
+        for (PublishedWork album :this.albums) {
+            JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle());
+            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+            c.gridy = 2 + j ; // Redni broj reda
             c.gridwidth = 1; // Zauzima 1 kolonu
             c.weightx = 1.0;
             c.weighty = 1.0;
             c.fill = GridBagConstraints.BOTH;
             add(albumPanel, c);
+            i++;
+            if(i%4==0){
+                j++;
+            }
         }
 
+        while(j!=3){
+            JPanel albumPanel = createEmptyPanel();
+            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+            c.gridy = 2 + j ; // Redni broj reda
+            c.gridwidth = 1; // Zauzima 1 kolonu
+            c.weightx = 1.0;
+            c.weighty = 1.0;
+            c.fill = GridBagConstraints.BOTH;
+            add(albumPanel, c);
+            i++;
+            if(i%4==0){
+                j++;
+            }
+        }
+        //        if(i%4!=0){
+//            JPanel albumPanel = createAlbumPanel("", "");
+//            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+//            c.gridy = 2 + i / 2; // Redni broj reda
+//            c.gridwidth = 1; // Zauzima 1 kolonu
+//            c.weightx = 1.0;
+//            c.weighty = 1.0;
+//            c.fill = GridBagConstraints.BOTH;
+//            add(albumPanel, c);
+//            i++;
+//        }
+
+    }
 
 
+    public void addAlbum(Album album) {
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets(25, 5, 15, 10);
 
+        int albumCount = getComponentCount() - 4; // Ignorisi prve 4 komponente
+        int albumsPerRow = 4; // Broj albuma po redu
+        int startingRow = 2;
+
+        JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle());
+        c.gridx = albumCount % albumsPerRow; // Redni broj kolone u trenutnom redu
+        c.gridy = startingRow + albumCount / albumsPerRow; // Redni broj reda
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.weightx = 1.0;
+        c.weighty = 1.0;
+        c.fill = GridBagConstraints.BOTH;
+        add(albumPanel, c);
+
+        revalidate();
+        repaint();
     }
 
     private JPanel createAlbumPanel(String coverText, String albumTitle) {
@@ -173,6 +232,15 @@ public class AlbumsPanelModerator extends JPanel {
             }
         });
 
+        return panel;
+    }
+
+    public JPanel createEmptyPanel(){
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+
+        panel.setPreferredSize(new Dimension(80, 160));
+        panel.setBackground(new Color(32,38,61));
         return panel;
     }
 

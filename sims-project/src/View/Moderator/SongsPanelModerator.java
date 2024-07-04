@@ -1,18 +1,23 @@
 package View.Moderator;
 
+import Models.PublishedWork;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class SongsPanelModerator extends JPanel {
 
     private ToolBarPanelModerator parentPanel;
+    private ArrayList<PublishedWork> songs = new ArrayList<>();
 
-    public SongsPanelModerator(ToolBarPanelModerator parentPanel) {
+    public SongsPanelModerator(ToolBarPanelModerator parentPanel,ArrayList<PublishedWork> songs) {
         this.parentPanel = parentPanel;
+        this.songs = songs;
         setLayout(new GridBagLayout());
         initSongsPanel();
     }
@@ -96,23 +101,37 @@ public class SongsPanelModerator extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         add(titleLabel, c);
 
-        int songCount = 30;
-        int songsPerRow = 4;
-        int startingRow = 2;
-        for (int i = 0; i < songCount; i++) {
-            JPanel songPanel = createSongPanel("Cover " + (i + 1), "Song " + (i + 1));
-            c.gridx = i % songsPerRow; // Redni broj kolone u trenutnom redu
-            c.gridy = startingRow + i / songsPerRow; // Redni broj reda
+        int i = 0;
+        int j = 0;
+        for (PublishedWork song :this.songs) {
+            JPanel songPanel = createSongPanel(song.getCover(), song.getTitle());
+            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+            c.gridy = 2 + j ; // Redni broj reda
             c.gridwidth = 1; // Zauzima 1 kolonu
             c.weightx = 1.0;
             c.weighty = 1.0;
             c.fill = GridBagConstraints.BOTH;
             add(songPanel, c);
+            i++;
+            if(i%4==0){
+                j++;
+            }
         }
 
-
-
-
+        while(j!=3){
+            JPanel songPanel = createEmptyPanel();
+            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+            c.gridy = 2 + j ; // Redni broj reda
+            c.gridwidth = 1; // Zauzima 1 kolonu
+            c.weightx = 1.0;
+            c.weighty = 1.0;
+            c.fill = GridBagConstraints.BOTH;
+            add(songPanel, c);
+            i++;
+            if(i%4==0){
+                j++;
+            }
+        }
     }
 
     private JPanel createSongPanel(String coverText, String songTitle) {
@@ -172,6 +191,15 @@ public class SongsPanelModerator extends JPanel {
             }
         });
 
+        return panel;
+    }
+
+    public JPanel createEmptyPanel(){
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+
+        panel.setPreferredSize(new Dimension(80, 160));
+        panel.setBackground(new Color(32,38,61));
         return panel;
     }
 

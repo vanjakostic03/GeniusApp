@@ -59,13 +59,13 @@ public class ToolBarPanelModerator extends JPanel {
         JButton albums = createStyledButton("Albums");
         c.gridx = 0;
         c.gridy = 0;
-        albums.addActionListener(e -> setContentPanel(new AlbumsPanelModerator(this)));
+        albums.addActionListener(e -> setContentPanel(new AlbumsPanelModerator(this,moderatorFrame.getPublishedWorkService().getAlbums())));
         optionsPanel.add(albums, c);
 
         JButton songs = createStyledButton("Songs");
         c.gridx = 0;
         c.gridy = 1;
-        songs.addActionListener(e -> setContentPanel(new SongsPanelModerator(this)));
+        songs.addActionListener(e -> setContentPanel(new SongsPanelModerator(this,moderatorFrame.getPublishedWorkService().getSongs())));
         optionsPanel.add(songs, c);
 
         JButton comments = createStyledButton("Comments");

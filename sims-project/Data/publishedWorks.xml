@@ -1,0 +1,41 @@
+<list>
+    <song>
+        <id>PW001</id>
+        <title>PESMA1</title>
+        <cover>https:fjsefjesfefef</cover>
+        <typeOfWork>SONG</typeOfWork>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <description>ihefoihef ufoe foie</description>
+        <releaseDate>2024-07-03 16:11:58.747 UTC</releaseDate>
+        <views>1234567</views>
+    </song>
+    <album>
+        <id>PW002</id>
+        <title>ALBUM1</title>
+        <cover>https:fjsefjesfefef</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+    </album>
+    <album>
+        <id>PW003</id>
+        <title>ALBUM2</title>
+        <cover>https:fjsefjesfefef</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+    </album><album>
+        <id>PW004</id>
+        <title>ALBUM3</title>
+        <cover>https:fjsefjesfefef</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+    </album>
+    <album>
+        <id>PW005</id>
+        <title>ALBUM4</title>
+        <cover>https:fjsefjesfefef</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+    </album>
+    <album>
+        <id>PW006</id>
+        <title>ALBUM5</title>
+        <cover>https:fjsefjesfefef</cover>
+        <typeOfWork>ALBUM</typeOfWork>
+    </album>
+</list>
