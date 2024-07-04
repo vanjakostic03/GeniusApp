@@ -71,7 +71,7 @@ public class AlbumController {
 
             SongForm songForm = new SongForm(albumForm,artistService.getArtists());
             songForm.setVisible(true);
-            SongController songController = new SongController(songForm,publishedWorkService,artistService);
+            SongController songController = new SongController(songForm,null,publishedWorkService,artistService);
         }
     }
 }

@@ -39,6 +39,6 @@ public class Main {
         CommentService commentService = new CommentService();
 
         ModeratorFrame mf = new ModeratorFrame("nesto",pwService,artistService,commentService);
-       // AdminFrame af = new AdminFrame("f");
+       //AdminFrame af = new AdminFrame("f");
     }
 }

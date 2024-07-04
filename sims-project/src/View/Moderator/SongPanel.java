@@ -1,5 +1,6 @@
 package View.Moderator;
 
+import Controler.SongController;
 import Enums.TypeOfArtist;
 import Models.Artist;
 import Models.Bend;
@@ -14,13 +15,20 @@ import java.awt.event.ActionListener;
 
 public class SongPanel extends JPanel {
     private Song song;
+    private SongsPanelModerator songsPanelModerator;
+    private JButton minusIconButton = new JButton();
+    private SongPanel songPanel = this;
     //private String songTitle;
-    public SongPanel(Song song){
+    public SongPanel(Song song,SongsPanelModerator songsPanelModerator){
+        this.songsPanelModerator = songsPanelModerator;
         this.song = song;
         setLayout(new GridBagLayout());
         initSongPanel();
     }
 
+    public Song getSong(){
+        return song;
+    }
     public void initSongPanel(){
         this.setBackground(new Color(32, 38, 61));
 
@@ -63,7 +71,7 @@ public class SongPanel extends JPanel {
         ImageIcon minusIcon = new ImageIcon(scaledImage);
 
         // Kreiranje buttona za ikonicu lupe
-        JButton minusIconButton = new JButton(minusIcon);
+        minusIconButton = new JButton(minusIcon);
         minusIconButton.setOpaque(false);
         minusIconButton.setContentAreaFilled(false);
         minusIconButton.setBorderPainted(false);
@@ -81,7 +89,6 @@ public class SongPanel extends JPanel {
         add(minusIconButton,c);
 
         minusIconButton.addActionListener(new ActionListener() {
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 int result = JOptionPane.showOptionDialog(null,
@@ -91,10 +98,12 @@ public class SongPanel extends JPanel {
                         JOptionPane.QUESTION_MESSAGE,
                         null,
                         new String[]{"Yes", "No"},
-                        "Yes");
+                        "No");
+                if (result == JOptionPane.YES_OPTION) {
+                    addDeleteListener( this);
+                }
             }
         });
-
 
 
         originalIcon = new ImageIcon(getClass().getResource("/img/edit.png"));
@@ -442,5 +451,16 @@ public class SongPanel extends JPanel {
 
         return panel;
     }
+
+    public void addDeleteListener(ActionListener listener) {
+        System.out.println("UPAOOOO");
+        minusIconButton.addActionListener(listener);
+
+        SongController songController = new SongController(null,songPanel,songsPanelModerator.getParentPanel().getModeratorFrame().getPublishedWorkService(),null);
+        songController.deleteSong();
+
+    }
+
+
 
 }

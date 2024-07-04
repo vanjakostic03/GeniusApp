@@ -27,6 +27,10 @@ public class SongsPanelModerator extends JPanel {
         initSongsPanel();
     }
 
+    public ToolBarPanelModerator getParentPanel() {
+        return parentPanel;
+    }
+
     public void initSongsPanel() {
         this.setBackground(new Color(32, 38, 61));
 
@@ -90,7 +94,7 @@ public class SongsPanelModerator extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 SongForm songForm = new SongForm(null,artists);
                 songForm.setVisible(true);
-                SongController songController = new SongController(songForm,parentPanel.getModeratorFrame().getPublishedWorkService(), parentPanel.getModeratorFrame().getArtistService());
+                SongController songController = new SongController(songForm,null,parentPanel.getModeratorFrame().getPublishedWorkService(), parentPanel.getModeratorFrame().getArtistService());
 
             }
         });
@@ -211,15 +215,16 @@ public class SongsPanelModerator extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         panel.add(idLabel, c);
 
-
+        SongsPanelModerator spm = this;
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 //Song song = new Song();
                 for(PublishedWork song: songs){
                     if(song.getId().equals(songId)){
-                SongPanel newPanel = new SongPanel((Song) song);
+                SongPanel newPanel = new SongPanel((Song) song,spm );
                 parentPanel.setContentPanel(newPanel);
+
 
                     }
                 }
