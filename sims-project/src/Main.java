@@ -37,7 +37,8 @@ public class Main {
 //        AccountService accountService = new AccountService();
         ArtistService artistService = new ArtistService();
         CommentService commentService = new CommentService();
-        ModeratorFrame mf = new ModeratorFrame("nesto",pwService,artistService,commentService);
-       // AdminFrame af = new AdminFrame("f");
+
+//        ModeratorFrame mf = new ModeratorFrame("nesto",pwService,artistService,commentService);
+        AdminFrame af = new AdminFrame("f");
     }
 }
