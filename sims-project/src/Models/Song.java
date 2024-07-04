@@ -11,6 +11,7 @@ public class Song extends PublishedWork{
     private Date releaseDate;
     private int views;
 
+    public Song() {}
     public Song(SingleArtist lyricist, SingleArtist composer, String lyrics, String description){
         releaseDate  = new Date();
         this.lyricist = lyricist;
