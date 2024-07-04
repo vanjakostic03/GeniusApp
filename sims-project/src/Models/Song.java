@@ -7,8 +7,6 @@ public class Song extends PublishedWork{
     private SingleArtist lyricist;
     private SingleArtist composer;
     private String lyrics;
-    private String description;
-    private Date releaseDate;
     private int views;
 
     public Song() {}
@@ -43,22 +41,6 @@ public class Song extends PublishedWork{
 
     public void setLyrics(String lyrics) {
         this.lyrics = lyrics;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(Date releaseDate) {
-        this.releaseDate = releaseDate;
     }
 
     public int getViews() {
