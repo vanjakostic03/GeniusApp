@@ -1,18 +1,27 @@
 package View.Moderator;
 
+import Models.Artist;
+import Models.PublishedWork;
+import Models.Song;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class SongsPanelModerator extends JPanel {
 
     private ToolBarPanelModerator parentPanel;
+    private ArrayList<PublishedWork> songs = new ArrayList<>();
+    private ArrayList<Artist> artists = new ArrayList<>();
 
-    public SongsPanelModerator(ToolBarPanelModerator parentPanel) {
+    public SongsPanelModerator(ToolBarPanelModerator parentPanel,ArrayList<PublishedWork> songs,ArrayList<Artist> artists) {
         this.parentPanel = parentPanel;
+        this.artists = artists;
+        this.songs = songs;
         setLayout(new GridBagLayout());
         initSongsPanel();
     }
@@ -96,26 +105,40 @@ public class SongsPanelModerator extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         add(titleLabel, c);
 
-        int songCount = 30;
-        int songsPerRow = 4;
-        int startingRow = 2;
-        for (int i = 0; i < songCount; i++) {
-            JPanel songPanel = createSongPanel("Cover " + (i + 1), "Song " + (i + 1));
-            c.gridx = i % songsPerRow; // Redni broj kolone u trenutnom redu
-            c.gridy = startingRow + i / songsPerRow; // Redni broj reda
+        int i = 0;
+        int j = 0;
+        for (PublishedWork song :this.songs) {
+            JPanel songPanel = createSongPanel(song.getCover(), song.getTitle(),song.getId());
+            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+            c.gridy = 2 + j ; // Redni broj reda
             c.gridwidth = 1; // Zauzima 1 kolonu
             c.weightx = 1.0;
             c.weighty = 1.0;
             c.fill = GridBagConstraints.BOTH;
             add(songPanel, c);
+            i++;
+            if(i%4==0){
+                j++;
+            }
         }
 
-
-
-
+        while(j!=3){
+            JPanel songPanel = createEmptyPanel();
+            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+            c.gridy = 2 + j ; // Redni broj reda
+            c.gridwidth = 1; // Zauzima 1 kolonu
+            c.weightx = 1.0;
+            c.weighty = 1.0;
+            c.fill = GridBagConstraints.BOTH;
+            add(songPanel, c);
+            i++;
+            if(i%4==0){
+                j++;
+            }
+        }
     }
 
-    private JPanel createSongPanel(String coverText, String songTitle) {
+    private JPanel createSongPanel(String coverText, String songTitle, String songId) {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setBackground(new Color(32,38,61));
@@ -123,7 +146,17 @@ public class SongsPanelModerator extends JPanel {
         c.insets = new Insets(2, 2, 2, 2);
 
         // Cover songa
-        JLabel coverLabel = new JLabel(coverText){
+        ImageIcon icon = new ImageIcon(getClass().getResource(coverText));
+
+// Dobijte Image objekat iz ImageIcon-a
+        Image image = icon.getImage();
+
+// Skalirajte sliku na željene dimenzije
+        Image scaledImage = image.getScaledInstance(160, 160, Image.SCALE_SMOOTH);
+
+// Kreirajte novu ImageIcon sa skaliranom slikom
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+        JLabel coverLabel = new JLabel(scaledIcon){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -163,15 +196,43 @@ public class SongsPanelModerator extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         panel.add(titleLabel, c);
 
+        JLabel idLabel = new JLabel(songId);
+        idLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
+        idLabel.setForeground(Color.white);
+        idLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        c.gridx = 0;
+        c.gridy = 2;
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.weightx = 0.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(idLabel, c);
+
+
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                SongPanel newPanel = new SongPanel();
+                //Song song = new Song();
+                for(PublishedWork song: songs){
+                    if(song.getId().equals(songId)){
+                SongPanel newPanel = new SongPanel((Song) song);
                 parentPanel.setContentPanel(newPanel);
+
+                    }
+                }
 
             }
         });
 
+        return panel;
+    }
+
+    public JPanel createEmptyPanel(){
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+
+        panel.setPreferredSize(new Dimension(80, 160));
+        panel.setBackground(new Color(32,38,61));
         return panel;
     }
 

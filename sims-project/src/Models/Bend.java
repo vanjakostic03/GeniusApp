@@ -1,5 +1,7 @@
 package Models;
 
+import Enums.TypeOfArtist;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -9,8 +11,8 @@ public class Bend extends Artist{
     private LocalDate dateOfEstablishment;
     ArrayList<Membership> memberships;
 
-    public Bend(String id, String name, String description, LocalDate dateOfEstablishment) {
-        super(id);
+    public Bend(String id,RecordLabel recordLabel, String name, String description, LocalDate dateOfEstablishment) {
+        super(id, recordLabel, TypeOfArtist.BAND);
         this.name = name;
         this.description = description;
         this.dateOfEstablishment = dateOfEstablishment;

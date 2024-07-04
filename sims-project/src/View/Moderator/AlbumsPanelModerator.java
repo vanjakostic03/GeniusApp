@@ -1,18 +1,27 @@
 package View.Moderator;
+import Models.Album;
+import Models.PublishedWork;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class AlbumsPanelModerator extends JPanel {
 
-    //private Font customFontRegular;
-    //private Font customFontBold;
-    ToolBarPanelModerator parentPanel ;
 
-    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel) {
-        //loadCustomFonts();
+    ToolBarPanelModerator parentPanel ;
+    ArrayList<PublishedWork> albums = new ArrayList<>() ;
+
+    public void setAlbums(ArrayList<PublishedWork> albums) {
+        this.albums = albums;
+    }
+
+    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel,ArrayList<PublishedWork> albums) {
+
         this.parentPanel = parenPanel;
+        this.albums = albums;
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -96,24 +105,63 @@ public class AlbumsPanelModerator extends JPanel {
         });
 
 
-
-        int albumCount = 30; // Primer: prikazuje do 30 albuma
-        int albumsPerRow = 4; // Broj albuma po redu
-        int startingRow = 2;
-        for (int i = 0; i < albumCount; i++) {
-            JPanel albumPanel = createAlbumPanel("Cover " + (i + 1), "Album " + (i + 1));
-            c.gridx = i % albumsPerRow; // Redni broj kolone u trenutnom redu
-            c.gridy = startingRow + i / albumsPerRow; // Redni broj reda
+//        int albumCount = 30; // Primer: prikazuje do 30 albuma
+//        int albumsPerRow = 4; // Broj albuma po redu
+//        int startingRow = 2;
+        int i = 0;
+        int j = 0;
+        for (PublishedWork album :this.albums) {
+            System.out.println(album.getCover());
+            JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle());
+            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+            c.gridy = 2 + j ; // Redni broj reda
             c.gridwidth = 1; // Zauzima 1 kolonu
             c.weightx = 1.0;
             c.weighty = 1.0;
             c.fill = GridBagConstraints.BOTH;
             add(albumPanel, c);
+            i++;
+            if(i%4==0){
+                j++;
+            }
         }
 
+        while(j!=3){
+            JPanel albumPanel = createEmptyPanel();
+            c.gridx = i % 4; // Redni broj kolone u trenutnom redu
+            c.gridy = 2 + j ; // Redni broj reda
+            c.gridwidth = 1; // Zauzima 1 kolonu
+            c.weightx = 1.0;
+            c.weighty = 1.0;
+            c.fill = GridBagConstraints.BOTH;
+            add(albumPanel, c);
+            i++;
+            if(i%4==0){
+                j++;
+            }
+        }
+    }
 
 
+    public void addAlbum(Album album) {
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets(25, 5, 15, 10);
 
+        int albumCount = getComponentCount() - 4; // Ignorisi prve 4 komponente
+        int albumsPerRow = 4; // Broj albuma po redu
+        int startingRow = 2;
+
+        JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle());
+        c.gridx = albumCount % albumsPerRow; // Redni broj kolone u trenutnom redu
+        c.gridy = startingRow + albumCount / albumsPerRow; // Redni broj reda
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.weightx = 1.0;
+        c.weighty = 1.0;
+        c.fill = GridBagConstraints.BOTH;
+        add(albumPanel, c);
+
+        revalidate();
+        repaint();
     }
 
     private JPanel createAlbumPanel(String coverText, String albumTitle) {
@@ -124,7 +172,17 @@ public class AlbumsPanelModerator extends JPanel {
         c.insets = new Insets(1, 1, 1, 1);
 
         // Cover albuma
-        JLabel coverLabel = new JLabel(coverText){
+        ImageIcon icon = new ImageIcon(getClass().getResource(coverText));
+
+// Dobijte Image objekat iz ImageIcon-a
+        Image image = icon.getImage();
+
+// Skalirajte sliku na željene dimenzije
+        Image scaledImage = image.getScaledInstance(160, 160, Image.SCALE_SMOOTH);
+
+// Kreirajte novu ImageIcon sa skaliranom slikom
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+        JLabel coverLabel = new JLabel(scaledIcon){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -141,7 +199,7 @@ public class AlbumsPanelModerator extends JPanel {
                 setBorder(new RoundBorder());
             }
         };
-        coverLabel.setBackground(new Color( 39,47,78));
+        //coverLabel.setBackground(new Color( 39,47,78));
         coverLabel.setPreferredSize(new Dimension(80, 160));
 
         c.gridx = 0;
@@ -173,6 +231,15 @@ public class AlbumsPanelModerator extends JPanel {
             }
         });
 
+        return panel;
+    }
+
+    public JPanel createEmptyPanel(){
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+
+        panel.setPreferredSize(new Dimension(80, 160));
+        panel.setBackground(new Color(32,38,61));
         return panel;
     }
 
