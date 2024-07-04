@@ -146,7 +146,7 @@ public class UserView extends JPanel {
 
     private JPanel createItemPanel(String genreName) {
         JPanel itemPanel = new JPanel(new BorderLayout());
-        itemPanel.setBackground(new Color(39, 47, 78));
+        itemPanel.setBackground(new Color(32, 38, 61));
         itemPanel.setBorder(new RoundBorder());
         itemPanel.setPreferredSize(new Dimension(200, 100)); // Podešavanje veličine kvadrata
 
@@ -154,7 +154,7 @@ public class UserView extends JPanel {
         ImageIcon genreImage = loadImageForGenre(genreName);
         if (genreImage != null) {
             JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(genreImage.getImage(), 150, 100)));
-            imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+            imageLabel.setBorder(BorderFactory.createEmptyBorder(3, 3, 3, 3));
             itemPanel.add(imageLabel, BorderLayout.CENTER);
         }
 
@@ -173,22 +173,23 @@ public class UserView extends JPanel {
         String imagePath = "";
         switch (genreName.toLowerCase()) {
             case "pop":
-                imagePath = "img/1111.png";
+                imagePath = "/img/fame.png";
                 break;
             case "rock":
-                imagePath = "img/1111.png";
+                imagePath = "/img/fame.png";
                 break;
             case "hip-hop":
-                imagePath = "img/1111.png";
+                imagePath = "/img/fame.png";
                 break;
             case "electronic":
-                imagePath = "img/1111.png";
+                imagePath = "/img/fame.png";
                 break;
             default:
                 System.err.println("Unknown genre: " + genreName);
                 return null;
         }
         URL imageURL = getClass().getResource(imagePath);
+        System.out.println(imageURL);
         if (imageURL != null) {
             return new ImageIcon(imageURL);
         } else {
