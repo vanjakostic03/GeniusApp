@@ -1,5 +1,6 @@
 package View.Moderator;
 
+import Models.Artist;
 import Models.PublishedWork;
 
 import javax.swing.*;
@@ -14,9 +15,11 @@ public class SongsPanelModerator extends JPanel {
 
     private ToolBarPanelModerator parentPanel;
     private ArrayList<PublishedWork> songs = new ArrayList<>();
+    private ArrayList<Artist> artists = new ArrayList<>();
 
-    public SongsPanelModerator(ToolBarPanelModerator parentPanel,ArrayList<PublishedWork> songs) {
+    public SongsPanelModerator(ToolBarPanelModerator parentPanel,ArrayList<PublishedWork> songs,ArrayList<Artist> artists) {
         this.parentPanel = parentPanel;
+        this.artists = artists;
         this.songs = songs;
         setLayout(new GridBagLayout());
         initSongsPanel();

@@ -65,7 +65,7 @@ public class ToolBarPanelModerator extends JPanel {
         JButton songs = createStyledButton("Songs");
         c.gridx = 0;
         c.gridy = 1;
-        songs.addActionListener(e -> setContentPanel(new SongsPanelModerator(this,moderatorFrame.getPublishedWorkService().getSongs())));
+        songs.addActionListener(e -> setContentPanel(new SongsPanelModerator(this,moderatorFrame.getPublishedWorkService().getSongs(),moderatorFrame.getArtistService().getArtists())));
         optionsPanel.add(songs, c);
 
         JButton comments = createStyledButton("Comments");
