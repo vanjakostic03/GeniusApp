@@ -54,15 +54,17 @@ public class SongController {
                 artists.add(artistService.findArtistById(artistTokens[0]));
             }
 
-            System.out.println(lyricistString);
-            System.out.println(lyricist.getName());
-
             for(Artist a: artists){
                 System.out.println(a.getId());
             }
 
+
             String id = publishedWorkService.getFreeID();
             Song song = new Song(id,title,cover,lyrics,description,composer,lyricist,genres,artists);
+            if(songForm.getAlbumFrame()!=null){
+                songForm.getAlbumFrame().addSong(song.getId()+","+song.getTitle());
+            }
+
             song.setComposer(composer);
             song.setLyricist(lyricist);
             song.setGenres(genres);

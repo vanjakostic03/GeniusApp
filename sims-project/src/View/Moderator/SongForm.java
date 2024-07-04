@@ -35,7 +35,9 @@ public class SongForm extends JFrame {
     private AlbumForm albumFrame; //ako se poziva iz album forme
 
 
-
+    public AlbumForm getAlbumFrame() {
+        return albumFrame;
+    }
 
     public SongForm(AlbumForm albumFrame, ArrayList<Artist> artists) {
         this.albumFrame = albumFrame;
@@ -231,50 +233,6 @@ public class SongForm extends JFrame {
         submitButton.addActionListener(listener);
 
     }
-
-//    submitButton.addActionListener(new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            String title = titleField.getText();
-//            String cover = coverField.getText();
-//            SingleArtist composer = (SingleArtist) composerBox.getSelectedItem();
-//            SingleArtist lyricist = (SingleArtist) lyricistBox.getSelectedItem();
-//            String lyrics = lyricsField.getText();
-//            String description = descriptionField.getText();
-//
-//            String genres[] = new String[genreList.getSelectedValuesList().size()];
-//            int i = 0;
-//            for(Object o: genreList.getSelectedValuesList()){
-//                genres[i] = (String) o;
-//                i++;
-//            }
-//
-//            String artists[] = new String[artistList.getSelectedValuesList().size()];
-//            i = 0;
-//            for(Object o: artistList.getSelectedValuesList()){
-//                artists[i] = (String) o;
-//                i++;
-//            }
-//
-//            // Process the input data as needed
-//            System.out.println("Title: " + title);
-//            System.out.println("Cover: " + cover);
-//            System.out.println("Genres: " + genres);
-//            System.out.println("Artists: " + artists);
-//            System.out.println("Composer: " + composer);
-//            System.out.println("Lyricist: " + lyricist);
-//            System.out.println("Lyrics: " + lyrics);
-//            System.out.println("Description: " + description);
-//
-//            if (albumFrame != null){
-//                albumFrame.addSong(title);
-//
-//            }
-//            setVisible(false);
-//            dispose();
-//        }
-//    });
-
 
 }
 
