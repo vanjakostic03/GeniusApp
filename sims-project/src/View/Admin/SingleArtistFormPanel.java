@@ -17,6 +17,7 @@ public class SingleArtistFormPanel extends JPanel {
     private JTextField pictureField;
     private DefaultListModel<String> listModel;
     private ArtistService artistService;
+    private JList<String> artistList;
 
     public SingleArtistFormPanel() {
         this.artistService = new ArtistService();
@@ -81,13 +82,37 @@ public class SingleArtistFormPanel extends JPanel {
         c.gridwidth = 2;
         add(addButton, c);
 
+        JButton updateButton = new JButton("Update Single Artist");
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                updateSingleArtist();
+            }
+        });
+        c.gridx = 0;
+        c.gridy = 5;
+        c.gridwidth = 2;
+        add(updateButton, c);
+
+        JButton deleteButton = new JButton("Delete Single Artist");
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                deleteSingleArtist();
+            }
+        });
+        c.gridx = 0;
+        c.gridy = 6;
+        c.gridwidth = 2;
+        add(deleteButton, c);
+
         listModel = new DefaultListModel<>();
-        JList<String> artistList = new JList<>(listModel);
+        artistList = new JList<>(listModel);
         artistList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
         JScrollPane listScrollPane = new JScrollPane(artistList);
         c.gridx = 0;
-        c.gridy = 5;
+        c.gridy = 7;
         c.gridwidth = 2;
         c.weightx = 1.0;
         c.weighty = 1.0;
@@ -112,7 +137,30 @@ public class SingleArtistFormPanel extends JPanel {
         }
     }
 
+    private void updateSingleArtist() {
+        String id = idField.getText();
+        String name = nameField.getText();
+        String biography = biographyField.getText();
+        String picture = pictureField.getText();
+
+        if (!id.isEmpty() && !name.isEmpty() && !biography.isEmpty() && !picture.isEmpty()) {
+            SingleArtist singleArtist = new SingleArtist(id, new RecordLabel(), biography, picture, name);
+            artistService.updateArtist(singleArtist);
+            loadSingleArtistsFromXML();
+        }
+    }
+
+    private void deleteSingleArtist() {
+        String selectedValue = artistList.getSelectedValue();
+        if (selectedValue != null) {
+            String id = selectedValue.split(",")[0];
+            artistService.deleteArtist(id);
+            loadSingleArtistsFromXML();
+        }
+    }
+
     private void loadSingleArtistsFromXML() {
+        listModel.clear();
         for (SingleArtist singleArtist : artistService.getSingleArtists()) {
             listModel.addElement(singleArtist.getId() + ", " + singleArtist.getName());
         }
@@ -121,7 +169,7 @@ public class SingleArtistFormPanel extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Single Artist Management");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 300);
+        frame.setSize(400, 500);
         frame.add(new SingleArtistFormPanel());
         frame.setVisible(true);
     }

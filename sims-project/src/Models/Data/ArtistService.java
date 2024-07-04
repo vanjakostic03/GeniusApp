@@ -70,6 +70,21 @@ public class ArtistService {
         saveArtistsToXML();
     }
 
+    public void deleteArtist(String id) {
+        artists.removeIf(artist -> artist.getId().equals(id));
+        saveArtistsToXML();
+    }
+
+    public void updateArtist(Artist updatedArtist) {
+        for (int i = 0; i < artists.size(); i++) {
+            if (artists.get(i).getId().equals(updatedArtist.getId())) {
+                artists.set(i, updatedArtist);
+                break;
+            }
+        }
+        saveArtistsToXML();
+    }
+
     public Artist findArtistById(String id) {
         for (Artist artist : artists) {
             if (artist.getId().equals(id)) {
@@ -93,12 +108,12 @@ public class ArtistService {
         xstream.alias("artist", Artist.class);
         xstream.alias("singleArtist", SingleArtist.class);
         xstream.alias("bend", Bend.class);
-        xstream.addPermission(AnyTypePermission.ANY); // Добавление разрешений
+        xstream.addPermission(AnyTypePermission.ANY);
 
         xstream.aliasType("singleArtist", SingleArtist.class);
         xstream.aliasType("bend", Bend.class);
 
-        try (FileWriter writer = new FileWriter("./Data/artists.xml")) {
+        try (FileWriter writer = new FileWriter("Data/artists.xml")) {
             xstream.toXML(artists, writer);
         } catch (IOException e) {
             e.printStackTrace();
@@ -114,7 +129,7 @@ public class ArtistService {
 
         xstream.aliasType("singleArtist", SingleArtist.class);
         xstream.aliasType("bend", Bend.class);
-        try (FileReader reader = new FileReader("./Data/artists.xml")) {
+        try (FileReader reader = new FileReader("Data/artists.xml")) {
             artists = (ArrayList<Artist>) xstream.fromXML(reader);
         } catch (IOException e) {
             e.printStackTrace();
