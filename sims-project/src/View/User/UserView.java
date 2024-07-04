@@ -48,71 +48,96 @@ public class UserView extends JPanel {
         explore.setFont(new Font("Dialog", Font.BOLD, 32));
         explore.setForeground(Color.WHITE);
         explore.setHorizontalAlignment(SwingConstants.LEFT);
-        c.gridy++;
-        c.gridwidth = 3;
+        c.gridx = 0;
+        c.gridy = 0;
+        c.gridwidth = 4;
         c.weightx = 1.0;
         c.weighty = 0.0;
         c.fill = GridBagConstraints.HORIZONTAL;
         add(explore, c);
 
-        // Panel za Žanrove
+// Panel za Žanrove
         JPanel genresPanel = createCategoryPanel("Genres", new String[]{"Pop", "Rock", "Hip-Hop", "Electronic"});
-        c.gridy++;
+        c.gridx = 0;
+        c.gridy = 1;
         c.gridwidth = 4;
-        c.weightx = 0.5;
-        c.weighty = 1.0;
+        c.weightx = 1.0;
+        c.weighty = 0.5;
         c.fill = GridBagConstraints.BOTH;
         add(genresPanel, c);
 
-        // Panel za Pesme
+// Panel za Pesme
         PublishedWork album1 = (albums.size() >= 1) ? albums.get(0) : null;
         PublishedWork album2 = (albums.size() >= 2) ? albums.get(1) : null;
         PublishedWork album3 = (albums.size() >= 3) ? albums.get(2) : null;
         JPanel songsPanel = createCategoryPanelSongs("Popular songs", new PublishedWork[]{album1, album2, album3});
-        c.gridx = 1;
-        c.gridy++;
-        c.gridwidth = 1;
+        c.gridx = 0;
+        c.gridy = 2;
+        c.gridwidth = 2;
         c.weightx = 0.5;
         c.weighty = 1.0;
         c.fill = GridBagConstraints.BOTH;
         add(songsPanel, c);
 
-        // Panel za Popularne Izvođače
-        JPanel popularArtistsPanel = createCategoryPanelArtist("Popular Artists", artists.getFirst());
-        c.gridx = 2;
-        c.gridy = 2;
-        c.gridwidth = 1;
-        c.weightx = 0.5;
-        c.weighty = 1.0;
-        c.fill = GridBagConstraints.BOTH;
-        add(popularArtistsPanel, c);
+// Panel za Popularne Izvođače
+        if (!artists.isEmpty()) {
+            JPanel popularArtistsPanel = createCategoryPanelArtist("Popular Artists", artists.get(0));
+            c.gridx = 2;
+            c.gridy = 2;
+            c.gridwidth = 2;
+            c.weightx = 0.5;
+            c.weighty = 1.0;
+            c.fill = GridBagConstraints.BOTH;
+            add(popularArtistsPanel, c);
+        }
     }
-
     private JPanel createCategoryPanelArtist(String categoryTitle, SingleArtist artist) {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(new Color(32, 38, 61));
-        panel.setPreferredSize(new Dimension(250, 150));
-        panel.setMaximumSize(new Dimension(250, 150));
-        panel.setMinimumSize(new Dimension(250, 150));
+        panel.setPreferredSize(new Dimension(250, 300));
+        panel.setMaximumSize(new Dimension(250, 300));
+        panel.setMinimumSize(new Dimension(250, 300));
 
-        // Učitavanje slike izvođača
+        // Naslov kategorije
+        JLabel titleLabel = new JLabel(categoryTitle);
+        titleLabel.setFont(new Font("Dialog", Font.BOLD, 20));
+        titleLabel.setForeground(Color.white);
+        titleLabel.setHorizontalAlignment(SwingConstants.LEFT);
+        titleLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        panel.add(titleLabel, BorderLayout.NORTH);
+
+        // Učitavanje slike izvođača sa zakrivljenim ivicama
         ImageIcon artistImage = loadImage(artist.getPicture());
         if (artistImage != null) {
-            JLabel imageLabel = new JLabel(artistImage);
+            JLabel imageLabel = new JLabel(new ImageIcon(getRoundedImage(artistImage.getImage(), 250, 250)));
+            imageLabel.setLayout(new BorderLayout());
             imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+            // Naziv izvođača unutar slike
+            JLabel nameLabel = new JLabel(artist.getName());
+            nameLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
+            nameLabel.setForeground(Color.white);
+            nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
+            nameLabel.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 0)); // Podesi razmak kako bi se prikazalo ime u donjem levom uglu
+            imageLabel.add(nameLabel, BorderLayout.SOUTH);
+
             panel.add(imageLabel, BorderLayout.CENTER);
         }
 
-        // Naziv izvođača
-        JLabel nameLabel = new JLabel(artist.getName());
-        nameLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
-        nameLabel.setForeground(Color.white);
-        nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
-        nameLabel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
-        panel.add(nameLabel, BorderLayout.SOUTH);
-
         return panel;
     }
+
+    private Image getRoundedImage(Image srcImg, int width, int height) {
+        BufferedImage output = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = output.createGraphics();
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setClip(new java.awt.geom.RoundRectangle2D.Float(0, 0, width, height, 50, 50));
+        g2.drawImage(srcImg, 0, 0, width, height, null);
+        g2.dispose();
+        return output;
+    }
+
+
 
     private JPanel createCategoryPanel(String categoryTitle, String[] genres) {
         JPanel panel = new JPanel(new BorderLayout());
