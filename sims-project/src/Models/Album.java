@@ -2,9 +2,11 @@ package Models;
 
 
 import Enums.TypeOfWork;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import java.util.ArrayList;
 
+@XStreamAlias("album")
 public class Album extends PublishedWork{
     private ArrayList<Song> songs;
 

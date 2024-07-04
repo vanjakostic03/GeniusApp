@@ -2,7 +2,9 @@ package Models;
 
 
 import Enums.TypeOfArtist;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+@XStreamAlias("artist")
 public abstract class Artist {
 
     protected String id;

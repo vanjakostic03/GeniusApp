@@ -112,10 +112,10 @@ public class PublishedWorkService {
         xstream.aliasType("bend", Bend.class);
         xstream.aliasType("album",Album.class);
         xstream.aliasType("song", Song.class);
-        
+
         try(FileReader reader = new FileReader("./Data/publishedWorks.xml")){
             publishedWorks = (ArrayList<PublishedWork>) xstream.fromXML(reader);
-            
+
         }catch(IOException e){
             e.printStackTrace();
         }

@@ -1,10 +1,18 @@
 <list>
     <singleArtist>
+        <id>A002</id> <!-- Vrednost id-a -->
+        <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
+        <picture>.eff</picture> <!-- Vrednost slike -->
+        <name>Taylor Swift</name> <!-- Vrednost imena -->
+        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+    </singleArtist>
+    <singleArtist>
         <id>A001</id> <!-- Vrednost id-a -->
         <biography>jofjjfefefef</biography> <!-- Vrednost biografije -->
         <picture>.eff</picture> <!-- Vrednost slike -->
         <name>Chris Brown</name> <!-- Vrednost imena -->
         <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
     </singleArtist>
+
 
 </list>

@@ -1,4 +1,6 @@
 
+import Controler.RegisterController;
+import Controler.SongController;
 import Models.Data.AccountService;
 import Models.Data.ArtistService;
 import Models.Data.CommentService;
@@ -6,11 +8,8 @@ import Models.Data.PublishedWorkService;
 import Models.PublishedWork;
 import View.Admin.AdminFrame;
 import View.Moderator.ModeratorFrame;
+import View.User.RegisterView;
 
-
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-// Main.java
 public class Main {
     public static void main(String[] args) {
 //        AccountService service = new AccountService();
