@@ -1,5 +1,6 @@
 package View.User;
 
+import Models.Data.AccountService;
 import Models.Data.ArtistService;
 import Models.Data.CommentService;
 import Models.Data.PublishedWorkService;
@@ -16,6 +17,7 @@ public class UserFrame extends JFrame {
     public JPanel mainPanel;
     public JPanel contentPanel;
     public JScrollPane scrollPane;
+    public AccountService accountService;
 
     public PublishedWorkService getPublishedWorkService() {
         return publishedWorkService;
@@ -24,16 +26,19 @@ public class UserFrame extends JFrame {
     public ArtistService getArtistService() {
         return artistService;
     }
+    public AccountService getAcountService() {
+        return accountService;
+    }
 
     public CommentService getCommentService() {
         return commentService;
     }
 
-    public UserFrame(String userName, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService) {
+    public UserFrame(String userName, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService, AccountService accountService) {
         this.publishedWorkService = publishedWorkService;
         this.artistService = artistService;
         this.commentService = commentService;
-
+        this.accountService = accountService;
         user = userName;
         userUI();
     }
@@ -66,7 +71,7 @@ public class UserFrame extends JFrame {
         c.insets = new Insets(0, 166, 0, 0);
         mainPanel.add(toolBarPanel, c);
 
-        contentPanel = new UserView(toolBarPanel);
+        contentPanel = new UserView(toolBarPanel,artistService.getSingleArtists(),publishedWorkService.getAlbums());
         contentPanel.setBackground(new Color(32, 38, 61));
         c.gridx = 1;
         c.gridy = 0;

@@ -1,5 +1,9 @@
 package View.User;
 
+import Models.Album;
+import Models.Artist;
+import Models.PublishedWork;
+import Models.SingleArtist;
 import View.Moderator.RoundBorder;
 import View.User.ToolBarPanelUser;
 
@@ -9,14 +13,21 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class UserView extends JPanel {
 
     ToolBarPanelUser parentPanel;
 
-    public UserView(ToolBarPanelUser parentPanel) {
+    ArrayList<PublishedWork> albums=new ArrayList<PublishedWork>();
+    ArrayList<SingleArtist> artists=new ArrayList<SingleArtist>();
+
+
+    public UserView(ToolBarPanelUser parentPanel, ArrayList<SingleArtist> singleArtists, ArrayList<PublishedWork> albums) {
         this.parentPanel = parentPanel;
         setLayout(new GridBagLayout());
+        this.albums=albums;
+        this.artists=singleArtists;
         initHomePanel();
     }
 
@@ -58,8 +69,28 @@ public class UserView extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(genresPanel, c);
 
+        PublishedWork album1=null;
+        PublishedWork album2=null;
+        PublishedWork album3=null;
+        System.out.println("velicina albuma");
+        System.out.println(albums.size());
+        if(albums.size()>=1){
+             album1=albums.get(0);
+             album2=null;
+             album3=null;
+
+        }else if(albums.size()>=2){
+             album1=albums.get(0);
+             album2=albums.get(1);
+             album3=null;
+        }else if(albums.size()>=3){
+             album1=albums.get(0);
+             album2=albums.get(1);
+             album3=albums.get(2);
+        }
+
         // Panel za Pesme
-        JPanel songsPanel = createCategoryPanelSongs("Popular songs", "song_image.jpg", new String[]{"Song 1", "Song 2", "Song 3"});
+        JPanel songsPanel = createCategoryPanelSongs("Popular songs",  new PublishedWork[]{album1, album2, album3});
         c.gridx = 1;
         c.gridy = 2;
         c.gridwidth = 1;
@@ -87,14 +118,15 @@ public class UserView extends JPanel {
         panel.setMinimumSize(new Dimension(250, 150));
 
         // Učitavanje slike za kategoriju
-        BufferedImage image = loadImage(imagePath);
-        if (image != null) {
-            JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(image, 100, 100)));
-            imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-            panel.add(imageLabel, BorderLayout.CENTER);
-        }
+        //BufferedImage image = loadImage(imagePath);
+       // if (image != null) {
+        //    JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(image, 100, 100)));
+         //   imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        //    panel.add(imageLabel, BorderLayout.CENTER);
+        //}
 
         // Naslov kategorije
+
         JLabel titleLabel = new JLabel(categoryTitle);
         titleLabel.setFont(new Font("Dialog", Font.BOLD, 20));
         titleLabel.setForeground(Color.white);
@@ -108,8 +140,10 @@ public class UserView extends JPanel {
         itemsPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         for (String item : items) {
-            JPanel itemPanel = createItemPanel(item);
-            itemsPanel.add(itemPanel);
+            if(item!=null) {
+                JPanel itemPanel = createItemPanel(item);
+                itemsPanel.add(itemPanel);
+            }
         }
 
         panel.add(itemsPanel, BorderLayout.SOUTH);
@@ -139,7 +173,7 @@ public class UserView extends JPanel {
         return itemPanel;
     }
 
-    private JPanel createCategoryPanelSongs(String categoryTitle, String imagePath, String[] items) {
+    private JPanel createCategoryPanelSongs(String categoryTitle, PublishedWork[] items) {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(new Color(32, 38, 61));
         panel.setPreferredSize(new Dimension(250, 300));
@@ -147,12 +181,12 @@ public class UserView extends JPanel {
         panel.setMinimumSize(new Dimension(250, 300));
 
         // Učitavanje slike za kategoriju
-        BufferedImage image = loadImage(imagePath);
-        if (image != null) {
-            JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(image, 100, 100)));
-            imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-            panel.add(imageLabel, BorderLayout.CENTER);
-        }
+        //BufferedImage image = loadImage(items[0].getCover());
+        //if (image != null) {
+        //    JLabel imageLabel = new JLabel(new ImageIcon(getScaledImage(image, 100, 100)));
+        //    imageLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        //    panel.add(imageLabel, BorderLayout.CENTER);
+        //}
 
         // Naslov kategorije
         JLabel titleLabel = new JLabel(categoryTitle);
@@ -167,7 +201,7 @@ public class UserView extends JPanel {
         itemsPanel.setBackground(new Color(32, 38, 61));
         itemsPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        for (String item : items) {
+        for (PublishedWork item : items) {
             JPanel itemPanel = createItemPanelSongs(item);
             itemsPanel.add(itemPanel);
         }
@@ -177,24 +211,32 @@ public class UserView extends JPanel {
         return panel;
     }
 
-    private JPanel createItemPanelSongs(String itemName) {
+    private JPanel createItemPanelSongs(PublishedWork item) {
+
         JPanel itemPanel = new JPanel(new BorderLayout());
         itemPanel.setBackground(new Color(39, 47, 78));
-        itemPanel.setBorder(new RoundBorder());
-        itemPanel.setPreferredSize(new Dimension(50, 80)); // Podešavanje veličine kvadrata
+        if(item!=null) {
 
-        // Učitavanje slike za stavku (ovde se može implementirati funkcija za učitavanje slike)
-        JLabel imageLabel = new JLabel(new ImageIcon("putanja_do_slike"));
-        imageLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
-        itemPanel.add(imageLabel, BorderLayout.CENTER);
+            itemPanel.setBorder(new RoundBorder());
+            itemPanel.setPreferredSize(new Dimension(50, 80)); // Podešavanje veličine kvadrata
 
-        // Naziv stavke
-        JLabel nameLabel = new JLabel(itemName);
-        nameLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
-        nameLabel.setForeground(Color.white);
-        nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        itemPanel.add(nameLabel, BorderLayout.SOUTH);
+            // Učitavanje slike za stavku (ovde se može implementirati funkcija za učitavanje slike)
+            JLabel imageLabel = new JLabel(new ImageIcon(item.getCover()));
+            System.out.println(item.getCover());
+            imageLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+            itemPanel.add(imageLabel, BorderLayout.CENTER);
 
+
+
+            // Naziv stavke
+            JLabel nameLabel = new JLabel(item.getTitle());
+            nameLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
+            nameLabel.setForeground(Color.white);
+            nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            itemPanel.add(nameLabel, BorderLayout.SOUTH);
+
+            return itemPanel;
+        }
         return itemPanel;
     }
 
@@ -263,6 +305,7 @@ public class UserView extends JPanel {
         } else {
             System.err.println("Ikonica nije učitana.");
         }
+
 
         return searchBar;
     }

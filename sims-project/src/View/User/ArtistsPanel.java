@@ -94,17 +94,13 @@ public class ArtistsPanel extends JPanel {
         panel.setBackground(new Color(32,38,61));
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(1, 1, 1, 1);
-
-        // Cover albuma
+        System.out.println(coverText);
         ImageIcon icon = new ImageIcon(getClass().getResource(coverText));
 
-        // Dobijte Image objekat iz ImageIcon-a
         Image image = icon.getImage();
 
-        // Skalirajte sliku na željene dimenzije
         Image scaledImage = image.getScaledInstance(160, 160, Image.SCALE_SMOOTH);
 
-        // Kreirajte novu ImageIcon sa skaliranom slikom
         ImageIcon scaledIcon = new ImageIcon(scaledImage);
         JLabel coverLabel = new JLabel(scaledIcon){
             @Override protected void paintComponent(Graphics g) {

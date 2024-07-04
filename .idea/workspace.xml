@@ -4,60 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="Sredjiivanje po direktorijumima radi registracija i login">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jdatepicker_1_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/User/AlbumPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/User/AlbumsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/User/ArtistsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/User/BandsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/User/ComentForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/New folder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/New folder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="gui user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/.idea/New folder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/.idea/New folder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/.idea/sims proj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/.idea/sims proj.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/RegisterController$LoginListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/RegisterController$LoginListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/RegisterController$RegisterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/RegisterController$RegisterListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/RegisterController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/New folder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Album.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Album.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Artist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Artist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Bend.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Bend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Moderator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Moderator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Notification.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Notification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/PlayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/PlayList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/PublishWork.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/SingleArtist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/SingleArtist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Song.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/LoginView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/UserView.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/New folder/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/sims-project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/sims-project/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/sims-project/Data/accounts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/sims-project/sims-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/sims-project/sims-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/Data/accounts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/Data/artists.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/Data/publishedWorks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/publishedWorks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/sims-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/sims-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Bend.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Bend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/PublishedWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/PublishedWorkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/RoundBorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/RoundBorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/ArtistsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/ArtistsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/RegisterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/RegisterView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +142,7 @@
       <workItem from="1720044044151" duration="119000" />
       <workItem from="1720069733400" duration="81000" />
       <workItem from="1720069850273" duration="290000" />
-      <workItem from="1720070183943" duration="13742000" />
+      <workItem from="1720070183943" duration="24736000" />
     </task>
     <task id="LOCAL-00001" summary="TopListType">
       <option name="closed" value="true" />
@@ -226,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720036062221</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="gui user">
+      <option name="closed" value="true" />
+      <created>1720084190857</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720084190857</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +213,8 @@
     <MESSAGE value="TopListType" />
     <MESSAGE value="nesto registracija i login" />
     <MESSAGE value="Sredjiivanje po direktorijumima radi registracija i login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sredjiivanje po direktorijumima radi registracija i login" />
+    <MESSAGE value="gui user" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

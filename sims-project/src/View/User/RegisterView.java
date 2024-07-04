@@ -26,7 +26,7 @@ public class RegisterView extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                g.setColor(new Color(70, 130, 180));
+                g.setColor(new Color(32, 38, 61));
                 g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
             }
         };
@@ -121,7 +121,7 @@ public class RegisterView extends JFrame {
 
     private JButton createButton(String text) {
         JButton button = new JButton(text);
-        button.setBackground(new Color(30, 144, 255));
+        button.setBackground(new Color(32, 30, 50));
         button.setForeground(Color.WHITE);
         button.setFocusPainted(false);
         button.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));

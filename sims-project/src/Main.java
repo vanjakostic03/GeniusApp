@@ -22,7 +22,7 @@ public class Main {
         PublishedWorkService pwService = new PublishedWorkService();
         //for(PublishedWork pw:pwService.getPublishedWorks()){
         //    System.out.println(pw.getId()+"\n");
-        //}
+        //}s
         //registerView.setVisible(true);
 
         // For login
@@ -44,8 +44,9 @@ public class Main {
                 System.out.println(s.getId()+"\n");
         }
         PublishedWorkService pwService2 = new PublishedWorkService();
+        AccountService service = new AccountService();
         CommentService commentService = new CommentService();
-        UserFrame mf = new UserFrame("nesto",pwService,artistService,commentService);
+        UserFrame mf = new UserFrame("nesto",pwService,artistService,commentService,service);
 
 
     }
