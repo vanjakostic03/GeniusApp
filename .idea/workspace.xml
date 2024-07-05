@@ -4,40 +4,85 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="dodavanje komentara">
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/BandFormPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SingleArtistFormPanel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SingleArtistFormPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/img/exclusive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sims-project/src/img/exclusive.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publishedWorks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/publishedWorks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/Data/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/Data/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/Data/artists.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/Data/artists.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/AlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/SongController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Bend.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Bend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/PublishedWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/PublishedWorkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/PublishedWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/PublishedWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/SingleArtist.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/SingleArtist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ArtistFormPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/BandFormPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ArtistFormPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/SongListAdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SongListAdminPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ToolBarPanelAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/ToolBarPanelAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumsPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumsPanelModerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongsPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongsPanelModerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/ToolBarPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/ToolBarPanelModerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumsPanel.java" beforeDir="false" />
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/AlbumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/AlbumController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/SongController$SubmitListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/SongController$SubmitListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/SongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/SongController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Album.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Album.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Artist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Artist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Bend.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Bend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Data/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Data/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Data/ArtistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Data/ArtistService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Data/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Data/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Data/PublishedWorkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Data/PublishedWorkService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/PublishedWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/PublishedWork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/SingleArtist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/SingleArtist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Admin/ArtistFormPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Admin/ArtistFormPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Admin/ArtistFormPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Admin/SongListAdminPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Admin/SongListAdminPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Admin/ToolBarPanelAdmin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Admin/ToolBarPanelAdmin$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Admin/ToolBarPanelAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Admin/ToolBarPanelAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/AlbumsPanelModerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/SongsPanelModerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/ToolBarPanelModerator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/ToolBarPanelModerator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/Moderator/ToolBarPanelModerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/Moderator/ToolBarPanelModerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/LoginView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/LoginView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/publishedWorks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/publishedWorks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/sims-project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/sims-project/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +101,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -100,9 +145,9 @@
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "171",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging miona",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Miona/Downloads/jdatepicker-1.3.4.jar",
+    "last_opened_file_path": "C:/Users/Miona/Desktop/New folder (3)/GeniusApp/sims-project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

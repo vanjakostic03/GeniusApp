@@ -4,6 +4,7 @@ import Controler.LoginController;
 import Controler.RegisterController;
 import Models.Account;
 import Models.Person;
+import View.Moderator.ModeratorFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +25,9 @@ public class ToolBarPanelUser extends JPanel {
         System.out.println("u konstrktoru");
         System.out.println(registerUser);
     }
-
+    public UserFrame getUserFrame() {
+        return userFrame;
+    }
     public void setContentPanel(JPanel newPanel) {
 
         userFrame.mainPanel.remove(userFrame.scrollPane); // Uklanjamo prethodni contentPanel
@@ -81,7 +84,7 @@ public class ToolBarPanelUser extends JPanel {
         JButton albums = createStyledButton("Albums");
         c.gridx = 0;
         c.gridy = 2;
-        //albums.addActionListener(e -> setContentPanel(new AlbumsPanel(this,userFrame.getPublishedWorkService().getAlbums(),userFrame.getArtistService().getArtists())));
+        albums.addActionListener(e -> setContentPanel(new AlbumsPanelUser(this,userFrame.getPublishedWorkService().getAlbums(),userFrame.getArtistService().getArtists())));
         optionsPanel.add(albums, c);
 
         JButton bands = createStyledButton("Bands");

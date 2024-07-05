@@ -17,7 +17,7 @@ public class UserFrame extends JFrame {
     private String user;
     private PublishedWorkService publishedWorkService;
     private ArtistService artistService;
-    private CommentService commentService;
+    public CommentService commentService;
     public JPanel mainPanel;
     public JPanel contentPanel;
     public JScrollPane scrollPane;
