@@ -1,8 +1,9 @@
 package Models;
 import Enums.Role;
 import Enums.Gender;
+
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class Person {
 
@@ -13,10 +14,11 @@ public class Person {
     private String address;
     private Date dateOfBirth;
     private Gender gender;
-    private Account account;
-    private List<PlayList> playLists;
 
-    public Person(String id, String name, String lastName, Role role, String address, Date dateOfBirth, Gender gender, Account account) {
+
+    public Person(String id, String name, String lastName, Role role, String address, Date dateOfBirth, Gender gender) {
+
+
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -24,7 +26,6 @@ public class Person {
         this.address = address;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
-        this.account = account;
     }
     public String getId() {
         return id;
@@ -82,19 +83,29 @@ public class Person {
         this.gender = gender;
     }
 
-    public Account getAccount() {
-        return account;
+//    public ArrayList<Notification> getNotifications() {
+//        return notifications;
+//    }
+//
+//    public void setNotifications(ArrayList<Notification> notifications) {
+//        this.notifications = notifications;
+//    }
+    public void followArtist(Artist artist){
+
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    //public void setPlayLists(List<PlayList> playLists) {
+//        this.playLists = playLists;
+//    }
+
+
+    public void updatePerson( String name, String lastName, Role role, String address, Date dateOfBirth, Gender gender) {
+        this.name = name;
+        this.lastName = lastName;
+        this.role = role;
+        this.address = address;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
     }
 
-    public List<PlayList> getPlayLists() {
-        return playLists;
-    }
-
-    public void setPlayLists(List<PlayList> playLists) {
-        this.playLists = playLists;
-    }
 }

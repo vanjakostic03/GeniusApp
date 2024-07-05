@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class Genre {
     private String id;
     private String name;
-    private ArrayList<String> subgenres;
+    private String cover;
+    private ArrayList<Genre> subgenres;
 
     public Genre(String id, String name) {
         this.id = id;
@@ -17,15 +18,23 @@ public class Genre {
         return id;
     }
 
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
+    }
+
     public void setId(String id) {
         this.id = id;
     }
 
-    public ArrayList<String> getSubgenres() {
+    public ArrayList<Genre> getSubgenres() {
         return subgenres;
     }
 
-    public void setSubgenres(ArrayList<String> subgenres) {
+    public void setSubgenres(ArrayList<Genre> subgenres) {
         this.subgenres = subgenres;
     }
 
@@ -37,11 +46,11 @@ public class Genre {
         this.name = name;
     }
 
-    public void addSubgenre(String subgenre) {
+    public void addSubgenre(Genre subgenre) {
         this.subgenres.add(subgenre);
     }
 
-    public void removeSubgenre(String subgenre) {
+    public void removeSubgenre(Genre subgenre) {
         this.subgenres.remove(subgenre);
     }
 }

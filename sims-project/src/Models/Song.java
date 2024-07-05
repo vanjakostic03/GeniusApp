@@ -1,39 +1,45 @@
 package Models;
 
 
-import java.time.LocalDate;
+import Enums.TypeOfWork;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.util.ArrayList;
+import java.util.Date;
+
+@XStreamAlias("song")
 public class Song extends PublishedWork{
-    private String lyricistId;
-    private String composerId;
+    private SingleArtist lyricist;
+    private SingleArtist composer;
     private String lyrics;
-    private String description;
-    private LocalDate releaseDate;
     private int views;
 
-    public Song(String lyricistId, String composerId, String lyrics, String description){
-        releaseDate  = LocalDate.now();
-        this.lyricistId = lyricistId;
-        this.composerId = composerId;
+    public Song() {}
+    public Song(String id, String title, String cover, String lyrics, String description, SingleArtist composer, SingleArtist lyricist, ArrayList<Genre>genres,ArrayList<Artist> artists) {
+        super(id,title,cover,artists, TypeOfWork.SONG,genres,description);
+
+        this.lyricist = lyricist;
+        this.composer = composer;
         this.lyrics = lyrics;
-        this.description = description;
         this.views = 0;
+
     }
 
-    public String getLyricistId() {
-        return lyricistId;
+
+    public SingleArtist getLyricist() {
+        return lyricist;
     }
 
-    public void setLyricistId(String lyricistId) {
-        this.lyricistId = lyricistId;
+    public void setLyricist(SingleArtist lyricist) {
+        this.lyricist = lyricist;
     }
 
-    public String getComposerId() {
-        return composerId;
+    public SingleArtist getComposer() {
+        return composer;
     }
 
-    public void setComposerId(String composerId) {
-        this.composerId = composerId;
+    public void setComposer(SingleArtist composer) {
+        this.composer = composer;
     }
 
     public String getLyrics() {
@@ -42,22 +48,6 @@ public class Song extends PublishedWork{
 
     public void setLyrics(String lyrics) {
         this.lyrics = lyrics;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public LocalDate getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
     }
 
     public int getViews() {

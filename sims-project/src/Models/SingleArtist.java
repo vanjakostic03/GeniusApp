@@ -1,43 +1,46 @@
 package Models;
 
+import Enums.TypeOfArtist;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.util.ArrayList;
 
 public class SingleArtist extends Artist{
-    private String Biography;
-    private String Picture;
-    private String Name;
+    private String biography;
+    private String picture;
+    private String name;
     private ArrayList<Membership> memberships;
 
-    public SingleArtist(String id, String biography, String picture, String name) {
-        super(id);
-        this.Biography = biography;
-        this.Picture = picture;
-        this.Name = name;
+    public SingleArtist(String id, RecordLabel recordLabel, String biography, String picture, String name) {
+        super(id,recordLabel,TypeOfArtist.SINGLE_ARTIST);
+        this.biography = biography;
+        this.picture = picture;
+        this.name = name;
         this.memberships = new ArrayList<>();
     }
 
     public String getBiography() {
-        return Biography;
+        return biography;
     }
 
     public void setBiography(String biography) {
-        this.Biography = biography;
+        this.biography = biography;
     }
 
     public String getPicture() {
-        return Picture;
+        return picture;
     }
 
     public void setPicture(String picture) {
-        this.Picture = picture;
+        this.picture = picture;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     public ArrayList<Membership> getMemberships() {

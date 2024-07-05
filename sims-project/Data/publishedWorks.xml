@@ -1,0 +1,683 @@
+<list>
+    <song>
+        <id>PW001</id>
+        <title>Moonlight</title>
+        <cover>/img/1111.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <releaseDate>2023-11-13 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <lyricist>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </lyricist>
+        <composer>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </composer>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <views>1234567</views>
+    </song>
+    <album>
+        <id>PW002</id>
+        <title>Indigo</title>
+        <cover>/img/indigo.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>ALBUM</typeOfWork>
+        <releaseDate>2019-06-28 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <songs>
+            <song>
+                <id>PW007</id>
+                <title>Dear god</title>
+                <cover>/img/indigo.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>jofjjfefefef</biography>
+                        <picture>.eff</picture>
+                        <name>Chris Brown</name>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <releaseDate>2019-06-28 00:00:00.0 UTC</releaseDate>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <lyricist>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </lyricist>
+                <composer>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </composer>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <views>1234567</views>
+            </song>
+            <song>
+                <id>PW011</id>
+                <title>Red</title>
+                <cover>/img/indigo.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>jofjjfefefef</biography>
+                        <picture>.eff</picture>
+                        <name>Chris Brown</name>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <releaseDate>2019-06-28 00:00:00.0 UTC</releaseDate>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <lyricist>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </lyricist>
+                <composer>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </composer>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <views>1234567</views>
+            </song>
+            <song>
+                <id>PW012</id>
+                <title>Indigo</title>
+                <cover>/img/indigo.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>jofjjfefefef</biography>
+                        <picture>.eff</picture>
+                        <name>Chris Brown</name>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <releaseDate>2019-06-28 00:00:00.0 UTC</releaseDate>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <lyricist>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </lyricist>
+                <composer>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </composer>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <id>PW003</id>
+        <title>F.A.M.E.</title>
+        <cover>/img/fame.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>ALBUM</typeOfWork>
+        <releaseDate>2011-03-18 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <songs>
+            <song>
+                <id>PW008</id>
+                <title>All back</title>
+                <cover>/img/fame.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>jofjjfefefef</biography>
+                        <picture>.eff</picture>
+                        <name>Chris Brown</name>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <releaseDate>2011-03-18 00:00:00.0 UTC</releaseDate>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <lyricist>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </lyricist>
+                <composer>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </composer>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <id>PW004</id>
+        <title>Breezy</title>
+        <cover>/img/breezy.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>ALBUM</typeOfWork>
+        <releaseDate>2022-06-24 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <songs>
+            <song>
+                <id>PW009</id>
+                <title>Dream</title>
+                <cover>/img/breezy.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>jofjjfefefef</biography>
+                        <picture>.eff</picture>
+                        <name>Chris Brown</name>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <releaseDate>2022-06-24 00:00:00.0 UTC</releaseDate>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <lyricist>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </lyricist>
+                <composer>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </composer>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <id>PW005</id>
+        <title>X</title>
+        <cover>/img/x.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>ALBUM</typeOfWork>
+        <releaseDate>2014-09-16 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <songs>
+            <song>
+                <id>PW010</id>
+                <title>Stereotype</title>
+                <cover>/img/x.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>jofjjfefefef</biography>
+                        <picture>.eff</picture>
+                        <name>Chris Brown</name>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <releaseDate>2014-09-16 00:00:00.0 UTC</releaseDate>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <lyricist>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </lyricist>
+                <composer>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </composer>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <id>PW006</id>
+        <title>11:11</title>
+        <cover>/img/1111.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>ALBUM</typeOfWork>
+        <releaseDate>2023-11-13 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <songs>
+            <song>
+                <id>PW001</id>
+                <title>Moonlight</title>
+                <cover>/img/1111.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>SI001</id>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>jofjjfefefef</biography>
+                        <picture>.eff</picture>
+                        <name>Chris Brown</name>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <releaseDate>2023-11-13 00:00:00.0 UTC</releaseDate>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+                <lyricist>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </lyricist>
+                <composer>
+                    <id>SI001</id>
+                    <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                    <biography>jofjjfefefef</biography>
+                    <picture>.eff</picture>
+                    <name>Chris Brown</name>
+                </composer>
+                <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+                <views>1234567</views>
+            </song>
+        </songs>
+    </album>
+    <song>
+        <id>PW007</id>
+        <title>Dear god</title>
+        <cover>/img/indigo.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <releaseDate>2019-06-28 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <lyricist>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </lyricist>
+        <composer>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </composer>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW008</id>
+        <title>All back</title>
+        <cover>/img/fame.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <releaseDate>2011-03-18 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <lyricist>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </lyricist>
+        <composer>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </composer>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW009</id>
+        <title>Dream</title>
+        <cover>/img/breezy.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <releaseDate>2022-06-24 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <lyricist>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </lyricist>
+        <composer>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </composer>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW010</id>
+        <title>Stereotype</title>
+        <cover>/img/x.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <releaseDate>2014-09-16 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <lyricist>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </lyricist>
+        <composer>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </composer>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW011</id>
+        <title>Red</title>
+        <cover>/img/indigo.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <releaseDate>2019-06-28 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <lyricist>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </lyricist>
+        <composer>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </composer>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW012</id>
+        <title>Indigo</title>
+        <cover>/img/indigo.png</cover>
+        <artists>
+            <singleArtist>
+                <id>SI001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <releaseDate>2019-06-28 00:00:00.0 UTC</releaseDate>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        <lyricist>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </lyricist>
+        <composer>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+        </composer>
+        <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+        <views>1234567</views>
+    </song>
+    <song>
+        <id>PW013</id>
+        <title>Iffy</title>
+        <cover>/img/breezy.png</cover>
+        <artists>
+            <singleArtist>
+                <id>A001</id>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>jofjjfefefef</biography>
+                <picture>.eff</picture>
+                <name>Chris Brown</name>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <genres/>
+        <releaseDate>2024-07-04 19:20:43.12 UTC</releaseDate>
+        <description>oir3oiwro3i2hro32rh2r</description>
+        <lyricist reference="../artists/singleArtist"/>
+        <composer reference="../artists/singleArtist"/>
+        <lyrics>nwiorjio3wrj3</lyrics>
+        <views>0</views>
+    </song>
+    <song>
+        <id>PW015</id>
+        <title>Nice</title>
+        <cover>/img/exclusive.png</cover>
+        <artists>
+            <singleArtist>
+                <id>5</id>
+                <recordLabel/>
+                <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                <biography>Christopher Maurice Brown (born May 5, 1989) is an American singer, songwriter, rapper, dancer and actor. He is one of the most prominent artists in RB music,[note 1] being credited as an evolver of the genre,[8] and often being referred to by contemporaries as the &quot;King of RB&quot;. Brown has had comparisons to Michael Jackson for his singing and dancing abilities</biography>
+                <picture>https://upload.wikimedia.org/wikipedia/commons/a/a0/Chris_Brown_PartyTour.jpg</picture>
+                <name>Chris Brown</name>
+                <memberships/>
+            </singleArtist>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <genres/>
+        <releaseDate>2024-07-04 21:27:23.777 UTC</releaseDate>
+        <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities</description>
+        <lyricist reference="../artists/singleArtist"/>
+        <composer reference="../artists/singleArtist"/>
+        <lyrics>ijwd jfoiwjf ij ijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ij</lyrics>
+        <views>0</views>
+    </song>
+    <song>
+        <id>PW016</id>
+        <title>You</title>
+        <cover>/img/exclusive.png</cover>
+        <artists>
+            <singleArtist reference="../../../song[9]/artists/singleArtist"/>
+        </artists>
+        <typeOfWork>SONG</typeOfWork>
+        <genres/>
+        <releaseDate>2024-07-04 21:27:32.699 UTC</releaseDate>
+        <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities</description>
+        <lyricist reference="../../song[9]/artists/singleArtist"/>
+        <composer reference="../../song[9]/artists/singleArtist"/>
+        <lyrics>ijwd jfoiwjf ij ijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ij</lyrics>
+        <views>0</views>
+    </song>
+    <album>
+        <id>PW017</id>
+        <title>Exclusive</title>
+        <cover>/img/exclusive.png</cover>
+        <artists>
+            <singleArtist reference="../../../song[9]/artists/singleArtist"/>
+        </artists>
+        <typeOfWork>ALBUM</typeOfWork>
+        <genres/>
+        <releaseDate>2024-07-04 21:27:35.751 UTC</releaseDate>
+        <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities.Brown has had comparisons to Michael Jackson for his singing and dancing abilities </description>
+        <songs>
+            <song>
+                <id>PW015</id>
+                <title>Nice</title>
+                <cover>/img/exclusive.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>5</id>
+                        <recordLabel/>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>Christopher Maurice Brown (born May 5, 1989) is an American singer, songwriter, rapper, dancer and actor. He is one of the most prominent artists in RB music,[note 1] being credited as an evolver of the genre,[8] and often being referred to by contemporaries as the &quot;King of RB&quot;. Brown has had comparisons to Michael Jackson for his singing and dancing abilities</biography>
+                        <picture>https://upload.wikimedia.org/wikipedia/commons/a/a0/Chris_Brown_PartyTour.jpg</picture>
+                        <name>Chris Brown</name>
+                        <memberships/>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <genres/>
+                <releaseDate>2024-07-04 21:27:23.777 UTC</releaseDate>
+                <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities</description>
+                <lyricist reference="../artists/singleArtist"/>
+                <composer reference="../artists/singleArtist"/>
+                <lyrics>ijwd jfoiwjf ij ijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ij</lyrics>
+                <views>0</views>
+            </song>
+            <song>
+                <id>PW016</id>
+                <title>You</title>
+                <cover>/img/exclusive.png</cover>
+                <artists>
+                    <singleArtist>
+                        <id>5</id>
+                        <recordLabel/>
+                        <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+                        <biography>Christopher Maurice Brown (born May 5, 1989) is an American singer, songwriter, rapper, dancer and actor. He is one of the most prominent artists in RB music,[note 1] being credited as an evolver of the genre,[8] and often being referred to by contemporaries as the &quot;King of RB&quot;. Brown has had comparisons to Michael Jackson for his singing and dancing abilities</biography>
+                        <picture>https://upload.wikimedia.org/wikipedia/commons/a/a0/Chris_Brown_PartyTour.jpg</picture>
+                        <name>Chris Brown</name>
+                        <memberships/>
+                    </singleArtist>
+                </artists>
+                <typeOfWork>SONG</typeOfWork>
+                <genres/>
+                <releaseDate>2024-07-04 21:27:23.777 UTC</releaseDate>
+                <description>Brown has had comparisons to Michael Jackson for his singing and dancing abilities</description>
+                <lyricist reference="../artists/singleArtist"/>
+                <composer reference="../artists/singleArtist"/>
+                <lyrics>ijwd jfoiwjf ij ijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ijijwd jfoiwjf ij</lyrics>
+                <views>0</views>
+            </song>
+        </songs>
+    </album>
+</list>

@@ -3,32 +3,47 @@ package Models;
 import java.time.LocalDateTime;
 
 public class ArtistVoting {
-    private String artistId;
-    private String voterId;
+    private String id;
+    private Artist artist;
+    private Person voter;
     private LocalDateTime votingDate;
 
-    public ArtistVoting(String artistId, String voterId) {
-        this.artistId = artistId;
-        this.voterId = voterId;
-        this.votingDate = LocalDateTime.now();
+   public ArtistVoting(String id, Artist artist, Person voter) {
+       this.id = id;
+       this.artist = artist;
+       this.voter = voter;
+       this.votingDate = LocalDateTime.now();
+   }
+
+    public String getId() {
+        return id;
     }
-    public String getArtistId() {
-        return artistId;
+
+    public void setId(String id) {
+        this.id = id;
     }
-    public void setArtistId(String artistId) {
-        this.artistId = artistId;
+
+    public Artist getArtist() {
+        return artist;
     }
-    public String getVoterId() {
-        return voterId;
+
+    public void setArtist(Artist artist) {
+        this.artist = artist;
     }
-    public void setVoterId(String voterId) {
-        this.voterId = voterId;
+
+    public Person getVoter() {
+        return voter;
     }
+
+    public void setVoter(Person voter) {
+        this.voter = voter;
+    }
+
     public LocalDateTime getVotingDate() {
         return votingDate;
     }
+
     public void setVotingDate(LocalDateTime votingDate) {
         this.votingDate = votingDate;
     }
-
 }

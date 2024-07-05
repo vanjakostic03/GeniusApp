@@ -3,30 +3,46 @@ package Models;
 import java.time.LocalDateTime;
 
 public class PublishedWorkVoting {
-    private String publishedWorkId;
-    private String voterId;
+    private String id;
+    private PublishedWork publishedWork;
+    private Person voter;
     private LocalDateTime votingDate;
 
-    public PublishedWorkVoting(String publishedWorkId, String voterId) {
-        this.publishedWorkId = publishedWorkId;
-        this.voterId = voterId;
+    public PublishedWorkVoting(String id, PublishedWork publishedWork, Person voter, LocalDateTime votingDate) {
+        this.id = id;
+        this.publishedWork = publishedWork;
+        this.voter = voter;
         this.votingDate = LocalDateTime.now();
     }
-    public String getPublishedWorkId() {
-        return publishedWorkId;
+
+    public String getId() {
+        return id;
     }
-    public void setPublishedWorkId(String publishedWorkId) {
-        this.publishedWorkId = publishedWorkId;
+
+    public void setId(String id) {
+        this.id = id;
     }
-    public String getVoterId() {
-        return voterId;
+
+    public PublishedWork getPublishedWork() {
+        return publishedWork;
     }
-    public void setVoterId(String voterId) {
-        this.voterId = voterId;
+
+    public void setPublishedWork(PublishedWork publishedWork) {
+        this.publishedWork = publishedWork;
     }
+
+    public Person getVoter() {
+        return voter;
+    }
+
+    public void setVoter(Person voter) {
+        this.voter = voter;
+    }
+
     public LocalDateTime getVotingDate() {
         return votingDate;
     }
+
     public void setVotingDate(LocalDateTime votingDate) {
         this.votingDate = votingDate;
     }
