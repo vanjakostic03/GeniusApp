@@ -1,5 +1,7 @@
 package View.Moderator;
+import Controler.AlbumController;
 import Models.Album;
+import Models.Artist;
 import Models.PublishedWork;
 
 import javax.swing.*;
@@ -13,15 +15,21 @@ public class AlbumsPanelModerator extends JPanel {
 
     ToolBarPanelModerator parentPanel ;
     ArrayList<PublishedWork> albums = new ArrayList<>() ;
-
+    ArrayList<Artist> artists = new ArrayList<>() ;
+    AlbumsPanelModerator albumsPanelModerator = this;
     public void setAlbums(ArrayList<PublishedWork> albums) {
         this.albums = albums;
     }
+    public  ToolBarPanelModerator getParentPanel() {
 
-    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel,ArrayList<PublishedWork> albums) {
+        return parentPanel;
+    }
+
+    public AlbumsPanelModerator(ToolBarPanelModerator parenPanel,ArrayList<PublishedWork> albums,ArrayList<Artist> artists) {
 
         this.parentPanel = parenPanel;
         this.albums = albums;
+        this.artists = artists;
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -99,20 +107,18 @@ public class AlbumsPanelModerator extends JPanel {
         plusIconButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                AlbumForm albumForm = new AlbumForm();
+                AlbumForm albumForm = new AlbumForm(artists);
                 albumForm.setVisible(true);
+                AlbumController albumController = new AlbumController(albumForm,null,parentPanel.getModeratorFrame().getPublishedWorkService(), parentPanel.getModeratorFrame().getArtistService());
             }
         });
 
 
-//        int albumCount = 30; // Primer: prikazuje do 30 albuma
-//        int albumsPerRow = 4; // Broj albuma po redu
-//        int startingRow = 2;
         int i = 0;
         int j = 0;
         for (PublishedWork album :this.albums) {
-            System.out.println(album.getCover());
-            JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle());
+            JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(), album.getId());
+            albumPanel.setBackground(new Color(32, 38, 61));
             c.gridx = i % 4; // Redni broj kolone u trenutnom redu
             c.gridy = 2 + j ; // Redni broj reda
             c.gridwidth = 1; // Zauzima 1 kolonu
@@ -151,7 +157,7 @@ public class AlbumsPanelModerator extends JPanel {
         int albumsPerRow = 4; // Broj albuma po redu
         int startingRow = 2;
 
-        JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle());
+        JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(),album.getId());
         c.gridx = albumCount % albumsPerRow; // Redni broj kolone u trenutnom redu
         c.gridy = startingRow + albumCount / albumsPerRow; // Redni broj reda
         c.gridwidth = 1; // Zauzima 1 kolonu
@@ -164,7 +170,7 @@ public class AlbumsPanelModerator extends JPanel {
         repaint();
     }
 
-    private JPanel createAlbumPanel(String coverText, String albumTitle) {
+    private JPanel createAlbumPanel(String coverText, String albumTitle, String albumId) {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setBackground(new Color(32,38,61));
@@ -223,11 +229,29 @@ public class AlbumsPanelModerator extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         panel.add(titleLabel, c);
 
+        JLabel idLabel = new JLabel(albumId);
+        idLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
+        idLabel.setForeground(Color.white);
+        idLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        c.gridx = 0;
+        c.gridy = 2;
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.weightx = 0.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(idLabel, c);
+
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                AlbumPanel newPanel = new AlbumPanel();
-                parentPanel.setContentPanel(newPanel);
+
+                for(PublishedWork album: albums){
+                    if(album.getId().equals(albumId)){
+
+                        AlbumPanel newPanel = new AlbumPanel((Album) album,albumsPanelModerator);
+                        parentPanel.setContentPanel(newPanel);
+                    }
+                }
             }
         });
 

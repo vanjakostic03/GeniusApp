@@ -1,5 +1,6 @@
 package View.Moderator;
 
+import Controler.SongController;
 import Enums.TypeOfArtist;
 import Models.Artist;
 import Models.Bend;
@@ -14,13 +15,20 @@ import java.awt.event.ActionListener;
 
 public class SongPanel extends JPanel {
     private Song song;
+    private SongsPanelModerator songsPanelModerator;
+    private JButton minusIconButton = new JButton();
+    private SongPanel songPanel = this;
     //private String songTitle;
-    public SongPanel(Song song){
+    public SongPanel(Song song,SongsPanelModerator songsPanelModerator){
+        this.songsPanelModerator = songsPanelModerator;
         this.song = song;
         setLayout(new GridBagLayout());
         initSongPanel();
     }
 
+    public Song getSong(){
+        return song;
+    }
     public void initSongPanel(){
         this.setBackground(new Color(32, 38, 61));
 
@@ -63,7 +71,7 @@ public class SongPanel extends JPanel {
         ImageIcon minusIcon = new ImageIcon(scaledImage);
 
         // Kreiranje buttona za ikonicu lupe
-        JButton minusIconButton = new JButton(minusIcon);
+        minusIconButton = new JButton(minusIcon);
         minusIconButton.setOpaque(false);
         minusIconButton.setContentAreaFilled(false);
         minusIconButton.setBorderPainted(false);
@@ -81,7 +89,6 @@ public class SongPanel extends JPanel {
         add(minusIconButton,c);
 
         minusIconButton.addActionListener(new ActionListener() {
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 int result = JOptionPane.showOptionDialog(null,
@@ -91,10 +98,12 @@ public class SongPanel extends JPanel {
                         JOptionPane.QUESTION_MESSAGE,
                         null,
                         new String[]{"Yes", "No"},
-                        "Yes");
+                        "No");
+                if (result == JOptionPane.YES_OPTION) {
+                    addDeleteListener( this);
+                }
             }
         });
-
 
 
         originalIcon = new ImageIcon(getClass().getResource("/img/edit.png"));
@@ -222,6 +231,7 @@ public class SongPanel extends JPanel {
         title.setFont(new Font("Dialog", Font.BOLD, 25));
         title.setForeground(Color.WHITE);
         title.setLineWrap(true);
+        title.setEditable(false);
 
         c.gridx = 1;
         c.gridy = 1;
@@ -250,6 +260,7 @@ public class SongPanel extends JPanel {
         artist.setFont(new Font("Dialog", Font.PLAIN, 25));
         artist.setForeground(Color.WHITE);
         artist.setLineWrap(true);
+        artist.setEditable(false);
 
         c.gridx = 1;
         c.gridy = 2;
@@ -260,11 +271,12 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(artist, c);
 
-        JTextArea views= new JTextArea(String.valueOf(song.getViews()));
+        JTextArea views= new JTextArea("Views:\n"+String.valueOf(song.getViews()));
         views.setBackground(new Color(32, 38, 61));
         views.setFont(new Font("Dialog", Font.PLAIN, 16));
         views.setForeground(Color.WHITE);
         views.setLineWrap(true);
+        views.setEditable(false);
 
         c.gridx = 2;
         c.gridy = 1;
@@ -275,11 +287,13 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(views, c);
 
-        JTextArea releaseDate= new JTextArea(String.valueOf(song.getReleaseDate()));
+        String releaseDateString = String.valueOf(song.getReleaseDate()).substring(4,10) + " " +String.valueOf(song.getReleaseDate()).substring(24);
+        JTextArea releaseDate= new JTextArea("Release date:\n" + releaseDateString);
         releaseDate.setBackground(new Color(32, 38, 61));
         releaseDate.setFont(new Font("Dialog", Font.PLAIN, 16));
         releaseDate.setForeground(Color.WHITE);
         releaseDate.setLineWrap(true);
+        releaseDate.setEditable(false);
 
         c.gridx = 2;
         c.gridy = 2;
@@ -329,7 +343,7 @@ public class SongPanel extends JPanel {
         lyrics.setWrapStyleWord(true);
         lyrics.setAlignmentX(CENTER_ALIGNMENT);
         lyrics.setMargin(new Insets(100, 10, 10, 10));
-
+        lyrics.setEditable(false);
 
         c.gridx = 1;
         c.gridy = 4;
@@ -401,12 +415,13 @@ public class SongPanel extends JPanel {
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(1, 1, 1, 1);
 
-        //JTextArea composer = new JTextArea(song.getComposer().getName());
-        JTextArea composer = new JTextArea("song.getComposer().getName()");
+        JTextArea composer = new JTextArea("Composer:\n" + song.getComposer().getName());
+        //JTextArea composer = new JTextArea("song.getComposer().getName()");
         composer.setBackground(new Color(32, 38, 61));
         composer.setFont(new Font("Dialog", Font.PLAIN, 16));
         composer.setForeground(Color.WHITE);
         composer.setLineWrap(true);
+        composer.setEditable(false);
         c.gridx = 0;
         c.gridy = 0;
         c.gridwidth = 1;
@@ -416,12 +431,12 @@ public class SongPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         panel.add(composer, c);
 
-        JTextArea lyricist = new JTextArea("efjlesfjfe");
-       // JTextArea lyricist = new JTextArea(song.getLyricist().getName());
+        JTextArea lyricist = new JTextArea("Lyricist:\n"+song.getLyricist().getName());
         lyricist.setBackground(new Color(32, 38, 61));
         lyricist.setFont(new Font("Dialog", Font.PLAIN, 16));
         lyricist.setForeground(Color.WHITE);
         lyricist.setLineWrap(true);
+        lyricist.setEditable(false);
         c.gridx = 1;
         c.gridy = 0;
         c.gridwidth = 1;
@@ -434,5 +449,16 @@ public class SongPanel extends JPanel {
 
         return panel;
     }
+
+    public void addDeleteListener(ActionListener listener) {
+
+        minusIconButton.addActionListener(listener);
+
+        SongController songController = new SongController(null,songPanel,songsPanelModerator.getParentPanel().getModeratorFrame().getPublishedWorkService(),null);
+        songController.deleteSong();
+
+    }
+
+
 
 }

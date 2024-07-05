@@ -1,5 +1,6 @@
 package View.Moderator;
 
+import Controler.SongController;
 import Models.Artist;
 import Models.PublishedWork;
 import Models.Song;
@@ -24,6 +25,10 @@ public class SongsPanelModerator extends JPanel {
         this.songs = songs;
         setLayout(new GridBagLayout());
         initSongsPanel();
+    }
+
+    public ToolBarPanelModerator getParentPanel() {
+        return parentPanel;
     }
 
     public void initSongsPanel() {
@@ -87,8 +92,10 @@ public class SongsPanelModerator extends JPanel {
         plusIconButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                SongForm songForm = new SongForm(null);
+                SongForm songForm = new SongForm(null,artists);
                 songForm.setVisible(true);
+                SongController songController = new SongController(songForm,null,parentPanel.getModeratorFrame().getPublishedWorkService(), parentPanel.getModeratorFrame().getArtistService());
+
             }
         });
 
@@ -208,15 +215,16 @@ public class SongsPanelModerator extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         panel.add(idLabel, c);
 
-
+        SongsPanelModerator spm = this;
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 //Song song = new Song();
                 for(PublishedWork song: songs){
                     if(song.getId().equals(songId)){
-                SongPanel newPanel = new SongPanel((Song) song);
+                SongPanel newPanel = new SongPanel((Song) song,spm );
                 parentPanel.setContentPanel(newPanel);
+
 
                     }
                 }

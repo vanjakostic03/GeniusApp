@@ -17,6 +17,10 @@ public class ToolBarPanelModerator extends JPanel {
         initToolBar();
     }
 
+    public ModeratorFrame getModeratorFrame() {
+        return moderatorFrame;
+    }
+
     public void setContentPanel(JPanel newPanel) {
 
         moderatorFrame.mainPanel.remove(moderatorFrame.scrollPane); // Uklanjamo prethodni contentPanel
@@ -59,7 +63,7 @@ public class ToolBarPanelModerator extends JPanel {
         JButton albums = createStyledButton("Albums");
         c.gridx = 0;
         c.gridy = 0;
-        albums.addActionListener(e -> setContentPanel(new AlbumsPanelModerator(this,moderatorFrame.getPublishedWorkService().getAlbums())));
+        albums.addActionListener(e -> setContentPanel(new AlbumsPanelModerator(this,moderatorFrame.getPublishedWorkService().getAlbums(),moderatorFrame.getArtistService().getArtists())));
         optionsPanel.add(albums, c);
 
         JButton songs = createStyledButton("Songs");

@@ -5,26 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="dodavanje komentara">
+      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/BandFormPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SingleArtistFormPanel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SingleArtistFormPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/img/exclusive.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/img/exclusive.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Data/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Data/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelLoggedIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/New folder/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publishedWorks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/publishedWorks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/Data/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/Data/accounts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/Data/artists.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/Data/artists.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/AlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/SongController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelLoggedIn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Bend.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Bend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/PublishedWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/PublishedWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/PublishedWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/PublishedWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/SingleArtist.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/SingleArtist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ArtistFormPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/BandFormPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ArtistFormPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/SongListAdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SongListAdminPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ToolBarPanelAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/ToolBarPanelAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumsPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumsPanelModerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongsPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongsPanelModerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/ToolBarPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/ToolBarPanelModerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumsPanel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +100,7 @@
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "171",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "miona",
+    "git-widget-placeholder": "Merging miona",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Miona/Downloads/jdatepicker-1.3.4.jar",
     "node.js.detected.package.eslint": "true",
@@ -138,7 +151,7 @@
       <workItem from="1720069733400" duration="81000" />
       <workItem from="1720069850273" duration="290000" />
       <workItem from="1720070183943" duration="26716000" />
-      <workItem from="1720126745042" duration="15386000" />
+      <workItem from="1720126745042" duration="16047000" />
     </task>
     <task id="LOCAL-00001" summary="TopListType">
       <option name="closed" value="true" />
@@ -244,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720139430331</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="dodavanje komentara">
+      <option name="closed" value="true" />
+      <created>1720142407372</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720142407372</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

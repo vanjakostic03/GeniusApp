@@ -41,6 +41,11 @@ public class PublishedWorkService {
         publishedWorks.remove(publishedWork);
     }
 
+    public void deletePublishedWorkById(String publishedWorkId) {
+        PublishedWork pw = getPublishedWorkById(publishedWorkId);
+        deletePublishedWork(pw);
+    }
+
     public  boolean idExists(String id) {
         for (PublishedWork publishedWork : publishedWorks) {
             if (publishedWork.getId().equals(id)) {
@@ -104,14 +109,18 @@ public class PublishedWorkService {
         xstream.alias("publishedWork", PublishedWork.class);
         xstream.alias("album",Album.class);
         xstream.alias("song", Song.class);
+
         xstream.addPermission(AnyTypePermission.ANY);
 
+
+        xstream.aliasType("singleArtist", SingleArtist.class);
+        xstream.aliasType("bend", Bend.class);
         xstream.aliasType("album",Album.class);
         xstream.aliasType("song", Song.class);
-        
-        try(FileReader reader = new FileReader("publishedWorks.xml")){
+
+        try(FileReader reader = new FileReader("./Data/publishedWorks.xml")){
             publishedWorks = (ArrayList<PublishedWork>) xstream.fromXML(reader);
-            
+
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -125,11 +134,13 @@ public class PublishedWorkService {
 
         xstream.addPermission(AnyTypePermission.ANY); // Dodavanje permisije
 
+        xstream.aliasType("singleArtist", SingleArtist.class);
+        xstream.aliasType("bend", Bend.class);
         xstream.aliasType("album",Album.class);
         xstream.aliasType("song", Song.class);
 
 
-        try (FileWriter writer = new FileWriter("publishedWorks.xml")) {
+        try (FileWriter writer = new FileWriter("./Data/publishedWorks.xml")) {
             xstream.toXML(publishedWorks, writer);
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,5 +1,9 @@
 package View.Moderator;
 
+import Enums.TypeOfArtist;
+import Models.Artist;
+import Models.Bend;
+import Models.Data.ArtistService;
 import Models.SingleArtist;
 
 import javax.swing.*;
@@ -7,30 +11,52 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SongForm extends JFrame {
+
 
     private JTextField titleField ;
     private JTextField coverField;
     private JTextArea lyricsField;
     private JTextArea descriptionField;
-    private JComboBox<SingleArtist> composerBox;
-    private JComboBox<SingleArtist> lyricistBox;
-    //JList<Genre> genreList;
-    private String[] genresStrings = {"zanr1","zanr2"};
-    JList<String> genreList = new JList<String>(genresStrings);
-    //JList<Artist> artistList;
-    private String[] artistsStrings = {"artist1","artist2"};
-    private JList<String> artistList= new JList<String>(artistsStrings);
+    private JComboBox<String> composerBox;
+    private JComboBox<String> lyricistBox;
+    private String[] genresStrings = {"zanr1","zanr2","zanr3","zanr4","zanr5"};
+    private JList<String> genreList = new JList<String>(genresStrings);
+    private String[] artistsStrings;
+    private JList<String> artistList= new JList<String>();
+    //private JList<String> artistList= new JList<String>(artistsStrings);
 
     private JButton submitButton = new JButton("Submit");
 
 
+    private ArrayList<Artist> artists = new ArrayList<>();
     private AlbumForm albumFrame; //ako se poziva iz album forme
 
 
-    public SongForm(AlbumForm albumFrame) {
+    public AlbumForm getAlbumFrame() {
+        return albumFrame;
+    }
+
+    public SongForm(AlbumForm albumFrame, ArrayList<Artist> artists) {
         this.albumFrame = albumFrame;
+        this.artists = artists;
+
+        artistsStrings = new String[artists.size()];
+        int i = 0;
+        for(Artist a : artists){
+            if (a.getTypeOfArtist() == TypeOfArtist.SINGLE_ARTIST) {
+                SingleArtist sa = (SingleArtist) a;
+                artistsStrings[i] = sa.getId()+","+sa.getName();
+            }else{
+                Bend b = (Bend) a;
+                artistsStrings[i] = b.getId()+","+b.getName();
+            }
+            i++;
+        }
+        artistList= new JList<String>(artistsStrings);
+
         setTitle("Song Entry Form");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(600, 800);
@@ -121,7 +147,7 @@ public class SongForm extends JFrame {
         composerLabel.setFont(new Font("Dialog", Font.BOLD, 16));
         formPanel.add(composerLabel, c);
 
-        composerBox = new JComboBox<>();
+        composerBox = new JComboBox<>(artistsStrings);
         c.gridx = 1;
         formPanel.add(composerBox, c);
 
@@ -134,7 +160,7 @@ public class SongForm extends JFrame {
         lyricistLabel.setFont(new Font("Dialog", Font.BOLD, 16));
         formPanel.add(lyricistLabel, c);
 
-        lyricistBox = new JComboBox<>();
+        lyricistBox = new JComboBox<>(artistsStrings);
         c.gridx = 1;
         formPanel.add(lyricistBox, c);
 
@@ -205,51 +231,8 @@ public class SongForm extends JFrame {
 
     public void addSubmitListener(ActionListener listener) {
         submitButton.addActionListener(listener);
+
     }
-
-//    submitButton.addActionListener(new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            String title = titleField.getText();
-//            String cover = coverField.getText();
-//            SingleArtist composer = (SingleArtist) composerBox.getSelectedItem();
-//            SingleArtist lyricist = (SingleArtist) lyricistBox.getSelectedItem();
-//            String lyrics = lyricsField.getText();
-//            String description = descriptionField.getText();
-//
-//            String genres[] = new String[genreList.getSelectedValuesList().size()];
-//            int i = 0;
-//            for(Object o: genreList.getSelectedValuesList()){
-//                genres[i] = (String) o;
-//                i++;
-//            }
-//
-//            String artists[] = new String[artistList.getSelectedValuesList().size()];
-//            i = 0;
-//            for(Object o: artistList.getSelectedValuesList()){
-//                artists[i] = (String) o;
-//                i++;
-//            }
-//
-//            // Process the input data as needed
-//            System.out.println("Title: " + title);
-//            System.out.println("Cover: " + cover);
-//            System.out.println("Genres: " + genres);
-//            System.out.println("Artists: " + artists);
-//            System.out.println("Composer: " + composer);
-//            System.out.println("Lyricist: " + lyricist);
-//            System.out.println("Lyrics: " + lyrics);
-//            System.out.println("Description: " + description);
-//
-//            if (albumFrame != null){
-//                albumFrame.addSong(title);
-//
-//            }
-//            setVisible(false);
-//            dispose();
-//        }
-//    });
-
 
 }
 
