@@ -1,17 +1,24 @@
 package View.User;
 
+import Models.Comment;
+import Models.Data.CommentService;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 public class ComentForm extends JFrame {
 
     private JTextArea reviewTextArea;
     private JComboBox<Integer> ratingComboBox;
+    private CommentService commentService;
 
-    public ComentForm() {
+    public ComentForm(CommentService commentService) {
+        this.commentService = commentService;
+
         setTitle("Comment Form");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
@@ -74,9 +81,17 @@ public class ComentForm extends JFrame {
                 String reviewText = reviewTextArea.getText();
                 Integer rating = (Integer) ratingComboBox.getSelectedItem();
 
+                // Create a new comment
+                String commentId = commentService.getFreeID();
+                Comment comment = new Comment(commentId, reviewText, rating, false, new Date(), null, null);
+
+                // Add comment to CommentService
+                commentService.addComment(comment);
+
                 // Process the input data as needed
                 System.out.println("Review: " + reviewText);
                 System.out.println("Rating: " + rating);
+
                 setVisible(false);
                 dispose();
             }
@@ -94,9 +109,9 @@ public class ComentForm extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new ComentForm().setVisible(true);
+                CommentService commentService = new CommentService(); // Create CommentService instance
+                new ComentForm(commentService).setVisible(true);
             }
         });
     }
 }
-

@@ -104,7 +104,7 @@ public class AlbumsPanel extends JPanel {
         plusIconButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ComentForm albumForm = new ComentForm();
+                ComentForm albumForm = new ComentForm(parentPanel.userFrame.getCommentService());
                 albumForm.setVisible(true);
                 AlbumController albumController = new AlbumController(albumForm,parentPanel.userFrame.getPublishedWorkService(),parentPanel.userFrame.getArtistService());
             }

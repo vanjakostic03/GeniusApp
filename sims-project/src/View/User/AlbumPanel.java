@@ -159,8 +159,8 @@ public class AlbumPanel extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                ComentForm reviewForm = new ComentForm();
-                reviewForm.setVisible(true);
+                //ComentForm reviewForm = new ComentForm();
+                //reviewForm.setVisible(true);
             }
         });
 
