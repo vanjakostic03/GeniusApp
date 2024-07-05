@@ -12,7 +12,7 @@ public class ToolBarPanelUser extends JPanel {
 
     private JPanel contentPanel;
     private JPanel mainPanel;
-    private UserFrame userFrame;
+    public UserFrame userFrame;
 
     public ToolBarPanelUser(UserFrame userFrame) {
         this.userFrame = userFrame;
@@ -47,7 +47,7 @@ public class ToolBarPanelUser extends JPanel {
         userFrame.mainPanel.repaint();
     }
 
-    private void initToolBar() {
+    public void initToolBar() {
         JPanel optionsPanel = new JPanel();
         optionsPanel.setLayout(new GridBagLayout());
         optionsPanel.setBackground(new Color(39, 47, 78));
@@ -76,7 +76,7 @@ public class ToolBarPanelUser extends JPanel {
         JButton albums = createStyledButton("Albums");
         c.gridx = 0;
         c.gridy = 2;
-        albums.addActionListener(e -> setContentPanel(new AlbumsPanel(this,userFrame.getPublishedWorkService().getAlbums())));
+        albums.addActionListener(e -> setContentPanel(new AlbumsPanel(this,userFrame.getPublishedWorkService().getAlbums(),userFrame.getArtistService().getArtists())));
         optionsPanel.add(albums, c);
 
         JButton bands = createStyledButton("Bands");
@@ -102,7 +102,7 @@ public class ToolBarPanelUser extends JPanel {
         c.gridy = 11;
         login.addActionListener(e -> {
             LoginView loginView = new LoginView();
-            new LoginController(userFrame.getAcountService(),loginView);
+            new LoginController(userFrame.getAcountService(),loginView,userFrame.getPublishedWorkService(),userFrame.getArtistService(),userFrame.getCommentService());
             loginView.setVisible(true);
         });
         optionsPanel.add(login, c);
@@ -118,7 +118,7 @@ public class ToolBarPanelUser extends JPanel {
         add(optionsPanel, panelConstraints);
     }
 
-    private JButton createStyledButton(String text) {
+    public JButton createStyledButton(String text) {
         JButton button = new JButton(text);
         button.setForeground(Color.WHITE);
         button.setFont(new Font("Dialog", Font.PLAIN, 16));

@@ -1,5 +1,6 @@
 package View.User;
 
+import Controler.LoginController;
 import Models.Data.AccountService;
 import Models.Data.ArtistService;
 import Models.Data.CommentService;
@@ -18,6 +19,7 @@ public class UserFrame extends JFrame {
     public JPanel contentPanel;
     public JScrollPane scrollPane;
     public AccountService accountService;
+    private LoginController loginController;
 
     public PublishedWorkService getPublishedWorkService() {
         return publishedWorkService;
@@ -34,12 +36,13 @@ public class UserFrame extends JFrame {
         return commentService;
     }
 
-    public UserFrame(String userName, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService, AccountService accountService) {
+    public UserFrame(String userName, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService, AccountService accountService,LoginController loginController) {
         this.publishedWorkService = publishedWorkService;
         this.artistService = artistService;
         this.commentService = commentService;
         this.accountService = accountService;
         user = userName;
+        this.loginController = loginController;
         userUI();
     }
 
@@ -87,5 +90,13 @@ public class UserFrame extends JFrame {
         mainPanel.add(scrollPane, c);
 
         this.add(mainPanel);
+    }
+
+    public void switchToLoggedInToolbar() {
+        ToolBarPanelLoggedIn toolbar = new ToolBarPanelLoggedIn(this);
+        getContentPane().remove(0); // Pretpostavka: toolbar je prvi dodat panel
+        getContentPane().add(toolbar, 0);
+        validate();
+        repaint();
     }
 }

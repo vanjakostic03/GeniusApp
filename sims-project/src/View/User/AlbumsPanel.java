@@ -1,8 +1,9 @@
 package View.User;
+import Controler.AlbumController;
 import Models.Album;
+import Models.Artist;
 import Models.PublishedWork;
 import View.Moderator.RoundBorder;
-import View.Moderator.ToolBarPanelModerator;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,15 +16,17 @@ public class AlbumsPanel extends JPanel {
 
     ToolBarPanelUser parentPanel ;
     ArrayList<PublishedWork> albums = new ArrayList<>() ;
+    ArrayList<Artist> artists = new ArrayList<>() ;
 
     public void setAlbums(ArrayList<PublishedWork> albums) {
         this.albums = albums;
     }
 
-    public AlbumsPanel(ToolBarPanelUser parenPanel, ArrayList<PublishedWork> albums) {
+    public AlbumsPanel(ToolBarPanelUser parenPanel,ArrayList<PublishedWork> albums,ArrayList<Artist> artists) {
 
         this.parentPanel = parenPanel;
         this.albums = albums;
+        this.artists = artists;
         setLayout(new GridBagLayout());
         initAlbumsPanel();
     }
@@ -44,7 +47,25 @@ public class AlbumsPanel extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         add(searchBar, c);
 
+        // Krug panel
+        JPanel circlePanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                int diameter = Math.min(getWidth(), getHeight());
+                g.setColor(Color.white);
+                g.fillOval((getWidth() - diameter) / 2, (getHeight() - diameter) / 2, diameter, diameter);
 
+            }
+        };
+        circlePanel.setPreferredSize(new Dimension(55, 55));
+        circlePanel.setBackground(new Color(32, 38, 61));
+        circlePanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        c.gridx = 4;
+        c.gridy = 0; // Prvi red
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.weightx = 0.0;
+        add(circlePanel, c);
 
         // Naslov "Albums"
         JLabel titleLabel = new JLabel("Albums");
@@ -59,6 +80,36 @@ public class AlbumsPanel extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         add(titleLabel, c);
 
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/plus.png"));
+        Image scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon plusIcon = new ImageIcon(scaledImage);
+
+        JButton plusIconButton = new JButton(plusIcon);
+        plusIconButton.setOpaque(false);
+        plusIconButton.setContentAreaFilled(false);
+        plusIconButton.setBorderPainted(false);
+        plusIconButton.setFocusPainted(false);
+        plusIconButton.setBackground(new Color(240, 240, 240));
+        plusIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 4;
+        c.gridy = 1;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(plusIconButton,c);
+
+        plusIconButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ComentForm albumForm = new ComentForm();
+                albumForm.setVisible(true);
+                AlbumController albumController = new AlbumController(albumForm,parentPanel.userFrame.getPublishedWorkService(),parentPanel.userFrame.getArtistService());
+            }
+        });
+
 
 //        int albumCount = 30; // Primer: prikazuje do 30 albuma
 //        int albumsPerRow = 4; // Broj albuma po redu
@@ -67,7 +118,8 @@ public class AlbumsPanel extends JPanel {
         int j = 0;
         for (PublishedWork album :this.albums) {
             System.out.println(album.getCover());
-            JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle());
+            JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(), album.getId());
+            albumPanel.setBackground(new Color(32, 38, 61));
             c.gridx = i % 4; // Redni broj kolone u trenutnom redu
             c.gridy = 2 + j ; // Redni broj reda
             c.gridwidth = 1; // Zauzima 1 kolonu
@@ -96,7 +148,30 @@ public class AlbumsPanel extends JPanel {
             }
         }
     }
-    private JPanel createAlbumPanel(String coverText, String albumTitle) {
+
+
+    public void addAlbum(Album album) {
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets(25, 5, 15, 10);
+
+        int albumCount = getComponentCount() - 4; // Ignorisi prve 4 komponente
+        int albumsPerRow = 4; // Broj albuma po redu
+        int startingRow = 2;
+
+        JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(),album.getId());
+        c.gridx = albumCount % albumsPerRow; // Redni broj kolone u trenutnom redu
+        c.gridy = startingRow + albumCount / albumsPerRow; // Redni broj reda
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.weightx = 1.0;
+        c.weighty = 1.0;
+        c.fill = GridBagConstraints.BOTH;
+        add(albumPanel, c);
+
+        revalidate();
+        repaint();
+    }
+
+    private JPanel createAlbumPanel(String coverText, String albumTitle, String albumId) {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setBackground(new Color(32,38,61));
@@ -155,12 +230,29 @@ public class AlbumsPanel extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         panel.add(titleLabel, c);
 
+        JLabel idLabel = new JLabel(albumId);
+        idLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
+        idLabel.setForeground(Color.white);
+        idLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        c.gridx = 0;
+        c.gridy = 2;
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.weightx = 0.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(idLabel, c);
 
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                AlbumPanel newPanel = new AlbumPanel();
-                parentPanel.setContentPanel(newPanel);
+
+                for(PublishedWork album: albums){
+                    if(album.getId().equals(albumId)){
+
+                        AlbumPanel newPanel = new AlbumPanel((Album) album);
+                        parentPanel.setContentPanel(newPanel);
+                    }
+                }
             }
         });
 

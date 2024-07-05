@@ -4,10 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="dodat artist sa slikom">
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="skoro gotov main view za userea">
+      <change afterPath="$PROJECT_DIR$/sims-project/src/Controler/LogoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelLoggedIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/AlbumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/AlbumController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/PublishedWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/PublishedWork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/AlbumsPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserView$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/publishedWorks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/publishedWorks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publishedWorks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/publishedWorks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/AlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/PublishedWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/PublishedWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/AlbumPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/AlbumsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +150,7 @@
       <workItem from="1720069733400" duration="81000" />
       <workItem from="1720069850273" duration="290000" />
       <workItem from="1720070183943" duration="26716000" />
-      <workItem from="1720126745042" duration="4931000" />
+      <workItem from="1720126745042" duration="10820000" />
     </task>
     <task id="LOCAL-00001" summary="TopListType">
       <option name="closed" value="true" />
@@ -203,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720130551447</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="skoro gotov main view za userea">
+      <option name="closed" value="true" />
+      <created>1720131954007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720131954007</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +265,8 @@
     <MESSAGE value="ima bagova ali moze da se pokrene. Uglavnom slike nece da se uciaju" />
     <MESSAGE value="uzitane slike u zanroe" />
     <MESSAGE value="dodat artist sa slikom" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodat artist sa slikom" />
+    <MESSAGE value="skoro gotov main view za userea" />
+    <option name="LAST_COMMIT_MESSAGE" value="skoro gotov main view za userea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -237,6 +275,11 @@
           <url>file://$PROJECT_DIR$/sims-project/src/Models/Person.java</url>
           <line>50</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

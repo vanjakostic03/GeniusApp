@@ -1,5 +1,6 @@
 package View.User;
 
+import Controler.AlbumController;
 import Models.PublishedWork;
 import Models.SingleArtist;
 import View.Moderator.RoundBorder;
@@ -7,6 +8,8 @@ import View.Moderator.RoundBorder;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
@@ -124,6 +127,13 @@ public class UserView extends JPanel {
             panel.add(imageLabel, BorderLayout.CENTER);
         }
 
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+               //otvoriti artista
+            }
+        });
+
         return panel;
     }
 
@@ -206,16 +216,16 @@ public class UserView extends JPanel {
         String imagePath = "";
         switch (genreName.toLowerCase()) {
             case "pop":
-                imagePath = "/img/fame.png";
+                imagePath = "/img/pop.png";
                 break;
             case "rock":
-                imagePath = "/img/fame.png";
+                imagePath = "/img/rock.png";
                 break;
             case "hip-hop":
-                imagePath = "/img/fame.png";
+                imagePath = "/img/hiphop.png";
                 break;
             case "electronic":
-                imagePath = "/img/fame.png";
+                imagePath = "/img/electic.png";
                 break;
             default:
                 System.err.println("Unknown genre: " + genreName);
@@ -283,7 +293,12 @@ public class UserView extends JPanel {
         nameLabel.setForeground(Color.white);
         nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
         itemPanel.add(nameLabel, BorderLayout.CENTER);
-
+        itemPanel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            //otvara se album
+            }
+        });
         return itemPanel;
     }
     private ImageIcon loadImage(String imagePath) {

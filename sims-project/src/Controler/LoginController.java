@@ -1,18 +1,36 @@
 package Controler;
 
+import Enums.Role;
+import Models.Data.AccountService;
+import Models.Account;
+import Models.Data.ArtistService;
+import Models.Data.CommentService;
+import Models.Data.PublishedWorkService;
+import View.User.LoginView;
+import View.User.UserFrame; // Pretpostavljamo da imate UserFrame ili odgovarajući prikaz za korisnika
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Enums.Role;
-import Models.Data.AccountService;
-import View.User.LoginView;
-import Models.Account;
-
-import javax.swing.*;
-
 public class LoginController {
     private AccountService accountService;
+    private PublishedWorkService publishedWorkService;
+    private ArtistService artistService;
+    private CommentService commentService;
     private LoginView view;
+
+    private UserFrame userFrame;
+
+    public LoginController(AccountService accountService, LoginView view, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService) {
+        this.publishedWorkService = publishedWorkService;
+        this.artistService = artistService;
+        this.commentService = commentService;
+        this.accountService = accountService;
+        this.view = view;
+
+        view.addLoginListener(new LoginListener());
+    }
 
     public LoginController(AccountService accountService, LoginView view) {
         this.accountService = accountService;
@@ -35,28 +53,58 @@ public class LoginController {
                 // Proveri tip korisnika
                 Role userType = account.getPerson().getRole();
                 switch (userType) {
-                    case Role.REGISTERED_USER:
-                        // Logika za korisnika
-                        System.out.println("User logged in.");
+                    case REGISTERED_USER:
+                        // Prikazi ili otvori panel za registrovanog korisnika
+                        showRegisteredUserPanel(account);
                         break;
-                    case Role.MODERATOR:
-                        // Logika za moderatora
-                        System.out.println("Moderator logged in.");
+                    case MODERATOR:
+                        // Prikazi ili otvori panel za moderatora
+                        showModeratorPanel(account);
                         break;
-                    case Role.ADMIN:
-                        // Logika za administratora
-                        System.out.println("Admin logged in.");
+                    case ADMIN:
+                        // Prikazi ili otvori panel za administratora
+                        showAdminPanel(account);
                         break;
                     default:
                         // Default handler, ako je tip nepoznat
-                        System.out.println("Unknown user type.");
+                        JOptionPane.showMessageDialog(view, "Unknown user type.");
                         break;
                 }
+
                 view.dispose();
             } else {
                 // Prikazi poruku o neuspesnoj prijavi
                 JOptionPane.showMessageDialog(view, "Invalid username or password!");
             }
         }
+
+        private void showRegisteredUserPanel(Account account) {
+            SwingUtilities.invokeLater(() -> {
+                if (userFrame != null) {
+                    userFrame.dispose(); // Zatvori trenutni UserFrame ako postoji
+                }
+                userFrame = new UserFrame(account.getPerson().getName(), publishedWorkService, artistService, commentService, accountService, LoginController.this); // Prosleđujemo LoginController
+                userFrame.setVisible(true);
+            });
+        }
+
+        private void showModeratorPanel(Account account) {
+            JOptionPane.showMessageDialog(view, "Moderator logged in."); // Primer poruke
+        }
+
+        private void showAdminPanel(Account account) {
+            JOptionPane.showMessageDialog(view, "Admin logged in."); // Primer poruke
+        }
     }
+
+    private void showRegisteredUserPanel(Account account) {
+        SwingUtilities.invokeLater(() -> {
+            if (userFrame != null) {
+                userFrame.dispose(); // Zatvori trenutni UserFrame ako postoji
+            }
+            userFrame = new UserFrame(account.getPerson().getName(), publishedWorkService, artistService, commentService, accountService,this);
+            userFrame.setVisible(true);
+        });
+    }
+
 }

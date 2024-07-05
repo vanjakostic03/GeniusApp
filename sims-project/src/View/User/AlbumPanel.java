@@ -1,5 +1,8 @@
+
 package View.User;
 
+import Enums.TypeOfArtist;
+import Models.*;
 import View.Moderator.RoundBorder;
 
 import javax.swing.*;
@@ -9,7 +12,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AlbumPanel extends JPanel {
-    public AlbumPanel(){
+    private Album album;
+
+    public AlbumPanel(Album album){
+        this.album = album;
         setLayout(new GridBagLayout());
         initAlbumPanel();
     }
@@ -29,20 +35,116 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
         add(searchBar, c);
 
-        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/minus.png"));
+        JPanel circlePanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                int diameter = Math.min(getWidth(), getHeight());
+                g.setColor(Color.white);
+                g.fillOval((getWidth() - diameter) / 2, (getHeight() - diameter) / 2, diameter, diameter);
+
+            }
+        };
+
+        circlePanel.setPreferredSize(new Dimension(55, 55));
+        circlePanel.setBackground(new Color(32, 38, 61));
+        circlePanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        c.gridx = 3;
+        c.gridy = 0; // Prvi red
+        c.gridwidth = 1; // Zauzima 1 kolonu
+        c.weightx = 0.0;
+        add(circlePanel, c);
+
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/minus.png")); // Postavite putanju do vaše ikonice
 
         Image scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon minusIcon = new ImageIcon(scaledImage);
+
+        JButton minusIconButton = new JButton(minusIcon);
+        minusIconButton.setOpaque(false);
+        minusIconButton.setContentAreaFilled(false);
+        minusIconButton.setBorderPainted(false);
+        minusIconButton.setFocusPainted(false);
+        minusIconButton.setBackground(new Color(240, 240, 240));
+        minusIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 3;
+        c.gridy = 1;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(minusIconButton,c);
+
+        minusIconButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int result = JOptionPane.showOptionDialog(null,
+                        "Do you want to delete album?",
+                        "Album",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        new String[]{"Yes", "No"},
+                        "Yes");
+            }
+        });
+
+
+
+        originalIcon = new ImageIcon(getClass().getResource("/img/edit.png"));
+
+        scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon editIcon = new ImageIcon(scaledImage);
+
+        JButton editIconButton = new JButton(editIcon);
+        editIconButton.setOpaque(false);
+        editIconButton.setContentAreaFilled(false);
+        editIconButton.setBorderPainted(false);
+        editIconButton.setFocusPainted(false);
+        editIconButton.setBackground(new Color(240, 240, 240));
+        editIconButton.setBorder(BorderFactory.createEmptyBorder());
+
+        c.gridx = 3;
+        c.gridy = 2;
+        c.gridwidth = 1;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        add(editIconButton,c);
+
+        editIconButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int result = JOptionPane.showOptionDialog(null,
+                        "Update?",
+                        "Album",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        new String[]{"Yes", "No"},
+                        "Yes");
+            }
+        });
+
+
+
+        originalIcon = new ImageIcon(getClass().getResource("/img/review.png"));
+
+        scaledImage = originalIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         ImageIcon reviewIcon = new ImageIcon(scaledImage);
 
-        ImageIcon commentIcon = new ImageIcon(scaledImage);
-
-        JButton commentIconButton = new JButton(commentIcon);
-        commentIconButton.setOpaque(false);
-        commentIconButton.setContentAreaFilled(false);
-        commentIconButton.setBorderPainted(false);
-        commentIconButton.setFocusPainted(false);
-        commentIconButton.setBackground(new Color(240, 240, 240));
-        commentIconButton.setBorder(BorderFactory.createEmptyBorder());
+        JButton reviewIconButton = new JButton(reviewIcon);
+        reviewIconButton.setOpaque(false);
+        reviewIconButton.setContentAreaFilled(false);
+        reviewIconButton.setBorderPainted(false);
+        reviewIconButton.setFocusPainted(false);
+        reviewIconButton.setBackground(new Color(240, 240, 240));
+        reviewIconButton.setBorder(BorderFactory.createEmptyBorder());
 
         c.gridx = 3;
         c.gridy = 3;
@@ -51,18 +153,24 @@ public class AlbumPanel extends JPanel {
         c.weighty = 0.0;
         c.fill = GridBagConstraints.HORIZONTAL;
 
-        add(commentIconButton,c);
+        add(reviewIconButton,c);
 
-        commentIconButton.addActionListener(new ActionListener() {
+        reviewIconButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                ComentForm comentForm = new ComentForm();
-                comentForm.setVisible(true);
+                ComentForm reviewForm = new ComentForm();
+                reviewForm.setVisible(true);
             }
         });
 
-        JLabel coverLabel = new JLabel("cover pesme"){
+        ImageIcon icon = new ImageIcon(getClass().getResource(album.getCover()));
+        Image image = icon.getImage();
+
+        Image scaledcoverImage = image.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(scaledcoverImage);
+
+        JLabel coverLabel = new JLabel(scaledIcon){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();
@@ -91,7 +199,7 @@ public class AlbumPanel extends JPanel {
         add(coverLabel, c);
 
 
-        JTextArea description= new JTextArea("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+        JTextArea description= new JTextArea(album.getDescription());
         description.setBackground(new Color(32, 38, 61));
         description.setFont(new Font("Dialog", Font.PLAIN, 18));
         description.setForeground(Color.WHITE);
@@ -108,7 +216,7 @@ public class AlbumPanel extends JPanel {
 
 
 
-        JTextArea title= new JTextArea("Title");
+        JTextArea title= new JTextArea(album.getTitle());
         title.setBackground(new Color(32, 38, 61));
         title.setFont(new Font("Dialog", Font.BOLD, 55));
         title.setForeground(Color.WHITE);
@@ -123,7 +231,22 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(title, c);
 
-        JTextArea artist= new JTextArea("Artist name");
+        String artists ="";
+        if(album.getArtists()!=null){
+            System.out.println("upao");
+            for(Artist a: album.getArtists()) {
+                if(a.getTypeOfArtist() == TypeOfArtist.BAND){
+                    Bend b = (Bend)a;
+                    artists+= b.getName() + "\n";
+                }else{
+                    SingleArtist sa = (SingleArtist) a;
+                    artists+= sa.getName() + "\n";
+                }
+            }
+        }
+
+        JTextArea artist= new JTextArea(artists);
+        //JTextArea artist= new JTextArea("Artist name");
         artist.setBackground(new Color(32, 38, 61));
         artist.setFont(new Font("Dialog", Font.PLAIN, 30));
         artist.setForeground(Color.WHITE);
@@ -138,7 +261,11 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(artist, c);
 
-        JTextArea views= new JTextArea("73984834");
+        int numOfViews = 0;
+        for(Song song: album.getSongs()){
+            numOfViews+=song.getViews();
+        }
+        JTextArea views= new JTextArea("Views:\n"+String.valueOf(numOfViews));
         views.setBackground(new Color(32, 38, 61));
         views.setFont(new Font("Dialog", Font.PLAIN, 30));
         views.setForeground(Color.WHITE);
@@ -152,8 +279,10 @@ public class AlbumPanel extends JPanel {
         c.weighty = 0.5;
         c.fill = GridBagConstraints.BOTH;
         add(views, c);
+        System.out.println(album.getReleaseDate());
+        String releaseDateString = String.valueOf(album.getReleaseDate()).substring(4,10) + " " +String.valueOf(album.getReleaseDate()).substring(24);
 
-        JTextArea releaseDate= new JTextArea("12.12.2012.");
+        JTextArea releaseDate= new JTextArea("Release date:\n"+releaseDateString);
         releaseDate.setBackground(new Color(32, 38, 61));
         releaseDate.setFont(new Font("Dialog", Font.PLAIN, 30));
         releaseDate.setForeground(Color.WHITE);
@@ -168,7 +297,13 @@ public class AlbumPanel extends JPanel {
         c.fill = GridBagConstraints.BOTH;
         add(releaseDate, c);
 
-        JTextArea songs = new JTextArea("\n\npesma\n pesma\n pesma \npesma\n pesma\n qpesma \n...\n"){
+        String songsString = "\n";
+        int i = 1;
+        for(Song song: album.getSongs()){
+            songsString+=i+". "+ song.getTitle()+"\n";
+            i++;
+        }
+        JTextArea songs = new JTextArea(songsString){
             @Override protected void paintComponent(Graphics g) {
                 if (!isOpaque() && getBorder() instanceof RoundBorder) {
                     Graphics2D g2 = (Graphics2D) g.create();

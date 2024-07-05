@@ -1,4 +1,5 @@
 
+import Controler.LoginController;
 import Models.Data.AccountService;
 import Models.Data.ArtistService;
 import Models.Data.CommentService;
@@ -7,6 +8,7 @@ import Models.PublishedWork;
 import Models.SingleArtist;
 import View.Moderator.ModeratorFrame;
 import View.Moderator.ToolBarPanelModerator;
+import View.User.LoginView;
 import View.User.UserFrame;
 import View.User.UserView;
 
@@ -46,7 +48,9 @@ public class Main {
         PublishedWorkService pwService2 = new PublishedWorkService();
         AccountService service = new AccountService();
         CommentService commentService = new CommentService();
-        UserFrame mf = new UserFrame("nesto",pwService,artistService,commentService,service);
+        LoginView view=new LoginView();
+        LoginController loginController=new LoginController(service, view,pwService2,artistService,commentService);
+        UserFrame mf = new UserFrame("nesto",pwService,artistService,commentService,service,loginController);
 
 
     }

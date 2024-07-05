@@ -3,6 +3,7 @@ package Models;
 import Enums.TypeOfWork;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public abstract class PublishedWork {
     protected String id;
@@ -12,6 +13,8 @@ public abstract class PublishedWork {
     protected TypeOfWork typeOfWork;
     protected ArrayList<Genre> genres;
 
+    protected Date releaseDate;
+    protected String description;
     public PublishedWork() {}
 
     public PublishedWork(String id, String title, String cover, ArrayList<Artist> artists, TypeOfWork typeOfWork, ArrayList<Genre> genres) {
@@ -21,6 +24,7 @@ public abstract class PublishedWork {
         this.artists = artists;
         this.typeOfWork = typeOfWork;
         this.genres = genres;
+
     }
     public String getId() {
         return id;
@@ -84,4 +88,19 @@ public abstract class PublishedWork {
     }
 
 
+    public Date getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
