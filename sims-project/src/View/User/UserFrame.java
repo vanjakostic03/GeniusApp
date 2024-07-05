@@ -79,7 +79,7 @@ public class UserFrame extends JFrame {
         c.insets = new Insets(0, 166, 0, 0);
         mainPanel.add(toolBarPanel, c);
 
-        contentPanel = new UserView(toolBarPanel,artistService.getSingleArtists(),publishedWorkService.getAlbums());
+        contentPanel = new UserView(toolBarPanel,artistService.getSingleArtists(),publishedWorkService.getAlbums(),registerUser);
         contentPanel.setBackground(new Color(32, 38, 61));
         c.gridx = 1;
         c.gridy = 0;

@@ -1,6 +1,8 @@
 package View.User;
 
 import Controler.AlbumController;
+import Models.Account;
+import Models.Album;
 import Models.PublishedWork;
 import Models.SingleArtist;
 import View.Moderator.RoundBorder;
@@ -21,10 +23,12 @@ public class UserView extends JPanel {
 
     private ArrayList<PublishedWork> albums;
     private ArrayList<SingleArtist> artists;
+    private Account registredUser;
 
-    public UserView(ToolBarPanelUser parentPanel, ArrayList<SingleArtist> singleArtists, ArrayList<PublishedWork> albums) {
+    public UserView(ToolBarPanelUser parentPanel, ArrayList<SingleArtist> singleArtists, ArrayList<PublishedWork> albums, Account registredUser ) {
         this.parentPanel = parentPanel;
         this.albums = albums;
+        this.registredUser=registredUser;
         this.artists = singleArtists;
         initHomePanel();
     }
@@ -296,7 +300,10 @@ public class UserView extends JPanel {
         itemPanel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                //otvara se album
+
+                AlbumPanel newPanel = new AlbumPanel((Album) item,parentPanel.getUserFrame().getCommentService(),registredUser);
+                parentPanel.setContentPanel(newPanel);
+
             }
         });
         return itemPanel;

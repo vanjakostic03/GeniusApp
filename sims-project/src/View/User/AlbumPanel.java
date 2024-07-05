@@ -17,14 +17,12 @@ public class AlbumPanel extends JPanel {
     private Album album;
     private JButton minusIconButton = new JButton();
     private AlbumPanel albumPanel= this;
-    private AlbumsPanelUser albumsPanelUser;
     private CommentService commentService;
     private Account registerUser;
 
-    public AlbumPanel(Album album,AlbumsPanelUser albumsPanelUser,CommentService commentService,Account registerUser){
+    public AlbumPanel(Album album,CommentService commentService,Account registerUser){
         this.album = album;
         this.registerUser=registerUser;
-        this.albumsPanelUser = albumsPanelUser;
         setLayout(new GridBagLayout());
         this.commentService=commentService;
         initAlbumPanel();

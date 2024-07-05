@@ -71,7 +71,7 @@ public class ToolBarPanelUser extends JPanel {
         c.gridx = 0;
         c.gridy = 0;
         System.out.println(userFrame.getArtistService().getSingleArtists().size());
-        explore.addActionListener(e -> setContentPanel (new UserView(this,userFrame.getArtistService().getSingleArtists(),userFrame.getPublishedWorkService().getAlbums())));
+        explore.addActionListener(e -> setContentPanel (new UserView(this,userFrame.getArtistService().getSingleArtists(),userFrame.getPublishedWorkService().getAlbums(),registerUser)));
         optionsPanel.add(explore, c);
 
 

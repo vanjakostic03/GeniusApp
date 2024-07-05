@@ -219,7 +219,7 @@ public class AlbumsPanelUser extends JPanel {
                 for(PublishedWork album: albums){
                     if(album.getId().equals(albumId)){
 
-                        AlbumPanel newPanel = new AlbumPanel((Album) album,albumsPanelUser,parentPanel.getUserFrame().getCommentService(),registerUser);
+                        AlbumPanel newPanel = new AlbumPanel((Album) album,parentPanel.getUserFrame().getCommentService(),registerUser);
                         parentPanel.setContentPanel(newPanel);
                     }
                 }
