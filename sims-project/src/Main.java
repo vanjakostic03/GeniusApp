@@ -49,8 +49,8 @@ public class Main {
         AccountService service = new AccountService();
         CommentService commentService = new CommentService();
         LoginView view=new LoginView();
-        LoginController loginController=new LoginController(service, view,pwService2,artistService,commentService);
-        UserFrame mf = new UserFrame("nesto",pwService,artistService,commentService,service,loginController);
+        LoginController loginController=new LoginController(service, view,pwService2,artistService,commentService,null);
+        UserFrame mf = new UserFrame("nesto",pwService,artistService,commentService,service,loginController,null);
 
 
     }

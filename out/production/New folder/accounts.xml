@@ -107,4 +107,34 @@
     <isBlocked>false</isBlocked>
     <isPrivate>false</isPrivate>
   </account>
+  <account>
+    <person>
+      <id>U006</id>
+      <name>zz</name>
+      <lastName>z</lastName>
+      <role>REGISTERED_USER</role>
+      <address>z</address>
+      <dateOfBirth>2024-07-05 00:02:43.69 UTC</dateOfBirth>
+      <gender>FEMALE</gender>
+    </person>
+    <email>zikaa</email>
+    <password>zikic</password>
+    <isBlocked>false</isBlocked>
+    <isPrivate>false</isPrivate>
+  </account>
+  <account>
+    <person>
+      <id>U007</id>
+      <name>fds</name>
+      <lastName>fsd</lastName>
+      <role>REGISTERED_USER</role>
+      <address>fds</address>
+      <dateOfBirth>2024-07-05 00:40:38.673 UTC</dateOfBirth>
+      <gender>OTHER</gender>
+    </person>
+    <email>fds</email>
+    <password>fsd</password>
+    <isBlocked>false</isBlocked>
+    <isPrivate>false</isPrivate>
+  </account>
 </list>

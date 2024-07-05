@@ -2,6 +2,8 @@ package View.User;
 
 import Controler.LoginController;
 import Controler.RegisterController;
+import Models.Account;
+import Models.Person;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,15 +11,18 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class ToolBarPanelUser extends JPanel {
-
     private JPanel contentPanel;
     private JPanel mainPanel;
     public UserFrame userFrame;
+    private Account registerUser;
 
-    public ToolBarPanelUser(UserFrame userFrame) {
+    public ToolBarPanelUser(UserFrame userFrame, Account registerUser) {
         this.userFrame = userFrame;
         setLayout(new GridBagLayout());
+        this.registerUser=registerUser;
         initToolBar();
+        System.out.println("u konstrktoru");
+        System.out.println(registerUser);
     }
 
     public void setContentPanel(JPanel newPanel) {
@@ -85,28 +90,45 @@ public class ToolBarPanelUser extends JPanel {
         bands.addActionListener(e -> setContentPanel(new BandsPanel(this,userFrame.getArtistService().getBands())));
         optionsPanel.add(bands, c);
 
-        JButton register = createStyledButton("Register");
-        c.gridx = 0;
-        c.gridy = 10;
-        register.addActionListener(e -> {
-            RegisterView registerView = new RegisterView();
-            new RegisterController(registerView, userFrame.getAcountService());
-            registerView.setVisible(true);
-        });
-       optionsPanel.add(register, c);
+        System.out.println(registerUser);
+        if(registerUser==null) {
+            JButton register = createStyledButton("Register");
+            c.gridx = 0;
+            c.gridy = 10;
+            register.addActionListener(e -> {
+                RegisterView registerView = new RegisterView();
+                new RegisterController(registerView, userFrame.getAcountService());
+                registerView.setVisible(true);
+            });
+            optionsPanel.add(register, c);
 
+            JButton login = createStyledButton("Login");
+            c.gridx = 0;
+            c.gridy = 11;
+            login.addActionListener(e -> {
 
+                LoginView loginView = new LoginView();
+                new LoginController(userFrame.getAcountService(), loginView, userFrame.getPublishedWorkService(), userFrame.getArtistService(), userFrame.getCommentService(),registerUser);
+                loginView.setVisible(true);
+            });
+            optionsPanel.add(login, c);
+        }else{
+            JButton playlista = createStyledButton("Playlista");
+            c.gridx = 0;
+            c.gridy = 10;
+            playlista.addActionListener(e -> {
+                //TODO pozvati playliste
+            });
+            optionsPanel.add(playlista, c);
 
-        JButton login = createStyledButton("Login");
-        c.gridx = 0;
-        c.gridy = 11;
-        login.addActionListener(e -> {
-            LoginView loginView = new LoginView();
-            new LoginController(userFrame.getAcountService(),loginView,userFrame.getPublishedWorkService(),userFrame.getArtistService(),userFrame.getCommentService());
-            loginView.setVisible(true);
-        });
-        optionsPanel.add(login, c);
-
+            JButton login = createStyledButton("Logout");
+            c.gridx = 0;
+            c.gridy = 11;
+            login.addActionListener(e -> {
+                //TODO pozvati userview
+            });
+            optionsPanel.add(login, c);
+        }
 
         GridBagConstraints panelConstraints = new GridBagConstraints();
         panelConstraints.gridx = 0;

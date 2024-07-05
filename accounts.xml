@@ -122,4 +122,19 @@
     <isBlocked>false</isBlocked>
     <isPrivate>false</isPrivate>
   </account>
+  <account>
+    <person>
+      <id>U007</id>
+      <name>fds</name>
+      <lastName>fsd</lastName>
+      <role>REGISTERED_USER</role>
+      <address>fds</address>
+      <dateOfBirth>2024-07-05 00:40:38.673 UTC</dateOfBirth>
+      <gender>OTHER</gender>
+    </person>
+    <email>fds</email>
+    <password>fsd</password>
+    <isBlocked>false</isBlocked>
+    <isPrivate>false</isPrivate>
+  </account>
 </list>

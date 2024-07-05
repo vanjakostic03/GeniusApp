@@ -1,16 +1,19 @@
 package View.User;
 
 import Controler.LoginController;
+import Models.Account;
 import Models.Data.AccountService;
 import Models.Data.ArtistService;
 import Models.Data.CommentService;
 import Models.Data.PublishedWorkService;
+import Models.Person;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class UserFrame extends JFrame {
 
+    public Account registerUser;
     private String user;
     private PublishedWorkService publishedWorkService;
     private ArtistService artistService;
@@ -36,13 +39,15 @@ public class UserFrame extends JFrame {
         return commentService;
     }
 
-    public UserFrame(String userName, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService, AccountService accountService,LoginController loginController) {
+    public UserFrame(String userName, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService, AccountService accountService,LoginController loginController,Account registedUser) {
         this.publishedWorkService = publishedWorkService;
         this.artistService = artistService;
         this.commentService = commentService;
         this.accountService = accountService;
         user = userName;
         this.loginController = loginController;
+        this.registerUser=registedUser;
+        System.out.println(registedUser);
         userUI();
     }
 
@@ -61,7 +66,7 @@ public class UserFrame extends JFrame {
         mainPanel.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
 
-        ToolBarPanelUser toolBarPanel = new ToolBarPanelUser(this);
+        ToolBarPanelUser toolBarPanel = new ToolBarPanelUser(this,registerUser);
         toolBarPanel.setBackground(new Color(39, 47, 78));
 
         c.gridx = 0;
@@ -92,11 +97,4 @@ public class UserFrame extends JFrame {
         this.add(mainPanel);
     }
 
-    public void switchToLoggedInToolbar() {
-        ToolBarPanelLoggedIn toolbar = new ToolBarPanelLoggedIn(this);
-        getContentPane().remove(0); // Pretpostavka: toolbar je prvi dodat panel
-        getContentPane().add(toolbar, 0);
-        validate();
-        repaint();
-    }
 }

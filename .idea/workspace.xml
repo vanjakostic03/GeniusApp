@@ -4,12 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="registracija">
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="dodavanje komentara">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/AlbumPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/AlbumsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/ComentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/ComentForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController$LoginListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Controler/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/Models/Data/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/Models/Data/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ComentForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelLoggedIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/ToolBarPanelUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/View/User/UserFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/View/User/UserFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/New folder/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/New folder/accounts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelLoggedIn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/ToolBarPanelUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +138,7 @@
       <workItem from="1720069733400" duration="81000" />
       <workItem from="1720069850273" duration="290000" />
       <workItem from="1720070183943" duration="26716000" />
-      <workItem from="1720126745042" duration="12395000" />
+      <workItem from="1720126745042" duration="15386000" />
     </task>
     <task id="LOCAL-00001" summary="TopListType">
       <option name="closed" value="true" />
@@ -221,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720138538785</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="dodavanje komentara">
+      <option name="closed" value="true" />
+      <created>1720139430331</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720139430331</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +271,8 @@
     <MESSAGE value="dodat artist sa slikom" />
     <MESSAGE value="skoro gotov main view za userea" />
     <MESSAGE value="registracija" />
-    <option name="LAST_COMMIT_MESSAGE" value="registracija" />
+    <MESSAGE value="dodavanje komentara" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodavanje komentara" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -260,7 +284,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java</url>
-          <line>54</line>
+          <line>59</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -19,14 +19,16 @@ public class LoginController {
     private ArtistService artistService;
     private CommentService commentService;
     private LoginView view;
+    private Account registredUser;
 
     private UserFrame userFrame;
 
-    public LoginController(AccountService accountService, LoginView view, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService) {
+    public LoginController(AccountService accountService, LoginView view, PublishedWorkService publishedWorkService, ArtistService artistService, CommentService commentService,Account registedUser) {
         this.publishedWorkService = publishedWorkService;
         this.artistService = artistService;
         this.commentService = commentService;
         this.accountService = accountService;
+        this.registredUser=registedUser;
         this.view = view;
 
         view.addLoginListener(new LoginListener());
@@ -79,11 +81,14 @@ public class LoginController {
         }
 
         private void showRegisteredUserPanel(Account account) {
+
             SwingUtilities.invokeLater(() -> {
+                registredUser=account;
+                System.out.println(registredUser);
                 if (userFrame != null) {
                     userFrame.dispose(); // Zatvori trenutni UserFrame ako postoji
                 }
-                userFrame = new UserFrame(account.getPerson().getName(), publishedWorkService, artistService, commentService, accountService, LoginController.this); // Prosleđujemo LoginController
+                userFrame = new UserFrame(account.getPerson().getName(), publishedWorkService, artistService, commentService, accountService, LoginController.this,registredUser); // Prosleđujemo LoginController
                 userFrame.setVisible(true);
             });
         }
@@ -97,14 +102,5 @@ public class LoginController {
         }
     }
 
-    private void showRegisteredUserPanel(Account account) {
-        SwingUtilities.invokeLater(() -> {
-            if (userFrame != null) {
-                userFrame.dispose(); // Zatvori trenutni UserFrame ako postoji
-            }
-            userFrame = new UserFrame(account.getPerson().getName(), publishedWorkService, artistService, commentService, accountService,this);
-            userFrame.setVisible(true);
-        });
-    }
 
 }
