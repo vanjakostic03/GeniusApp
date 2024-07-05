@@ -152,4 +152,19 @@
     <isBlocked>false</isBlocked>
     <isPrivate>false</isPrivate>
   </account>
+  <account>
+    <person>
+      <id>U009</id>
+      <name>vanja</name>
+      <lastName>kostic</lastName>
+      <role>REGISTERED_USER</role>
+      <address>iuwehfiuewfojewfnoiewf</address>
+      <dateOfBirth>2024-07-05 02:28:46.313 UTC</dateOfBirth>
+      <gender>FEMALE</gender>
+    </person>
+    <email>Vanja</email>
+    <password>vanja1123</password>
+    <isBlocked>false</isBlocked>
+    <isPrivate>false</isPrivate>
+  </account>
 </list>

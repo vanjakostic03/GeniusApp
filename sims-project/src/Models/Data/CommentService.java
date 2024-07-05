@@ -62,7 +62,7 @@ public class CommentService {
         xstream.alias("comment", Comment.class);
         xstream.addPermission(AnyTypePermission.ANY); // Adding permission for serialization
 
-        try (FileWriter writer = new FileWriter("comments.xml")) {
+        try (FileWriter writer = new FileWriter("./Data/comments.xml")) {
             xstream.toXML(comments, writer);
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,7 +74,7 @@ public class CommentService {
         xstream.alias("comment", Comment.class);
         xstream.addPermission(AnyTypePermission.ANY); // Adding permission for deserialization
 
-        try (FileReader reader = new FileReader("comments.xml")) {
+        try (FileReader reader = new FileReader("./Data/comments.xml")) {
             comments = (ArrayList<Comment>) xstream.fromXML(reader);
         } catch (IOException e) {
             e.printStackTrace();

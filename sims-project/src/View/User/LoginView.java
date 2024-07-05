@@ -13,7 +13,7 @@ public class LoginView extends JFrame {
     public LoginView() {
         setTitle("Login");
         setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
         // Create main panel with blue background and rounded corners

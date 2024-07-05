@@ -296,7 +296,7 @@ public class UserView extends JPanel {
         itemPanel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-            //otvara se album
+                //otvara se album
             }
         });
         return itemPanel;
@@ -309,7 +309,6 @@ public class UserView extends JPanel {
             return null;
         }
     }
-
     private Image getScaledAndRoundedImage1(Image srcImg, int size) {
         BufferedImage output = new BufferedImage(size, size, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = output.createGraphics();

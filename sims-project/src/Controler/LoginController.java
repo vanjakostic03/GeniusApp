@@ -6,6 +6,8 @@ import Models.Account;
 import Models.Data.ArtistService;
 import Models.Data.CommentService;
 import Models.Data.PublishedWorkService;
+import View.Admin.AdminFrame;
+import View.Moderator.ModeratorFrame;
 import View.User.LoginView;
 import View.User.UserFrame; // Pretpostavljamo da imate UserFrame ili odgovarajući prikaz za korisnika
 
@@ -94,11 +96,17 @@ public class LoginController {
         }
 
         private void showModeratorPanel(Account account) {
+            ModeratorFrame mf = new ModeratorFrame(account.getEmail(),publishedWorkService,artistService,commentService);
             JOptionPane.showMessageDialog(view, "Moderator logged in."); // Primer poruke
+//            userFrame.dispose();
+//            userFrame.setVisible(false);
         }
 
         private void showAdminPanel(Account account) {
+            AdminFrame af = new AdminFrame(account.getEmail());
             JOptionPane.showMessageDialog(view, "Admin logged in."); // Primer poruke
+//            userFrame.dispose();
+//            userFrame.setVisible(false);
         }
     }
 

@@ -1,0 +1,16 @@
+<list>
+  <comment>
+    <id>C001</id>
+    <text>nije dobro</text>
+    <grade>4</grade>
+    <isApproved>false</isApproved>
+    <date>2024-07-05 00:29:15.228 UTC</date>
+  </comment>
+  <comment>
+    <id>C002</id>
+    <text>imam komentar</text>
+    <grade>3</grade>
+    <isApproved>false</isApproved>
+    <date>2024-07-05 02:32:15.893 UTC</date>
+  </comment>
+</list>

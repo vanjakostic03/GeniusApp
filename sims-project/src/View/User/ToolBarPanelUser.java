@@ -81,7 +81,7 @@ public class ToolBarPanelUser extends JPanel {
         JButton albums = createStyledButton("Albums");
         c.gridx = 0;
         c.gridy = 2;
-        albums.addActionListener(e -> setContentPanel(new AlbumsPanel(this,userFrame.getPublishedWorkService().getAlbums(),userFrame.getArtistService().getArtists())));
+        //albums.addActionListener(e -> setContentPanel(new AlbumsPanel(this,userFrame.getPublishedWorkService().getAlbums(),userFrame.getArtistService().getArtists())));
         optionsPanel.add(albums, c);
 
         JButton bands = createStyledButton("Bands");
