@@ -5,7 +5,7 @@ import java.awt.geom.Area;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 
-class RoundBorder extends AbstractBorder {
+public class RoundBorder extends AbstractBorder {
     private static final Color ALPHA_ZERO = new Color(0x0, true);
     @Override public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
         Graphics2D g2 = (Graphics2D) g.create();

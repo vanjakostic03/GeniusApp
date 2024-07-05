@@ -1,15 +1,15 @@
 
-import Controler.RegisterController;
-import Controler.SongController;
 import Models.Data.AccountService;
 import Models.Data.ArtistService;
 import Models.Data.CommentService;
 import Models.Data.PublishedWorkService;
 import Models.PublishedWork;
-import View.Admin.AdminFrame;
 import View.Moderator.ModeratorFrame;
-import View.User.RegisterView;
 
+
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+// Main.java
 public class Main {
     public static void main(String[] args) {
 //        AccountService service = new AccountService();
@@ -19,7 +19,6 @@ public class Main {
         for(PublishedWork pw:pwService.getPublishedWorks()){
             System.out.println(pw.getId()+"\n");
         }
-
         //registerView.setVisible(true);
 
         // For login
@@ -34,12 +33,11 @@ public class Main {
 //        Serialization serialization = new Serialization();
 //        serialization.load();
         //treba pozvati prozor za nereg.korisnika
-//        AccountService accountService = new AccountService();
+        AccountService accountService = new AccountService();
         ArtistService artistService = new ArtistService();
+        //PublishedWorkService pwService2 = new PublishedWorkService();
         CommentService commentService = new CommentService();
-
-        //ModeratorFrame mf = new ModeratorFrame("nesto",pwService,artistService,commentService);
-       AdminFrame af = new AdminFrame("f");
+        ModeratorFrame mf = new ModeratorFrame("nesto",pwService,artistService,commentService);
 
     }
 }

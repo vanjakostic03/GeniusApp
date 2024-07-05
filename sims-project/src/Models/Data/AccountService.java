@@ -50,7 +50,7 @@ public class AccountService {
         xstream.alias("account", Account.class);
         xstream.addPermission(AnyTypePermission.ANY); // Dodavanje permisije
 
-        try (FileWriter writer = new FileWriter("./Data/accounts.xml")) {
+        try (FileWriter writer = new FileWriter("accounts.xml")) {
             xstream.toXML(accounts, writer);
         } catch (IOException e) {
             e.printStackTrace();
@@ -62,7 +62,7 @@ public class AccountService {
         xstream.alias("account", Account.class);
         xstream.addPermission(AnyTypePermission.ANY); // Dodavanje permisije
 
-        try (FileReader reader = new FileReader("./Data/accounts.xml")) {
+        try (FileReader reader = new FileReader("accounts.xml")) {
             accounts = (ArrayList<Account>) xstream.fromXML(reader);
         } catch (IOException e) {
             e.printStackTrace();

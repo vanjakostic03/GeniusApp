@@ -4,16 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="nesto registracija i login">
+    <list default="true" id="d970542e-2035-44f9-b4d3-57d3503560a4" name="Changes" comment="dodavanje komentara">
+      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/BandFormPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SingleArtistFormPanel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SingleArtistFormPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/img/exclusive.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sims-project/src/img/exclusive.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/UserControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/publishedWorks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/publishedWorks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/Data/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/Data/accounts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/Data/artists.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/Data/artists.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/AlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Controler/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/SongController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sims-project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Controler/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/UserModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sims-project/src/nesto/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/UserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Bend.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Bend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/ArtistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Data/PublishedWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Data/PublishedWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/PublishedWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/PublishedWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/SingleArtist.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/SingleArtist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/Models/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/Models/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ArtistFormPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/BandFormPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ArtistFormPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/SongListAdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/SongListAdminPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Admin/ToolBarPanelAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Admin/ToolBarPanelAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumsPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/AlbumsPanelModerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongsPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/SongsPanelModerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/Moderator/ToolBarPanelModerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sims-project/src/View/Moderator/ToolBarPanelModerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sims-project/src/View/User/AlbumsPanel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +86,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ComentForm.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MusicApp.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -70,13 +95,14 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "127",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "171",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "miona",
+    "git-widget-placeholder": "Merging miona",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Miona/Downloads/xpp3_min-1.1.4c.jar",
+    "last_opened_file_path": "C:/Users/Miona/Downloads/jdatepicker-1.3.4.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,9 +111,17 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Miona\Desktop\New folder\sims-project" />
+      <recent name="C:\Users\Miona\Desktop\New folder\sims-project\src" />
+      <recent name="C:\Users\Miona\Desktop\New folder" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -109,7 +143,15 @@
       <workItem from="1719822631574" duration="3116000" />
       <workItem from="1719925072024" duration="2646000" />
       <workItem from="1719930699693" duration="11019000" />
-      <workItem from="1720018902319" duration="8675000" />
+      <workItem from="1720018902319" duration="13561000" />
+      <workItem from="1720043589890" duration="184000" />
+      <workItem from="1720043805084" duration="32000" />
+      <workItem from="1720043883725" duration="80000" />
+      <workItem from="1720044044151" duration="119000" />
+      <workItem from="1720069733400" duration="81000" />
+      <workItem from="1720069850273" duration="290000" />
+      <workItem from="1720070183943" duration="26716000" />
+      <workItem from="1720126745042" duration="16047000" />
     </task>
     <task id="LOCAL-00001" summary="TopListType">
       <option name="closed" value="true" />
@@ -127,24 +169,144 @@
       <option name="project" value="LOCAL" />
       <updated>1720028393901</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sredjiivanje po direktorijumima radi registracija i login">
+      <option name="closed" value="true" />
+      <created>1720035419846</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720035419846</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Sredjiivanje po direktorijumima radi registracija i login">
+      <option name="closed" value="true" />
+      <created>1720035444480</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720035444480</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Sredjiivanje po direktorijumima radi registracija i login">
+      <option name="closed" value="true" />
+      <created>1720036062221</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720036062221</updated>
+    </task>
+    <task id="LOCAL-00006" summary="gui user">
+      <option name="closed" value="true" />
+      <created>1720084190857</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720084190857</updated>
+    </task>
+    <task id="LOCAL-00007" summary="gui user">
+      <option name="closed" value="true" />
+      <created>1720110796432</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720110796432</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ima bagova ali moze da se pokrene. Uglavnom slike nece da se uciaju">
+      <option name="closed" value="true" />
+      <created>1720112326836</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720112326836</updated>
+    </task>
+    <task id="LOCAL-00009" summary="uzitane slike u zanroe">
+      <option name="closed" value="true" />
+      <created>1720128618677</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720128618677</updated>
+    </task>
+    <task id="LOCAL-00010" summary="dodat artist sa slikom">
+      <option name="closed" value="true" />
+      <created>1720130551447</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720130551447</updated>
+    </task>
+    <task id="LOCAL-00011" summary="skoro gotov main view za userea">
+      <option name="closed" value="true" />
+      <created>1720131954007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720131954007</updated>
+    </task>
+    <task id="LOCAL-00012" summary="registracija">
+      <option name="closed" value="true" />
+      <created>1720138538785</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720138538785</updated>
+    </task>
+    <task id="LOCAL-00013" summary="dodavanje komentara">
+      <option name="closed" value="true" />
+      <created>1720139430331</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720139430331</updated>
+    </task>
+    <task id="LOCAL-00014" summary="dodavanje komentara">
+      <option name="closed" value="true" />
+      <created>1720142407372</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720142407372</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TopListType" />
     <MESSAGE value="nesto registracija i login" />
-    <option name="LAST_COMMIT_MESSAGE" value="nesto registracija i login" />
+    <MESSAGE value="Sredjiivanje po direktorijumima radi registracija i login" />
+    <MESSAGE value="gui user" />
+    <MESSAGE value="ima bagova ali moze da se pokrene. Uglavnom slike nece da se uciaju" />
+    <MESSAGE value="uzitane slike u zanroe" />
+    <MESSAGE value="dodat artist sa slikom" />
+    <MESSAGE value="skoro gotov main view za userea" />
+    <MESSAGE value="registracija" />
+    <MESSAGE value="dodavanje komentara" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodavanje komentara" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sims-project/src/Models/Person.java</url>
-          <line>51</line>
+          <line>50</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sims-project/src/View/User/UserFrame.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
