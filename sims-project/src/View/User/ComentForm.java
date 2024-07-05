@@ -1,7 +1,10 @@
 package View.User;
 
+import Models.Account;
+import Models.Album;
 import Models.Comment;
 import Models.Data.CommentService;
+import Models.Person;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -15,10 +18,13 @@ public class ComentForm extends JFrame {
     private JTextArea reviewTextArea;
     private JComboBox<Integer> ratingComboBox;
     private CommentService commentService;
+    private Account account;
+    private Album album;
 
-    public ComentForm(CommentService commentService) {
+    public ComentForm(CommentService commentService, Account account, Album album) {
         this.commentService = commentService;
-
+        this.account = account;
+        this.album = album;
         setTitle("Comment Form");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
@@ -83,7 +89,7 @@ public class ComentForm extends JFrame {
 
                 // Create a new comment
                 String commentId = commentService.getFreeID();
-                Comment comment = new Comment(commentId, reviewText, rating, false, new Date(), null, null);
+                Comment comment = new Comment(commentId, reviewText, rating, false, new Date(), album, account.getPerson());
 
                 // Add comment to CommentService
                 commentService.addComment(comment);
@@ -110,7 +116,10 @@ public class ComentForm extends JFrame {
             @Override
             public void run() {
                 CommentService commentService = new CommentService(); // Create CommentService instance
-                new ComentForm(commentService).setVisible(true);
+                // Example usage:
+                // Account account = new Account(); // Initialize account
+                // Album album = new Album(); // Initialize album
+                // new ComentForm(commentService, account, album).setVisible(true);
             }
         });
     }

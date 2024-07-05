@@ -23,25 +23,6 @@ public class CommentService {
         saveCommentsToXML();
     }
 
-    public void approveComment(String commentId) {
-        for (Comment comment : comments) {
-            if (comment.getId().equals(commentId)) {
-                comment.approve();
-                saveCommentsToXML(); // Save after modification
-                return;
-            }
-        }
-    }
-
-    public Comment findCommentById(String commentId) {
-        for (Comment comment : comments) {
-            if (comment.getId().equals(commentId)) {
-                return comment;
-            }
-        }
-        return null;
-    }
-
     public String getFreeID() {
         int maxId = 0;
         for (Comment comment : comments) {
@@ -50,8 +31,8 @@ public class CommentService {
                 if (id > maxId) {
                     maxId = id;
                 }
-            } catch (NumberFormatException | StringIndexOutOfBoundsException e) {
-                // Ignore invalid IDs or IDs without proper format
+            } catch (NumberFormatException e) {
+                // Ignore invalid IDs
             }
         }
         return "C" + String.format("%03d", maxId + 1);
@@ -60,7 +41,7 @@ public class CommentService {
     public void saveCommentsToXML() {
         XStream xstream = new XStream();
         xstream.alias("comment", Comment.class);
-        xstream.addPermission(AnyTypePermission.ANY); // Adding permission for serialization
+        xstream.addPermission(AnyTypePermission.ANY); // Add permission
 
         try (FileWriter writer = new FileWriter("./Data/comments.xml")) {
             xstream.toXML(comments, writer);
@@ -72,7 +53,7 @@ public class CommentService {
     public void loadCommentsFromXML() {
         XStream xstream = new XStream();
         xstream.alias("comment", Comment.class);
-        xstream.addPermission(AnyTypePermission.ANY); // Adding permission for deserialization
+        xstream.addPermission(AnyTypePermission.ANY); // Add permission
 
         try (FileReader reader = new FileReader("./Data/comments.xml")) {
             comments = (ArrayList<Comment>) xstream.fromXML(reader);
@@ -80,7 +61,4 @@ public class CommentService {
             e.printStackTrace();
         }
     }
-
-    // Additional methods as needed
-
 }

@@ -1,5 +1,6 @@
 package View.User;
 import Controler.AlbumController;
+import Models.Account;
 import Models.Album;
 import Models.Artist;
 import Models.PublishedWork;
@@ -18,6 +19,7 @@ public class AlbumsPanelUser extends JPanel {
     ArrayList<PublishedWork> albums = new ArrayList<>() ;
     ArrayList<Artist> artists = new ArrayList<>() ;
     AlbumsPanelUser albumsPanelUser = this;
+    Account registerUser;
     public void setAlbums(ArrayList<PublishedWork> albums) {
         this.albums = albums;
     }
@@ -25,8 +27,8 @@ public class AlbumsPanelUser extends JPanel {
         return parentPanel;
     }
 
-    public AlbumsPanelUser(ToolBarPanelUser parenPanel,ArrayList<PublishedWork> albums,ArrayList<Artist> artists) {
-
+    public AlbumsPanelUser(ToolBarPanelUser parenPanel, ArrayList<PublishedWork> albums, ArrayList<Artist> artists, Account registerUser) {
+        this.registerUser=registerUser;
         this.parentPanel = parenPanel;
         this.albums = albums;
         this.artists = artists;
@@ -86,7 +88,7 @@ public class AlbumsPanelUser extends JPanel {
         int i = 0;
         int j = 0;
         for (PublishedWork album :this.albums) {
-            JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(), album.getId());
+            JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(), album.getId(),registerUser);
             albumPanel.setBackground(new Color(32, 38, 61));
             c.gridx = i % 4; // Redni broj kolone u trenutnom redu
             c.gridy = 2 + j ; // Redni broj reda
@@ -126,7 +128,7 @@ public class AlbumsPanelUser extends JPanel {
         int albumsPerRow = 4; // Broj albuma po redu
         int startingRow = 2;
 
-        JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(),album.getId());
+        JPanel albumPanel = createAlbumPanel(album.getCover(), album.getTitle(),album.getId(),registerUser);
         c.gridx = albumCount % albumsPerRow; // Redni broj kolone u trenutnom redu
         c.gridy = startingRow + albumCount / albumsPerRow; // Redni broj reda
         c.gridwidth = 1; // Zauzima 1 kolonu
@@ -139,7 +141,7 @@ public class AlbumsPanelUser extends JPanel {
         repaint();
     }
 
-    private JPanel createAlbumPanel(String coverText, String albumTitle, String albumId) {
+    private JPanel createAlbumPanel(String coverText, String albumTitle, String albumId,Account registerUser) {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setBackground(new Color(32,38,61));
@@ -217,7 +219,7 @@ public class AlbumsPanelUser extends JPanel {
                 for(PublishedWork album: albums){
                     if(album.getId().equals(albumId)){
 
-                        AlbumPanel newPanel = new AlbumPanel((Album) album,albumsPanelUser,parentPanel.getUserFrame().getCommentService());
+                        AlbumPanel newPanel = new AlbumPanel((Album) album,albumsPanelUser,parentPanel.getUserFrame().getCommentService(),registerUser);
                         parentPanel.setContentPanel(newPanel);
                     }
                 }

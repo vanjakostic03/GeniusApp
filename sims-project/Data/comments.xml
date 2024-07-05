@@ -13,4 +13,72 @@
     <isApproved>false</isApproved>
     <date>2024-07-05 03:07:06.199 UTC</date>
   </comment>
+  <comment>
+    <id>C003</id>
+    <text>novo</text>
+    <grade>5</grade>
+    <isApproved>false</isApproved>
+    <date>2024-07-05 03:21:41.97 UTC</date>
+    <publishWork class="Models.Album">
+      <id>PW004</id>
+      <title>Breezy</title>
+      <cover>/img/breezy.png</cover>
+      <artists>
+        <Models.SingleArtist>
+          <id>SI001</id>
+          <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+          <biography>jofjjfefefef</biography>
+          <picture>.eff</picture>
+          <name>Chris Brown</name>
+        </Models.SingleArtist>
+      </artists>
+      <typeOfWork>ALBUM</typeOfWork>
+      <releaseDate>2022-06-24 00:00:00.0 UTC</releaseDate>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+      <songs>
+        <Models.Song>
+          <id>PW009</id>
+          <title>Dream</title>
+          <cover>/img/breezy.png</cover>
+          <artists>
+            <Models.SingleArtist>
+              <id>SI001</id>
+              <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+              <biography>jofjjfefefef</biography>
+              <picture>.eff</picture>
+              <name>Chris Brown</name>
+            </Models.SingleArtist>
+          </artists>
+          <typeOfWork>SONG</typeOfWork>
+          <releaseDate>2022-06-24 00:00:00.0 UTC</releaseDate>
+          <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+          <lyricist>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+          </lyricist>
+          <composer>
+            <id>SI001</id>
+            <typeOfArtist>SINGLE_ARTIST</typeOfArtist>
+            <biography>jofjjfefefef</biography>
+            <picture>.eff</picture>
+            <name>Chris Brown</name>
+          </composer>
+          <lyrics>hawdhiawhd ihadihd oaifoawhdo</lyrics>
+          <views>1234567</views>
+        </Models.Song>
+      </songs>
+    </publishWork>
+    <person>
+      <id>U003</id>
+      <name>a</name>
+      <lastName>a</lastName>
+      <role>REGISTERED_USER</role>
+      <address>a</address>
+      <dateOfBirth>2024-07-03 19:36:15.606 UTC</dateOfBirth>
+      <gender>OTHER</gender>
+    </person>
+  </comment>
 </list>

@@ -19,9 +19,11 @@ public class AlbumPanel extends JPanel {
     private AlbumPanel albumPanel= this;
     private AlbumsPanelUser albumsPanelUser;
     private CommentService commentService;
+    private Account registerUser;
 
-    public AlbumPanel(Album album,AlbumsPanelUser albumsPanelUser,CommentService commentService){
+    public AlbumPanel(Album album,AlbumsPanelUser albumsPanelUser,CommentService commentService,Account registerUser){
         this.album = album;
+        this.registerUser=registerUser;
         this.albumsPanelUser = albumsPanelUser;
         setLayout(new GridBagLayout());
         this.commentService=commentService;
@@ -99,7 +101,7 @@ public class AlbumPanel extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                ComentForm comentForm = new ComentForm(commentService);
+                ComentForm comentForm = new ComentForm(commentService,registerUser,album);
                 comentForm.setVisible(true);
             }
         });
